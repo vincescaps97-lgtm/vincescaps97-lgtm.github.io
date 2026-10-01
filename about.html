@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chi Sono — Vincenzo Capasso</title>
+<meta name="description" content="Performance &amp; Marketing automation: paid media, tracking e automazione applicata al marketing.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+<script>(function(){try{var t=localStorage.getItem("theme");if(!t){t="dark";}document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme="dark";}})();</script>
+<link rel="stylesheet" href="css/style.css?v=30">
+<link rel="stylesheet" href="css/content.css?v=30">
+</head>
+<body>
+
+<header class="pagehead">
+  <h1 class="pagehead__title">Chi Sono</h1>
+</header>
+
+<main class="page">
+  <section class="sec sec--tight">
+    <div class="about">
+      <div class="about__text">
+        <p class="lede reveal" id="tagline"></p>
+        <p class="reveal">
+          Trasformo dati e insight in strategie, funnel e campagne che
+          performano. Quando non performano, scopro perché. Quando il cliente
+          dice «sarà la creatività», di solito no. 🫠
+        </p>
+        <p class="reveal">
+          Lavoro su Meta, Google, TikTok e LinkedIn, con un approccio
+          data-driven che mette insieme advertising, tracking, marketing
+          automation e AI. Cioè passo le giornate a guardare CPL, CPA, ROAS e
+          conversion rate, e a chiedermi cosa stiano cercando di dirmi.
+        </p>
+        <p class="reveal">
+          Il mio obiettivo è capire cosa spinge davvero la performance e
+          intervenire dove l'impatto è reale. Non dove il report viene meglio.
+          😌
+        </p>
+        <p class="reveal">Nel mio lavoro mi occupo di tre cose:</p>
+        <ol class="about__points reveal">
+          <li>
+            <strong>Capire perché le persone fanno quello che fanno.</strong>
+            Dati e psicologia comportamentale, perché sono più prevedibili di
+            quanto vorrebbero. 🧠
+          </li>
+          <li>
+            <strong>Togliere attrito dai funnel.</strong>
+            Ogni click in più per arrivare al form è un utente che se ne va, e
+            di solito non torna a salutare. 🚪
+          </li>
+          <li>
+            <strong>Automatizzare e usare l'AI.</strong>
+            Ma solo dopo aver capito dove sto andando. ⚙️
+          </li>
+        </ol>
+        <p class="reveal">
+          Mi diverto a sperimentare funnel nuovi, a costruire automazioni che
+          ascoltano prima di agire e a trasformare i numeri in decisioni.
+        </p>
+        <p class="reveal">
+          Se le cose non vanno come dovrebbero, sei nel posto giusto. Se va
+          benissimo, vediamo comunque perché i miracoli non mi convincono mai.
+          🤨
+        </p>
+      </div>
+
+      <aside class="about__side">
+        <!-- La foto viene da PROFILE.photo in js/data.js. Se il
+             file non c'è, il riquadro resta un segnaposto verde
+             con le iniziali: nessun buco e nessun immagine
+             rotta. -->
+        <img class="portrait" id="portrait" alt="Vincenzo Capasso"
+             decoding="async" fetchpriority="high">
+        <p class="about__name" id="name"></p>
+        <p class="about__role" id="role"></p>
+        <p class="about__place" id="place"></p>
+        <div class="about__links" id="links"></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ---------- esperienza ---------- -->
+  <section class="sec">
+    <div class="sec__head"><h2 class="sec__title">Esperienza</h2></div>
+    <div class="tl" id="jobs"></div>
+  </section>
+
+  <!-- ---------- competenze ---------- -->
+  <section class="sec">
+    <div class="sec__head"><h2 class="sec__title">Competenze</h2></div>
+    <div class="groups" id="skills"></div>
+  </section>
+
+  <!-- ---------- strumenti ---------- -->
+  <section class="sec">
+    <div class="sec__head"><h2 class="sec__title">Strumenti</h2></div>
+    <div id="tools"></div>
+  </section>
+
+  <!-- ---------- formazione + certificazioni ---------- -->
+  <section class="sec">
+    <div class="sec__head"><h2 class="sec__title">Formazione</h2></div>
+    <div class="tl" id="edu"></div>
+  </section>
+
+  <section class="sec" style="padding-top:0">
+    <div class="sec__head"><h2 class="sec__title">Certificazioni</h2></div>
+    <div class="badges reveal" id="certs"></div>
+  </section>
+
+  <section class="sec" style="padding-top:0">
+    <div class="sec__head"><h2 class="sec__title">Soft Skills</h2></div>
+    <div class="badges reveal" id="soft"></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>&copy; <span data-year></span> Vincenzo Capasso. Tutti i diritti riservati.</p>
+  <p id="footlinks"></p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script type="module">
+  import { boot } from "./js/site.js";
+  import { PROFILE, SOCIALS, SKILLS, TOOLS, JOBS, EDUCATION, CERTIFICATIONS, SOFT_SKILLS } from "./js/data.js";
+  import { job, edu, groupCard, toolGroups, badges, socialLinks } from "./js/render.js";
+
+  boot({ page: "about" });
+
+  document.getElementById("tagline").textContent = PROFILE.tagline;
+  document.getElementById("name").textContent = PROFILE.name;
+
+  // Foto profilo: `photo` in data.js. Il riquadro di riserva
+  // (initiali su verde acqua) è il fallback se il file manca,
+  // così la colonna non resta con un buco.
+  const portrait = document.getElementById("portrait");
+  if (PROFILE.photo) {
+    portrait.src = PROFILE.photo;
+    // se il file non si carica, torna al segnaposto
+    portrait.addEventListener("error", () => portrait.removeAttribute("src"), { once: true });
+  } else {
+    portrait.removeAttribute("src");
+  }
+  document.getElementById("role").textContent = PROFILE.roleLine;
+  document.getElementById("place").textContent = PROFILE.location;
+  document.getElementById("links").innerHTML = SOCIALS
+    .map((s) => `<a href="${s.href}" target="_blank" rel="noopener">${s.label}</a>`).join("");
+
+  document.getElementById("jobs").innerHTML = JOBS.map(job).join("");
+  document.getElementById("skills").innerHTML = SKILLS.map(groupCard).join("");
+  document.getElementById("tools").innerHTML = toolGroups(TOOLS);
+  document.getElementById("edu").innerHTML = EDUCATION.map(edu).join("");
+  document.getElementById("certs").innerHTML = badges(CERTIFICATIONS);
+  document.getElementById("soft").innerHTML = badges(SOFT_SKILLS);
+  document.getElementById("footlinks").innerHTML = socialLinks(SOCIALS);
+</script>
+</body>
+</html>

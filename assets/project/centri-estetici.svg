@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="Il metodo di test modulare: la griglia di sei varianti con una cella cambiata, il macchinario del centro estetico e il costo per lead in discesa">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#047857"/>
+      <stop offset=".55" stop-color="#0d9488"/>
+      <stop offset="1" stop-color="#5eead4"/>
+    </linearGradient>
+
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a7f3d0"/>
+      <stop offset="1" stop-color="#5eead4"/>
+    </linearGradient>
+
+    <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6ee7b7" stop-opacity="0"/>
+      <stop offset="1" stop-color="#6ee7b7" stop-opacity=".34"/>
+    </linearGradient>
+
+    <linearGradient id="hot" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d1fae5"/>
+      <stop offset="1" stop-color="#5eead4"/>
+    </linearGradient>
+
+    <linearGradient id="machine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ecfdf5"/>
+      <stop offset="1" stop-color="#86efac"/>
+    </linearGradient>
+
+    <filter id="soft" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="90"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#bg)"/>
+
+  <g filter="url(#soft)" opacity=".4">
+    <ellipse cx="600" cy="470" rx="470" ry="300" fill="#04301f"/>
+  </g>
+
+  <!-- ============================================================
+       IL MACCHINARIO — l'apparecchio che il cliente vende ai
+       centri estetici. Torre, braccio, testa con due ugelli: la
+       sagoma basta, è un segno e non un prodotto illustrato.
+
+       Sta a sinistra ed è il punto di partenza: la griglia a
+       destra è il metodo per farlo funzionare.
+       ============================================================ -->
+  <g transform="translate(84 176)">
+    <rect x="0" y="336" width="236" height="44" rx="22" fill="url(#machine)"/>
+    <rect x="86" y="120" width="64" height="224" rx="20" fill="url(#machine)"/>
+    <g transform="rotate(-18 118 140)">
+      <rect x="118" y="106" width="150" height="52" rx="26" fill="url(#machine)"/>
+      <rect x="238" y="62" width="128" height="86" rx="34" fill="url(#machine)"/>
+      <rect x="272" y="140" width="26" height="34" rx="13" fill="#047857"/>
+      <rect x="316" y="140" width="26" height="34" rx="13" fill="#047857"/>
+    </g>
+    <rect x="102" y="164" width="32" height="32" rx="10" fill="#047857" opacity=".6"/>
+  </g>
+
+  <!-- aggancio: dal macchinario alla griglia. Il metodo nasce
+       dal prodotto, non il contrario. -->
+  <g stroke="#ecfdf5" stroke-opacity=".5" stroke-width="4" stroke-linecap="round" stroke-dasharray="3 12" fill="none">
+    <path d="M370 358h62"/>
+  </g>
+  <circle cx="440" cy="358" r="7" fill="#ecfdf5" fill-opacity=".5"/>
+
+  <!-- ============================================================
+       IL FOCUS — la griglia di 6 varianti.
+
+       3 hook × 2 body × 1 CTA = 6 celle. Una sola è stata
+       cambiata: bordo tratteggiato e fondo scuro, mentre la
+       vincitrice è piena e si stacca con una freccia. È il
+       punto del caso, quindi sta al centro e domina.
+       ============================================================ -->
+  <g transform="translate(468 196)">
+    <rect x="0"   y="0"   width="204" height="118" rx="20" fill="#0a3a26" fill-opacity=".55" stroke="#ffffff" stroke-opacity=".2" stroke-width="4"/>
+    <rect x="228" y="0"   width="204" height="118" rx="20" fill="#0a3a26" fill-opacity=".55" stroke="#ffffff" stroke-opacity=".2" stroke-width="4"/>
+    <rect x="456" y="0"   width="204" height="118" rx="20" fill="url(#hot)" stroke="#ecfdf5" stroke-width="5"/>
+
+    <rect x="0"   y="142" width="204" height="118" rx="20" fill="#0a3a26" fill-opacity=".55" stroke="#ffffff" stroke-opacity=".2" stroke-width="4"/>
+    <rect x="228" y="142" width="204" height="118" rx="20" fill="#0a3a26" fill-opacity=".55" stroke="#ffffff" stroke-opacity=".2" stroke-width="4"/>
+    <rect x="456" y="142" width="204" height="118" rx="20" fill="#0a3a26" fill-opacity=".8" stroke="#a7f3d0" stroke-width="5" stroke-dasharray="14 11"/>
+
+    <!-- dentro ogni cella un trattino lungo (hook) e uno corto
+         (body), identici ovunque: la differenza sta nel bordo,
+         non nel contenuto -->
+    <g fill="#ffffff" fill-opacity=".3">
+      <rect x="34"  y="46"  width="92" height="13" rx="6.5"/>
+      <rect x="34"  y="72"  width="56" height="13" rx="6.5"/>
+      <rect x="262" y="46"  width="92" height="13" rx="6.5"/>
+      <rect x="262" y="72"  width="56" height="13" rx="6.5"/>
+      <rect x="34"  y="188" width="92" height="13" rx="6.5"/>
+      <rect x="34"  y="214" width="56" height="13" rx="6.5"/>
+      <rect x="262" y="188" width="92" height="13" rx="6.5"/>
+      <rect x="262" y="214" width="56" height="13" rx="6.5"/>
+    </g>
+    <g fill="#04301f" fill-opacity=".6">
+      <rect x="490" y="46"  width="92" height="13" rx="6.5"/>
+      <rect x="490" y="72"  width="56" height="13" rx="6.5"/>
+      <rect x="490" y="188" width="92" height="13" rx="6.5"/>
+      <rect x="490" y="214" width="56" height="13" rx="6.5"/>
+    </g>
+
+    <path d="M600 44c40 0 56 14 74 34" fill="none" stroke="#ecfdf5" stroke-width="5" stroke-linecap="round"/>
+    <path d="M674 78l-4-26 25 6Z" fill="#ecfdf5"/>
+  </g>
+
+  <!-- ============================================================
+       IL RISULTATO — in basso: il costo per lead scende e si
+       appiattisce. Piccolo, perché il focus è il metodo; presente,
+       perché è la promessa del caso.
+       ============================================================ -->
+  <g transform="translate(0 566)">
+    <path d="M170 40C320 48 380 74 470 102C560 130 620 154 700 168C790 184 880 192 1030 194L1030 232L170 232Z"
+          fill="url(#fill)"/>
+    <g stroke="#a7f3d0" stroke-opacity=".26" stroke-width="2">
+      <path d="M170 232h860"/>
+    </g>
+    <path d="M170 40C320 48 380 74 470 102C560 130 620 154 700 168C790 184 880 192 1030 194"
+          fill="none" stroke="url(#line)" stroke-width="11" stroke-linecap="round"/>
+    <g stroke="#ecfdf5" stroke-width="9" stroke-linecap="round" fill="none" opacity=".9">
+      <path d="M986 132l-54 48M932 180v-48h48"/>
+    </g>
+  </g>
+
+  <!-- tacche: il tempo del test, non un asse con numeri -->
+  <g stroke="#ffffff" stroke-opacity=".3" stroke-width="3" stroke-linecap="round">
+    <path d="M170 760v24"/>
+    <path d="M600 760v24"/>
+    <path d="M1030 760v24"/>
+  </g>
+</svg>

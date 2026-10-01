@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="Le ricerche di brand di una concessionaria crescono da 700 a 1.600 al mese: curva in salita sopra un'auto">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e7490"/>
+      <stop offset=".55" stop-color="#0891b2"/>
+      <stop offset="1" stop-color="#67e8f9"/>
+    </linearGradient>
+
+    <!-- la curva: parte bassa a sinistra, sale e appiattisce in alto.
+         È la forma di una crescita che si stabilizza. -->
+    <linearGradient id="line" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#a5f3fc"/>
+      <stop offset="1" stop-color="#e0f7ff"/>
+    </linearGradient>
+
+    <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#67e8f9" stop-opacity=".4"/>
+      <stop offset="1" stop-color="#67e8f9" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="car" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e0f7ff"/>
+      <stop offset="1" stop-color="#7dd3e8"/>
+    </linearGradient>
+
+    <filter id="soft" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="90"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#bg)"/>
+
+  <g filter="url(#soft)" opacity=".4">
+    <ellipse cx="600" cy="700" rx="470" ry="170" fill="#04283a"/>
+  </g>
+
+  <!-- ============================================================
+       SOPRA — le ricerche di brand. Quattro linee di griglia,
+       una per ricerca: non un grafico con assi e numeri, il
+       segnale arriva dalla forma della curva.
+       ============================================================ -->
+  <g stroke="#ffffff" stroke-opacity=".13" stroke-width="2">
+    <path d="M170 470h860"/>
+    <path d="M170 380h860"/>
+    <path d="M170 290h860"/>
+    <path d="M170 200h860"/>
+  </g>
+
+  <path d="M170 470C300 466 360 452 430 436C520 416 560 380 620 348C700 306 740 246 800 210C870 170 940 152 1030 146L1030 470Z"
+        fill="url(#fill)"/>
+  <g stroke="#a5f3fc" stroke-opacity=".26" stroke-width="2">
+    <path d="M170 470h860"/>
+  </g>
+
+  <path d="M170 470C300 466 360 452 430 436C520 416 560 380 620 348C700 306 740 246 800 210C870 170 940 152 1030 146"
+        fill="none" stroke="url(#line)" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- partenza e arrivo: due pallini, e la differenza si vede
+       nel diametro, non in una scritta -->
+  <g fill="#04283a" stroke="#e0f7ff" stroke-width="7">
+    <circle cx="170" cy="470" r="19"/>
+    <circle cx="1030" cy="146" r="26"/>
+  </g>
+
+  <!-- lente d'ingrandimento: è una ricerca, non un grafico di
+       vendite. Sta sulla partenza, dove la domanda era bassa -->
+  <g stroke="#e0f7ff" stroke-width="8" fill="none" opacity=".82" stroke-linecap="round">
+    <circle cx="150" cy="600" r="46"/>
+    <path d="M184 634l44 44"/>
+  </g>
+
+  <!-- ============================================================
+       SOTTO — l'auto. Silhouette laterale di un'utilitaria: è
+       il prodotto che il cliente vende, e serve a far capire il
+       settore senza scriverlo. Leggermente scalata per lasciare
+       spazio alla lente.
+       ============================================================ -->
+  <g transform="translate(120 10) scale(0.85)">
+    <!-- carrozzeria: muso a destra, ruote integrate nei passaggi -->
+    <path d="M212 706V650c0-16 12-28 30-32l150-34c56-46 122-70 206-70 74 0 140 22 190 62l52 6c22 3 36 20 36 42v82h-96a62 62 0 0 0-124 0H402a62 62 0 0 0-124 0h-66Z"
+          fill="url(#car)"/>
+    <!-- vetri -->
+    <path d="M436 604c46-38 104-58 172-58 60 0 114 18 156 50l-8 8H430Z"
+          fill="#04283a" opacity=".55"/>
+    <!-- luce posteriore -->
+    <path d="M212 690h-8a14 14 0 0 1-14-14v-6h22Z" fill="#0e7490" opacity=".8"/>
+    <!-- ruote -->
+    <g fill="#04283a" stroke="#e0f7ff" stroke-width="6">
+      <circle cx="340" cy="706" r="62"/>
+      <circle cx="764" cy="706" r="62"/>
+    </g>
+    <g fill="#7dd3e8">
+      <circle cx="340" cy="706" r="24"/>
+      <circle cx="764" cy="706" r="24"/>
+    </g>
+    <!-- linee della carrozzeria: due sole, per dare volume -->
+    <g stroke="#04283a" stroke-opacity=".3" stroke-width="5" stroke-linecap="round" fill="none">
+      <path d="M420 646h250"/>
+      <path d="M900 664h84"/>
+    </g>
+  </g>
+
+  <!-- tacche sull'asse del tempo: tre anni, tre punti -->
+  <g stroke="#ffffff" stroke-opacity=".32" stroke-width="3" stroke-linecap="round">
+    <path d="M170 796v26"/>
+    <path d="M600 796v26"/>
+    <path d="M1030 796v26"/>
+  </g>
+</svg>

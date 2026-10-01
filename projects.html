@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects — Vincenzo Capasso</title>
+<meta name="description" content="Progetti e lavori: campagne, automazione, analytics e web.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+<script>(function(){try{var t=localStorage.getItem("theme");if(!t){t="dark";}document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme="dark";}})();</script>
+<link rel="stylesheet" href="css/style.css?v=30">
+<link rel="stylesheet" href="css/content.css?v=30">
+</head>
+<body>
+
+<header class="pagehead">
+  <h1 class="pagehead__title">Projects</h1>
+  <p class="pagehead__lede">Progetti e lavori. Filtra per disciplina, o scorri.</p>
+</header>
+
+<main class="page">
+  <section class="sec sec--tight">
+    <div class="chips" id="chips" role="group" aria-label="Filtra i progetti per disciplina"></div>
+    <p class="sec__note" id="count" style="margin-bottom:1.5rem"></p>
+    <div class="pgrid" id="grid"></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>&copy; <span data-year></span> Vincenzo Capasso. Tutti i diritti riservati.</p>
+  <p id="footlinks"></p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script type="module">
+  import { boot } from "./js/site.js";
+  import { PROJECTS, CATEGORIES, SOCIALS } from "./js/data.js";
+  import { projectCard, socialLinks } from "./js/render.js";
+
+  boot({ page: "projects" });
+
+  const grid = document.getElementById("grid");
+  const chips = document.getElementById("chips");
+  const count = document.getElementById("count");
+
+  // la home può linkare un filtro diretto: projects.html?cat=...
+  const fromUrl = new URLSearchParams(location.search).get("cat");
+  let active = CATEGORIES.includes(fromUrl) ? fromUrl : "All";
+
+  chips.innerHTML = ["All", ...CATEGORIES]
+    .map((c) => `<button class="chip" data-cat="${c}" aria-pressed="${c === active}">${c}</button>`)
+    .join("");
+
+  function render() {
+    const list = active === "All" ? PROJECTS : PROJECTS.filter((p) => p.cats.includes(active));
+    grid.innerHTML = list.map(projectCard).join("");
+    count.textContent =
+      list.length + (list.length === 1 ? " progetto" : " progetti") +
+      (active === "All" ? "" : " · " + active);
+  }
+
+  chips.addEventListener("click", (e) => {
+    const btn = e.target.closest(".chip");
+    if (!btn) return;
+    active = btn.dataset.cat;
+    chips.querySelectorAll(".chip").forEach((c) => c.setAttribute("aria-pressed", String(c === btn)));
+    render();
+  });
+
+  render();
+  document.getElementById("footlinks").innerHTML = socialLinks(SOCIALS);
+</script>
+</body>
+</html>

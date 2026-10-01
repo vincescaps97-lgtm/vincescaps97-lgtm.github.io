@@ -1,0 +1,1220 @@
+/* ============================================================
+   Yourstudio — original build
+   Vanilla CSS. Two families, both SIL OFL:
+   "Permanent Marker" (display) + "Geist" (UI)
+   ============================================================ */
+
+/* Darker Grotesque — display (Black) + testo (Regular).
+   SIL Open Font License: i file sono in `fonts/` con la licenza
+   accanto, `fonts/OFL.txt`.
+
+   Nota sul peso: il Black è dichiarato a `font-weight: 800`
+   perché è il peso che il design usa per i titoli. Dichiararlo
+   a 900 e cambiare tutte le `font-weight: 800` sparse nei
+   componenti non cambierebbe nulla e costerebbe una ricerca
+   su tutto il CSS. */
+@font-face{
+  font-family:"Darker Grotesque";
+  src:url("../fonts/DarkerGrotesque-Regular.ttf") format("truetype");
+  font-weight:400; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"Darker Grotesque";
+  src:url("../fonts/DarkerGrotesque-Black.ttf") format("truetype");
+  font-weight:800; font-style:normal; font-display:swap;
+}
+
+:root{
+  --paper:   #ffffff;
+  --ink:     #111214;
+  --muted:   #6b7280;
+  --line:    #e6e9f0;
+  --blue:    #3dcab1;
+
+  --display: "Darker Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ui:      "Darker Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --pad: clamp(1rem, 4vw, 3rem);
+
+  /* Side gutter, so lines of text do not run edge to edge on wide
+     screens. Collapses on mobile. */
+  --gutter: clamp(6rem, 13vw, 12rem);
+
+  --shadow: 0 24px 60px -22px rgba(17,18,20,.28);
+}
+
+*,*::before,*::after{ box-sizing:border-box }
+
+html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; overflow-x:clip }
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--ui);
+  font-size:clamp(1.375rem,.55vw + 1.15rem,1.7rem);
+  line-height:1.65;
+  overflow-x:hidden;
+}
+
+h1,h2,h3{ margin:0; line-height:1.05; font-weight:800 }
+p{ margin:0 }
+ul{ margin:0; padding:0; list-style:none }
+a{ color:inherit; text-decoration:none }
+img{ max-width:100%; display:block }
+
+:focus-visible{
+  outline:2px solid var(--blue);
+  outline-offset:3px;
+  border-radius:3px;
+}
+
+/* ============================================================
+   GRAPH PAPER + DOODLES
+
+   Copia del riferimento: due layer `fixed` dietro a tutto,
+   fermi. Griglia `grid.svg` a tile 126px con `opacity .02`, i
+   sette doodle a `opacity .03` ancorati a percentuali del
+   viewport. Montati da `js/background.js` su ogni pagina.
+   ============================================================ */
+
+.bg{ position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden }
+
+.bg__grid{
+  position:absolute;
+  inset:0;
+  background-image:url("../assets/doodle/grid.svg");
+  background-size:126px auto;
+  background-position:0 0;
+  opacity:.02;
+}
+
+.bg__doodles{ position:absolute; inset:0; opacity:.03 }
+
+.bg__doodle{
+  position:absolute;
+  left:var(--x); top:var(--y);
+  width:var(--w); height:var(--h);
+  transform:translate(var(--tx,0),var(--ty,0)) rotate(var(--r,0deg));
+  object-fit:contain;
+}
+
+/* ============================================================
+   TOP BAR — Menu / Close
+   ============================================================ */
+
+.topbar__btn{
+  position:fixed;
+  top:var(--pad);
+  left:var(--pad);
+  z-index:95;
+  font-family:var(--display);
+  font-weight:800;
+  font-size:clamp(1.1rem,1.4vw,1.5rem);
+  letter-spacing:.02em;
+  background:none;
+  border:0;
+  padding:.35rem .2rem;
+  color:inherit;
+  cursor:pointer;
+  transition:opacity .2s ease, transform .2s ease, visibility .2s;
+}
+.topbar__btn:hover{ transform:rotate(-4deg) scale(1.06) }
+
+/* Cerchio scarabocchiato intorno a "Menu": si disegna all'hover
+   e al focus da tastiera, come nel riferimento. */
+.topbar__btn .menu-ring{
+  position:absolute;
+  left:50%; top:50%;
+  width:158px; height:auto;
+  translate:-50% -50%;
+  overflow:visible;
+  pointer-events:none;
+}
+.topbar__btn .menu-ring path{
+  transition:stroke-dashoffset .55s cubic-bezier(.5,0,.3,1);
+}
+.topbar__btn:hover .menu-ring path,
+.topbar__btn:focus-visible .menu-ring path{
+  stroke-dashoffset:0 !important;
+}
+
+/* Close sits in the same spot, and takes over when the drawer is open */
+.topbar__close{ opacity:0; visibility:hidden }
+body.menu-open .topbar__close{ opacity:1; visibility:visible }
+body.menu-open .topbar .topbar__btn:not(.topbar__close){
+  opacity:0; visibility:hidden; pointer-events:none;
+}
+
+/* Theme toggle — fixed top-right, above everything */
+.topbar__theme{
+  position:fixed;
+  top:var(--pad);
+  right:var(--pad);
+  z-index:96;
+  width:42px; height:42px;
+  display:grid; place-items:center;
+  background:rgba(255,255,255,.6);
+  -webkit-backdrop-filter:blur(10px);
+  backdrop-filter:blur(10px);
+  border:1px solid var(--line);
+  border-radius:50%;
+  color:var(--ink);
+  cursor:pointer;
+  transition:transform .2s ease, background .2s ease;
+}
+.topbar__theme:hover{ transform:rotate(-10deg) scale(1.07) }
+.topbar__theme svg{ width:20px; height:20px; display:block }
+.topbar__theme .icon-sun{ display:none }
+[data-theme="dark"] .topbar__theme{ background:rgba(22,24,29,.6) }
+[data-theme="dark"] .topbar__theme .icon-moon{ display:none }
+[data-theme="dark"] .topbar__theme .icon-sun{ display:block }
+
+/* ============================================================
+   DOCK — macOS style, hero only
+   ============================================================ */
+
+.dock{
+  position:relative;
+  z-index:3;
+  display:flex;
+  justify-content:center;
+  padding:0 var(--pad);
+}
+
+/* Glassy bar, matched to the reference: heavy blur, very
+   translucent fill, soft glow instead of a drop shadow.
+   The gap has to be real — macOS icons fill their frame, so a
+   1px gap leaves them touching. */
+.dock__inner{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 11px;
+  background:rgba(246,246,246,.36);
+  -webkit-backdrop-filter:blur(20px) saturate(1.8);
+  backdrop-filter:blur(20px) saturate(1.8);
+  border-radius:28px;
+  box-shadow:0 0 6px rgba(0,0,0,.15);
+}
+
+.dock__item{
+  position:relative;
+  display:block;
+  line-height:0;
+  transform-origin:bottom center;
+  /* JS writes transform each frame while magnifying */
+  will-change:transform;
+  transition:none;
+}
+.dock__item.is-pressed .dock__icon{ animation:bounce .5s ease 2 }
+
+/* The icon artwork already carries the macOS squircle shape, so the
+   dock adds no plate of its own — just a soft drop shadow. */
+.dock__icon{
+  display:grid;
+  place-items:center;
+  width:clamp(44px,5vw,60px);
+  aspect-ratio:1;
+  border-radius:24%;
+  box-shadow:0 3px 9px -2px rgba(0,0,0,.3);
+}
+.dock__icon svg,
+.dock__icon img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+}
+
+@keyframes bounce{
+  0%,100%{ transform:translateY(0) }
+  45%    { transform:translateY(-22%) }
+}
+
+/* label above the icon */
+.dock__tip{
+  position:absolute;
+  bottom:calc(100% + 12px);
+  left:50%;
+  translate:-50% 0;
+  font-family:var(--ui);
+  font-size:.75rem;
+  line-height:1;
+  white-space:nowrap;
+  color:#fff;
+  background:rgba(17,18,20,.88);
+  padding:.35rem .55rem;
+  border-radius:6px;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .15s ease;
+}
+.dock__tip::after{
+  content:"";
+  position:absolute;
+  top:100%; left:50%;
+  translate:-50% 0;
+  border:5px solid transparent;
+  border-top-color:rgba(17,18,20,.88);
+}
+.dock__item:hover .dock__tip,
+.dock__item.is-focus .dock__tip{ opacity:1 }
+
+/* running indicator under the current page */
+.dock__item.is-current .dock__icon::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:-8px;
+  translate:-50% 0;
+  width:4px; height:4px;
+  border-radius:50%;
+  background:var(--ink);
+}
+
+.dock__sep{
+  width:1px;
+  align-self:stretch;
+  margin:3px 2px;
+  background:rgba(17,18,20,.16);
+}
+
+/* ============================================================
+   DRAWER — slides in from the left
+   ============================================================ */
+
+.drawer{
+  position:fixed;
+  inset:0;
+  z-index:80;
+}
+.drawer[hidden]{ display:none }
+
+.drawer__scrim{
+  position:absolute;
+  inset:0;
+  background:rgba(255,255,255,.72);
+  backdrop-filter:blur(3px);
+  -webkit-backdrop-filter:blur(3px);
+  opacity:0;
+}
+
+.drawer__panel{
+  position:absolute;
+  inset:0 auto 0 0;
+  width:min(420px,86vw);
+  padding:clamp(4.5rem,9vw,6rem) var(--pad) var(--pad);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  gap:2rem;
+  background:var(--paper);
+  box-shadow:1px 0 0 rgba(61,202,177,.12), 18px 0 60px -20px rgba(17,18,20,.28);
+  will-change:transform;
+}
+
+.drawer__list{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:.15rem;
+}
+
+.drawer__link{
+  font-family:var(--display);
+  font-weight:800;
+  font-size:clamp(1.8rem,5.4vw,2.9rem);
+  text-transform:none;
+  line-height:1.2;
+  transition:color .2s ease, translate .25s ease;
+}
+.drawer__link:hover{ color:var(--blue); translate:10px 0 }
+.drawer__link.is-current{ color:var(--blue) }
+
+.drawer__social{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:.1rem;
+  font-family:var(--display);
+  font-size:1.05rem;
+  color:var(--muted);
+}
+.drawer__social a{ transition:color .2s ease, translate .2s ease }
+.drawer__social a:hover{ color:var(--ink); translate:5px 0 }
+
+body.menu-open{ overflow:hidden }
+
+/* ============================================================
+   HERO (home)
+   ============================================================ */
+
+.hero{
+  position:relative;
+  min-height:100svh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:clamp(1.5rem,4svh,3rem);
+  /* i padding seguono l'altezza della finestra: su un portatile
+     basso 6rem sopra e 5rem sotto non lasciano spazio al
+     contenuto, che finisce per schiacciarsi in mezzo */
+  padding:clamp(4.5rem,11svh,6.5rem) var(--gutter) clamp(2.5rem,7svh,5rem);
+  overflow:hidden;
+}
+
+.hero__inner{ position:relative; z-index:2; text-align:center; max-width:min(1100px,92vw) }
+
+/* I titoli sono più grandi di quanto fossero con il Telegraf:
+   Darker Grotesque è ~16% più stretto, quindi a parità di
+   corpo il titolo occupa meno spazio e sembra più piccolo.
+   Alzare il corpo riporta la presenza visiva a quella di prima. */
+.hero__title{
+  position:relative;
+  display:inline-block;
+  font-family:var(--display);
+  font-size:clamp(3.2rem,15vw,11.5rem);
+  letter-spacing:.01em;
+  line-height:.95;
+  text-transform:none;
+  -webkit-text-stroke:0;
+}
+
+/* Evidenziazione "selezione" dietro al nome, come nel riferimento:
+   banda azzurra + due liniette blu ai bordi (sinistra in alto,
+   destra in basso, come i cursori di selezione). La banda si
+   distende da sinistra all'atterraggio, le liniette compaiono dopo. */
+.hl{ position:relative; display:inline-block; white-space:nowrap }
+.hl-text{ position:relative; z-index:1 }
+.hl::before{
+  content:""; position:absolute; inset:0 -16px;
+  background:rgba(61,202,177,.1); z-index:0;
+  transform:scaleX(0); transform-origin:left center;
+  animation:hl-in .9s cubic-bezier(.6,0,.2,1) .55s forwards;
+}
+.hl-bar{
+  position:absolute; top:-4px; bottom:-4px; width:6px;
+  background:var(--blue); border-radius:97px; z-index:2;
+  opacity:0; animation:hl-bar-in .45s ease forwards;
+}
+.hl-bar::after{
+  content:""; position:absolute; left:3px; right:-9px; height:12px;
+  background:var(--blue); border-radius:50%;
+}
+.hl-bar--l{ left:-16px; animation-delay:1.25s }
+.hl-bar--l::after{ top:0 }
+.hl-bar--r{ right:-16px; animation-delay:1.4s }
+.hl-bar--r::after{ bottom:0 }
+@keyframes hl-in{ to{ transform:scaleX(1); } }
+@keyframes hl-bar-in{
+  from{ opacity:0; transform:translateY(8px); }
+  to{ opacity:1; transform:none; }
+}
+
+.hero__sub{
+  margin:1.75rem auto 0;
+  max-width:42ch;
+  font-family:var(--display);
+  font-size:clamp(1.3rem,2.3vw,2.05rem);
+  line-height:1.4;
+}
+
+/* Freccia a mano in fondo all'hero: due SVG sovrapposti come nel
+   riferimento (curva + punta), ruotati per puntare in giù.
+
+   Sta in posizione assoluta sul fondo, non nel flusso: nel flusso
+   finiva incollata alla dock e lasciava mezzo schermo vuoto
+   sotto, che è il contrario di "qui sotto c'è dell'altro". Con
+   il blocco `@media (max-height:880px)` sotto, il contenuto
+   dell'hero entra sempre e la freccia non ci si sovrappone. */
+.hero__arrow{
+  position:absolute;
+  bottom:clamp(2rem,6svh,4rem);
+  left:50%;
+  width:clamp(60px,7vw,92px);
+  aspect-ratio:206/170;
+  translate:-50% 0;
+  rotate:-28deg;
+  color:var(--blue);
+  opacity:.8;
+  pointer-events:none;
+  animation:bob 2.4s ease-in-out infinite;
+}
+.hero__arrow .arrow-curve{ position:absolute; inset:0; width:100%; height:100% }
+.hero__arrow .arrow-head{
+  position:absolute;
+  left:69%; bottom:-4%;
+  width:31%; height:32%;
+}
+
+@keyframes bob{
+  0%,100%{ transform:translateY(0);    opacity:1 }
+  50%    { transform:translateY(10px); opacity:.55 }
+}
+@media (prefers-reduced-motion:reduce){
+  .hero__arrow{ animation:none }
+}
+
+/* ============================================================
+   PAGE FURNITURE
+   ============================================================ */
+
+.page{
+  position:relative;
+  z-index:2;
+}
+
+.pagehead{
+  position:relative;
+  z-index:2;
+  padding:clamp(5rem,10vw,8rem) var(--gutter) clamp(2rem,4vw,3rem);
+  max-width:1400px;
+  margin-inline:auto;
+}
+/* I titoli dei progetti e degli articoli sono lunghi, e a 7.5rem
+   andrebbero su tre righe con lettere enormi. Qui la dimensione
+   scala con la lunghezza del testo: `data-len` va da 1 (corto) a
+   3 (lungo). Serve perché il font display ha advance molto
+   largo: contare i caratteri è un buon proxy delle righe. */
+.pagehead__title{
+  font-family:var(--display);
+  font-size:clamp(2.6rem,9vw,7rem);
+  text-transform:none;
+  line-height:.94;
+  text-wrap:balance;
+}
+/* I valori sono calibrati sull'advance reale del Black (0.451em per
+   carattere, misurato sul campione): una riga da 56 caratteri
+   esce da 877px di colonna a 72px, quindi i titoli lunghi restano
+   su due righe. Se cambi il font, rimisura. */
+.pagehead__title[data-len="2"]{ font-size:clamp(1.8rem,6vw,4.6rem) }
+.pagehead__title[data-len="3"]{ font-size:clamp(1.4rem,4.4vw,3.15rem) }
+.pagehead__lede{
+  margin-top:1.5rem;
+  max-width:60ch;
+  color:var(--muted);
+  font-size:clamp(1.2rem,1.8vw,1.45rem);
+}
+
+.sec{
+  position:relative;
+  z-index:2;
+  padding:clamp(3rem,7vw,6rem) var(--gutter);
+  max-width:1400px;
+  margin-inline:auto;
+}
+.sec--tight{ padding-top:0 }
+
+.sec__head{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:1rem;
+  flex-wrap:wrap;
+  margin-bottom:2.5rem;
+}
+.sec__title{
+  font-family:var(--display);
+  font-size:clamp(1.9rem,4.5vw,3.4rem);
+  text-transform:none;
+}
+.sec__note{ font-family:var(--display); color:var(--muted) }
+
+.lede{ max-width:100%; font-size:clamp(1.4rem,2.6vw,2rem); line-height:1.45 }
+
+/* ============================================================
+   FILTER CHIPS (projects)
+   ============================================================ */
+
+.chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem;
+  margin-bottom:2.5rem;
+}
+.chip{
+  font:inherit;
+  font-size:.9rem;
+  color:var(--ink);
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:99px;
+  padding:.4rem 1rem;
+  cursor:pointer;
+  transition:background .2s ease, color .2s ease, border-color .2s ease;
+}
+.chip:hover{ border-color:var(--ink) }
+.chip[aria-pressed="true"]{ background:var(--blue); border-color:var(--blue); color:#fff }
+
+/* ============================================================
+   PROJECT GRID
+   ============================================================ */
+
+.pgrid{
+  display:grid;
+  gap:clamp(1.25rem,2.5vw,2rem);
+  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+}
+
+/* ============================================================
+   LAVORI SELEZIONATI — striscia a scorrimento continuo
+
+   Come nel riferimento: la fila esce dal contenitore e scorre in
+   orizzontale. Se i progetti sono pochi il set viene ripetuto
+   invece di andare a capo, così non resta mai mezzo vuoto.
+
+   La velocità è costante (il tempo dell'animazione scala con la
+   lunghezza del set) e il moto si ferma al passaggio del cursore
+   o quando il focus entra nella striscia.
+   ============================================================ */
+
+.marquee{
+  /* esce dal padding della sezione e arriva ai bordi della pagina */
+  width:100vw;
+  margin-left:calc(50% - 50vw);
+  overflow:hidden;
+  padding-block:.35rem;
+  /* le estremità sfumano invece di tagliare le card a netto */
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);
+          mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);
+}
+
+.marquee__track{
+  display:flex;
+  width:max-content;
+  animation:marquee-scroll var(--marquee-dur,26s) linear infinite;
+  will-change:transform;
+}
+.marquee__set{
+  display:flex;
+  gap:clamp(1.25rem,2.5vw,2rem);
+  /* il gap finale entra nella misura del set, così lo scatto
+     dell'animazione è esatto e il ciclo non scivola */
+  padding-right:clamp(1.25rem,2.5vw,2rem);
+}
+
+.marquee:hover .marquee__track,
+.marquee:focus-within .marquee__track{ animation-play-state:paused }
+
+/* nella striscia le card non si restringono: larghezza fissa */
+.marquee .pcard{
+  flex:0 0 auto;
+  width:clamp(280px,26vw,400px);
+}
+
+@keyframes marquee-scroll{
+  from{ transform:translateX(0) }
+  to  { transform:translateX(calc(-1 * var(--marquee-step,50%))) }
+}
+
+.pcard{
+  display:flex;
+  flex-direction:column;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:14px;
+  overflow:hidden;
+  transition:transform .35s cubic-bezier(.34,1.56,.64,1), box-shadow .35s ease;
+}
+.pcard:hover{ transform:translateY(-6px); box-shadow:var(--shadow) }
+
+/* Media 4/3. Se il progetto ha un'immagine, va in `cover` e con
+   un leggero zoom allo hover; il gradiente di `art` resta sotto e
+   fa da fallback se il file non c'è. */
+.pcard__media{
+  aspect-ratio:4/3;
+  position:relative;
+  background-size:cover;
+  background-position:center;
+  background-color:var(--line);
+}
+.pcard__media::after{
+  content:attr(data-year);
+  position:absolute;
+  left:1rem; bottom:.85rem;
+  font-family:var(--display);
+  font-size:.95rem;
+  color:#fff;
+  text-shadow:0 2px 8px rgba(0,0,0,.4);
+}
+/* l'anno sull'immagine ha bisogno di una velatura per restare
+   leggibile su qualunque foto */
+.pcard__media::before{
+  content:"";
+  position:absolute;
+  inset:auto 0 0 0;
+  height:45%;
+  background:linear-gradient(transparent,rgba(0,0,0,.35));
+  opacity:0;
+  transition:opacity .35s ease;
+  pointer-events:none;
+}
+.pcard:hover .pcard__media::before{ opacity:1 }
+
+.pcard__body{ padding:1.1rem 1.2rem 1.4rem; display:flex; flex-direction:column; gap:.5rem; flex:1 }
+
+/* Titolo della card: stesso ragionamento della paginahead, ma
+   stretto. Con `data-len` lungo scende di un gradino invece di
+   occupare tre righe e spingere il resto della card in basso. */
+.pcard__title{
+  font-family:var(--display);
+  font-size:1.7rem;
+  line-height:1.05;
+  text-wrap:balance;
+}
+/* la colonna della card è ~310px: a 20px ci stanno ~34 caratteri
+   per riga, quindi i titoli da 52 caratteri restano su due righe */
+.pcard__title[data-len="2"]{ font-size:1.4rem }
+.pcard__title[data-len="3"]{ font-size:1.22rem }
+
+.pcard__excerpt{ color:var(--muted); font-size:1.12rem; flex:1 }
+.pcard__cats{ display:flex; flex-wrap:wrap; gap:.35rem; margin-top:.35rem }
+.tag{
+  font-size:.88rem;
+  letter-spacing:.03em;
+  text-transform:none;
+  border:1px solid var(--line);
+  border-radius:99px;
+  padding:.15rem .55rem;
+  color:var(--muted);
+}
+
+.pcard__cta{
+  align-self:flex-start;
+  margin-top:.75rem;
+  font-family:var(--display);
+  font-size:.9rem;
+  border:1px solid var(--line);
+  border-radius:99px;
+  padding:.35rem .9rem;
+  transition:background .25s ease, color .25s ease, border-color .25s ease;
+}
+.pcard:hover .pcard__cta{ background:var(--blue); border-color:var(--blue); color:#fff }
+
+.pcard.is-hidden{ display:none }
+
+/* ============================================================
+   BROWSER WINDOW CARD (about)
+   ============================================================ */
+
+.window{
+  background:#fff;
+  border-radius:14px;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  max-width:760px;
+  margin-inline:auto;
+  border:1px solid var(--line);
+}
+.window__bar{
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+  padding:.8rem 1rem;
+  border-bottom:1px solid var(--line);
+  background:#fbfbfd;
+}
+.window__dots{ display:flex; gap:.45rem }
+.window__dots i{ width:12px; height:12px; border-radius:50%; display:block }
+.window__dots i:nth-child(1){ background:#ff5f57 }
+.window__dots i:nth-child(2){ background:#febc2e }
+.window__dots i:nth-child(3){ background:#28c840 }
+.window__url{
+  margin-left:auto;
+  font-size:.75rem;
+  color:var(--muted);
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:99px;
+  padding:.15rem .7rem;
+}
+
+.wlist{ display:flex; flex-direction:column }
+.wrow{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:.4rem 1rem;
+  align-items:center;
+  padding:1.35rem 1.4rem;
+  border-top:1px solid var(--line);
+}
+.wrow:first-child{ border-top:0 }
+
+.wrow__avatar{
+  width:44px; height:44px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  font-family:var(--display);
+  font-size:1.1rem;
+  color:#fff;
+  background:var(--blue);
+}
+.wrow__name{ font-size:1.05rem }
+.wrow__role{ font-size:.85rem; color:var(--muted) }
+.wrow__year{ font-family:var(--display); font-size:1rem; color:var(--muted) }
+.wrow__desc{
+  grid-column:2 / -1;
+  color:var(--muted);
+  font-size:.95rem;
+  max-width:62ch;
+}
+
+.wtabs{
+  display:flex;
+  justify-content:center;
+  gap:.25rem;
+  margin-bottom:2.5rem;
+  flex-wrap:wrap;
+}
+.wtab{
+  font:inherit;
+  color:var(--ink);
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:.4rem 1rem;
+  cursor:pointer;
+  transition:background .2s ease, color .2s ease;
+}
+.wtab[aria-selected="true"]{ background:var(--ink); border-color:var(--ink); color:#fff }
+
+/* ============================================================
+   GALLERY (Three.js wall)
+   ============================================================ */
+
+.gallery{ position:relative; z-index:2; padding-bottom:4rem }
+#wall{
+  width:100%;
+  height:min(78svh,760px);
+  display:block;
+  touch-action:pan-y;
+  cursor:grab;
+}
+.gallery__hint{
+  text-align:center;
+  font-family:var(--display);
+  color:var(--muted);
+  font-size:.95rem;
+}
+
+/* caption toast when a polaroid is clicked */
+.toast{
+  position:fixed;
+  left:50%;
+  bottom:2.5rem;
+  translate:-50% 0;
+  z-index:95;
+  background:var(--ink);
+  color:#fff;
+  font-family:var(--display);
+  padding:.6rem 1.2rem;
+  border-radius:99px;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .25s ease, translate .25s ease;
+}
+.toast.is-on{ opacity:1; translate:-50% -6px }
+
+/* ============================================================
+   JOURNAL
+   ============================================================ */
+
+.posts{ display:flex; flex-direction:column }
+
+.post{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 160px;
+  gap:1.5rem;
+  align-items:center;
+  padding:1.75rem 0;
+  border-top:1px solid var(--line);
+  transition:padding-left .3s ease;
+}
+.post:hover{ padding-left:.75rem }
+.post h3{ font-family:var(--display); font-size:clamp(1.6rem,3.1vw,2.35rem); margin:.4rem 0; text-wrap:balance }
+.post h3[data-len="2"]{ font-size:clamp(1.45rem,2.75vw,2rem) }
+.post h3[data-len="3"]{ font-size:clamp(1.32rem,2.4vw,1.7rem) }
+.post time{ font-size:1rem; color:var(--muted); letter-spacing:.04em }
+.post p{ color:var(--muted); max-width:100% }
+.post__thumb{
+  aspect-ratio:4/3;
+  border-radius:10px;
+  border:1px solid var(--line);
+  box-shadow:0 8px 20px -12px rgba(17,18,20,.35);
+}
+
+/* ============================================================
+   ARTICLE (single project / post)
+   ============================================================ */
+
+/* Il testo prende tutta la larghezza della sezione, centrato nel
+   pagina: niente colonna stretta con metà schermo vuoto a destra.
+   Il `max-width` serve solo sui monitor larghissimi, dove senza
+   un tetto la riga diventerebbe illeggibile. */
+.article{ max-width:52rem; margin-inline:auto }
+.article > * + *{ margin-top:1.25rem }
+.article p{ color:#2b2f36 }
+
+/* Sottotitolo dell'articolo: display font, come i titoli di sezione
+   ma più piccolo, con un filetto sopra per staccare il blocco. */
+.article__h{
+  margin-top:2.75rem;
+  padding-top:1.25rem;
+  border-top:1px solid var(--line);
+  font-family:var(--display);
+  font-weight:800;
+  font-size:clamp(1.4rem,2.6vw,1.9rem);
+  line-height:1.25;
+  text-transform:none;
+}
+
+/* Elenchi: il marcatore prende il colore d'accento, il resto
+   resta testo corrente. */
+.article__list{
+  list-style:disc;
+  padding-left:1.35rem;
+  color:#2b2f36;
+}
+.article__list li + li{ margin-top:.6rem }
+.article__list li::marker{ color:var(--blue) }
+ol.article__list{ list-style:decimal }
+
+/* Box a sinistra: le frasi che nel LinkedIn erano in evidenza,
+   qui diventano una citazione con filetto. */
+.article__q{
+  margin-left:0;
+  padding:.15rem 0 .15rem 1.15rem;
+  border-left:3px solid var(--blue);
+  font-family:var(--display);
+  font-size:clamp(1.2rem,1.9vw,1.45rem);
+  line-height:1.4;
+  color:var(--ink);
+}
+
+.article__meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem 1.5rem;
+  font-size:1.05rem;
+  color:var(--muted);
+  margin-top:1.5rem;
+}
+.article__meta b{ color:var(--ink); font-weight:500 }
+
+/* Link all'originale su LinkedIn, in fondo all'articolo. */
+.article__src{ font-size:1.1rem }
+.article__src a{
+  color:var(--blue);
+  border-bottom:1px solid currentColor;
+  padding-bottom:1px;
+  transition:opacity .2s ease;
+}
+.article__src a:hover{ opacity:.7 }
+
+/* Tabella dei dati: più larga della colonna del testo, che a
+   34rem non ci starebbe con quattro colonne. Si allarga
+   simmetricamente attorno al centro, così non resta appiccicata
+   al testo né spacca la sezione. */
+.tablewrap{
+  width:min(46rem,100vw - 2 * var(--pad));
+  margin-inline:auto;
+  overflow-x:auto;
+  margin-block:.5rem;
+  -webkit-overflow-scrolling:touch;
+}
+
+.article__table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:1.08rem;
+  min-width:26rem;
+}
+.article__table th,
+.article__table td{
+  padding:.6rem .8rem;
+  text-align:left;
+  border-bottom:1px solid var(--line);
+}
+.article__table th{
+  font-family:var(--display);
+  font-weight:800;
+  font-size:.9rem;
+  color:var(--ink);
+  border-bottom-width:2px;
+  white-space:nowrap;
+}
+.article__table td{ color:#2b2f36 }
+/* l'ultima colonna è quella da mettere in evidenza */
+.article__table td:last-child{
+  font-family:var(--display);
+  color:var(--blue);
+  white-space:nowrap;
+}
+.article__table tbody tr:last-child td{ border-bottom:0 }
+
+.heroimg{
+  aspect-ratio:16/9;
+  border-radius:16px;
+  margin-bottom:clamp(2rem,4vw,3.5rem);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+  background-size:cover;
+  background-position:center;
+  background-color:var(--line);
+}
+
+.backlink{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  font-family:var(--display);
+  font-size:.95rem;
+  color:var(--muted);
+  margin-bottom:1.5rem;
+}
+.backlink:hover{ color:var(--blue) }
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+
+.contact{
+  position:relative;
+  z-index:2;
+  display:grid;
+  place-items:center;
+  min-height:100svh;
+  padding:6rem var(--pad) 5rem;
+  overflow:hidden;
+}
+.scribble{
+  position:absolute;
+  z-index:3;
+  font-family:var(--display);
+  font-size:clamp(1.15rem,1.9vw,1.6rem);
+  line-height:1.25;
+  max-width:14ch;
+}
+.scribble--l{ left:var(--pad);  top:52%; rotate:-8deg }
+.scribble--r{ right:var(--pad); bottom:22%; rotate:7deg }
+
+/* Niente form: il contatto è la mail. Il bottone riprende
+   l'icona della dock — stesso segnale che si vede già nell'hero —
+   e l'hover usa la stessa fisica del dock: solleva e ingrandisce. */
+.mailcta{
+  position:relative;
+  z-index:3;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+.mailcta__title{
+  font-family:var(--display);
+  font-size:clamp(3rem,12vw,7rem);
+  line-height:.95;
+  text-transform:none;
+  margin-bottom:clamp(1.5rem,4vw,2.5rem);
+}
+
+.mailcta__btn{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:clamp(1rem,2.5vw,1.5rem);
+  transition:transform .35s cubic-bezier(.34,1.56,.64,1);
+}
+.mailcta__btn:hover{ transform:translateY(-10px) }
+
+.mailcta__icon{
+  width:clamp(112px,17vw,168px);
+  height:auto;
+  /* l'icona della dock ha già la sua ombra: qui si aggiunge solo
+     l'alone verde, che è il segnale del colore d'accento */
+  filter:drop-shadow(0 14px 22px rgba(0,0,0,.28));
+  transition:filter .35s ease;
+}
+.mailcta__btn:hover .mailcta__icon{
+  filter:drop-shadow(0 18px 28px rgba(0,0,0,.32)) drop-shadow(0 0 18px rgba(61,202,177,.45));
+}
+.mailcta__btn:active{ transform:translateY(-4px) scale(.97) }
+
+.mailcta__sub{
+  margin-top:clamp(1.5rem,4vw,2.25rem);
+  font-size:1.15rem;
+  color:var(--muted);
+  max-width:44ch;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.foot{
+  position:relative;
+  z-index:2;
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+  flex-wrap:wrap;
+  padding:2rem var(--gutter);
+  border-top:1px solid var(--line);
+  font-size:.9rem;
+  color:var(--muted);
+  background:rgba(255,255,255,.75);
+  backdrop-filter:blur(6px);
+}
+.foot a{ border-bottom:1px solid var(--line) }
+.foot a:hover{ color:var(--ink) }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width:900px){
+  .post{ grid-template-columns:1fr; }
+  .post__thumb{ max-width:220px; }
+}
+
+@media (max-width:760px){
+  :root{ --gutter: clamp(1rem, 4vw, 3rem) }
+
+  .dock{ padding-inline:.5rem }
+  .dock__inner{ gap:4px; padding:6px 7px; border-radius:17px }
+  .dock__icon{ width:42px }
+  .dock__tip{ display:none }
+
+  .drawer__panel{ width:min(320px,88vw) }
+
+  /* sul piccolo schermo, nel riferimento sopravvive solo il
+     fulmine: sette doodle a pioggia su un viewport strettino
+     diventano rumore. */
+  .bg__doodle{ display:none }
+  .bg__doodle[src$="lightning.png"]{ display:block }
+
+  .mosaic{ grid-template-columns:1fr }
+  .scribble{ display:none }
+  .wrow{ grid-template-columns:auto 1fr; }
+  .wrow__year{ display:none }
+  .wrow__desc{ grid-column:1 / -1 }
+}
+
+/* ============================================================
+   HERO SU FINESTRE BASSE
+
+   Titolo, dock e freccia insieme vogliono circa 840px. Su un
+   portatile da 13" (720-800px di altezza) non ci stanno, e il
+   centro dell'hero si stringe con la freccia che tocca la dock.
+   Qui si scala tutto insieme, non si toglie la freccia: è il
+   segnale che sotto la piega c'è il resto.
+   ============================================================ */
+
+@media (max-height:880px){
+  .hero__title{ font-size:clamp(2.8rem,10.5vw,8rem) }
+  .hero__arrow{ width:clamp(54px,5.5vw,72px) }
+  .hero__sub{ font-size:clamp(1.2rem,1.85vw,1.65rem) }
+  .hero{ gap:clamp(1.1rem,3svh,2rem) }
+  /* il blocco centrale si alza: la freccia ha il fondo libero */
+  .hero__inner{ margin-bottom:clamp(2rem,7svh,4.5rem) }
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{ scroll-behavior:auto }
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+  }
+
+  /* niente moto automatico: la striscia si scorre a mano */
+  .marquee{
+    overflow-x:auto;
+    -webkit-mask-image:none;
+            mask-image:none;
+  }
+  .marquee__track{ animation:none }
+}
+/* ============================================================
+   DARK MODE — si attiva con data-theme="dark" su <html>.
+   Lo switch in alto a destra lo cambia e lo salva in
+   localStorage; senza scelta vince prefers-color-scheme.
+   ============================================================ */
+
+[data-theme="dark"]{
+  --paper:#0d0e11;
+  --ink:#f0f1f4;
+  --muted:#9aa1ab;
+  --line:#262a31;
+  --shadow:0 24px 60px -22px rgba(0,0,0,.7);
+}
+
+::selection{ background:rgba(61,202,177,.28); }
+
+/* superfici chiare */
+[data-theme="dark"] .pcard,
+[data-theme="dark"] .group,
+[data-theme="dark"] .tool,
+[data-theme="dark"] .window,
+[data-theme="dark"] .chip,
+[data-theme="dark"] .servlist,
+[data-theme="dark"] .sticky,
+[data-theme="dark"] .servvign,
+[data-theme="dark"] .build,
+[data-theme="dark"] .about__side,
+[data-theme="dark"] .btn-touch{
+  background:#15171c;
+}
+[data-theme="dark"] .window__bar{ background:#101216; }
+[data-theme="dark"] .window__url{ background:#15171c; }
+
+/* testi scritti a mano con colore fisso */
+[data-theme="dark"] .tl__points li,
+[data-theme="dark"] .article p,
+[data-theme="dark"] .article__list,
+[data-theme="dark"] .article__table td,
+[data-theme="dark"] .about__text p{ color:#d5d9df; }
+[data-theme="dark"] .group li,
+[data-theme="dark"] .servvign__items li{
+  background:#171a1f;
+  color:#c9ced6;
+}
+[data-theme="dark"] .servvign__text,
+[data-theme="dark"] .sticky p{ color:#d5d9df; }
+[data-theme="dark"] .tool{ color:var(--ink); }
+
+/* hover chiari */
+[data-theme="dark"] .servrow:hover,
+[data-theme="dark"] .brow:hover{ background:#16181d; }
+
+/* badge e tab: il bordo usa --ink, il testo hover va scurito */
+[data-theme="dark"] .badge{ background:#15171c; }
+[data-theme="dark"] .badge:hover{ color:#0d0e11; }
+[data-theme="dark"] .wtab{ background:#15171c; color:var(--ink); }
+[data-theme="dark"] .wtab[aria-selected="true"]{ color:#0d0e11; }
+
+/* vetri e barre */
+[data-theme="dark"] .dock__inner{ background:rgba(20,22,26,.55); }
+[data-theme="dark"] .dock__sep{ background:rgba(255,255,255,.18); }
+[data-theme="dark"] .dock__tip{ background:rgba(240,241,244,.92); color:#111214; }
+[data-theme="dark"] .dock__tip::after{ border-top-color:rgba(240,241,244,.92); }
+[data-theme="dark"] .drawer__scrim{ background:rgba(8,9,12,.62); }
+[data-theme="dark"] .foot{ background:rgba(13,14,17,.78); }
+[data-theme="dark"] .toast{ background:#1a1d22; border:1px solid var(--line); }
+
+/* dettagli */
+[data-theme="dark"] .tl__dot{ background:#15171c; }
+[data-theme="dark"] .hl::before{ background:rgba(61,202,177,.22); }
+[data-theme="dark"] .portrait{
+  background:linear-gradient(145deg,#0b3b36,#125e55);
+  border-color:var(--line);
+}
+
+/* Sfondo: il riferimento è disegnato in nero su carta bianca, quindi
+   in dark mode i due layer si invertono. Le opacità (.02 / .03)
+   restano quelle del riferimento. */
+[data-theme="dark"] .bg__grid,
+[data-theme="dark"] .bg__doodles{ filter:invert(1) }

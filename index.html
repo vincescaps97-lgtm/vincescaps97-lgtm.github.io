@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vincenzo Capasso — Performance &amp; Marketing automation</title>
+<meta name="description" content="Performance &amp; Marketing automation. Trasformo dati, funnel e automazioni in campagne pubblicitarie performanti e strategie digitali scalabili.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+<script>(function(){try{var t=localStorage.getItem("theme");if(!t){t="dark";}document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme="dark";}})();</script>
+<link rel="stylesheet" href="css/style.css?v=30">
+<link rel="stylesheet" href="css/content.css?v=30">
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero__inner">
+    <h1 class="hero__title"><span class="hl"><span class="hl-text">Vincenzo</span><span class="hl-bar hl-bar--l" aria-hidden="true"></span><span class="hl-bar hl-bar--r" aria-hidden="true"></span></span></h1>
+    <p class="hero__role" id="heroRole"></p>
+    <p class="hero__sub">
+      Trasformo dati, funnel e automazioni in campagne pubblicitarie
+      performanti e strategie digitali scalabili.
+    </p>
+  </div>
+
+  <div id="dock" class="dock"></div>
+
+  <!-- Freccia a mano verso il basso, sotto la dock: è il segnale
+       che sotto la piega c'è il resto del lavoro. Stesso tratto
+       del riferimento, nel colore d'accento del sito. -->
+  <div class="hero__arrow" aria-hidden="true">
+    <svg viewBox="0 0 206 170" class="arrow-curve">
+      <path d="M3.286 3.275C37.489 11.195 67.153 38.575 77.515 49.697C82.189 54.713 93.683 66.354 90.557 74.127C88.559 79.094 84.292 84.717 79.341 86.764C66.939 91.891 56.797 88.636 46.539 81.374C38.291 75.534 40.679 66.956 44.301 58.525C50.808 43.386 63.176 30.823 79.084 26.167C101.102 19.723 125.267 29.751 141.253 45.227C163.172 66.447 173.334 97.104 177.393 126.535" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+    </svg>
+    <svg viewBox="0 0 62 52" class="arrow-head">
+      <path d="M58.525 2.662 36.518 48.504 2.736 3.94" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+    </svg>
+  </div>
+</header>
+
+<main class="page">
+
+  <!-- ---------- lavori selezionati ---------- -->
+  <section class="sec">
+    <div class="sec__head">
+      <h2 class="sec__title">Lavori selezionati</h2>
+      <a class="sec__note backlink" href="projects.html" style="margin:0">Vedi tutto &rarr;</a>
+    </div>
+    <div class="marquee" id="work"></div>
+  </section>
+
+  <!-- ---------- servizi ---------- -->
+  <section class="sec">
+    <h2 class="sec__title">Servizi</h2>
+    <div class="servwrap">
+      <div class="servlist" id="services"></div>
+      <div class="servside">
+        <aside class="sticky reveal" aria-label="Nota">
+          <p>Ogni progetto è diverso, ma l'obiettivo è sempre lo stesso — rendere tutto chiaro, intenzionale e ben fatto.</p>
+        </aside>
+        <div class="servvign" id="servvign" hidden></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- blog ---------- -->
+  <section class="sec">
+    <div class="sec__head">
+      <h2 class="sec__title">Blogs</h2>
+      <a class="sec__note backlink" href="journal.html" style="margin:0">See all</a>
+    </div>
+    <div class="btable" id="posts"></div>
+  </section>
+
+  <!-- ---------- CTA contatti ---------- -->
+  <section class="sec cta-mind">
+    <div class="cta-mind__text">
+      <h2 class="sec__title cta-mind__title">Hai qualcosa<br>in mente?</h2>
+      <a class="btn-touch" href="contact.html">Scrivimi</a>
+    </div>
+    <svg class="cta-mind__arrow" viewBox="0 0 140 170" aria-hidden="true">
+      <path d="M112 8c4 30-2 62-30 92-14 15-34 30-54 38" fill="none" stroke="#3dcab1" stroke-width="5" stroke-linecap="round"/>
+      <path d="M112 8c8 2 14 8 15 18-8-2-14-8-15-18Z" fill="none" stroke="#3dcab1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M28 138L22 118M28 138L48 136" fill="none" stroke="#3dcab1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <p>&copy; <span data-year></span> Vincenzo Capasso. Tutti i diritti riservati.</p>
+  <p id="footlinks"></p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script type="module">
+  import { boot } from "./js/site.js";
+  import { PROFILE, PROJECTS, POSTS, SOCIALS, CATEGORIES, SKILLS } from "./js/data.js";
+  import { projectCard, blogRow, marqueeScroll, socialLinks } from "./js/render.js";
+
+  boot({ page: "home", dock: true });
+
+  document.title = PROFILE.name + " — " + PROFILE.role;
+
+  document.getElementById("heroRole").textContent = PROFILE.role;
+
+  document.getElementById("work").innerHTML = PROJECTS.slice(0, 3).map(projectCard).join("");
+  // la striscia esce dal contenitore e scorre in continuazione:
+  // con tre progetti la fila si ripete invece di andare a capo
+  marqueeScroll(document.querySelector(".marquee"));
+  document.getElementById("posts").innerHTML = POSTS.map(blogRow).join("");
+
+  // Servizi: righe numerate che portano ai progetti filtrati
+  document.getElementById("services").innerHTML = CATEGORIES.map((c, i) => `
+    <a class="servrow reveal" data-i="${i}" href="projects.html?cat=${encodeURIComponent(c)}">
+      <span class="servrow__num">${String(i + 1).padStart(2, "0")}</span>
+      <span class="servrow__name">${c}</span>
+      <span class="servrow__go" aria-hidden="true">&rsaquo;</span>
+    </a>`).join("");
+
+  // Vignetta ancorata a destra della lista: mostra il servizio sotto
+  // il cursore (o con il focus) e nasconde la nota. Il click resta
+  // invariato: apre i progetti filtrati.
+  const servVign = document.getElementById("servvign");
+  const stickyNote = document.querySelector(".servside .sticky");
+  const canHover = matchMedia("(hover: hover)").matches;
+
+  const skillFor = (cat) =>
+    SKILLS.find((s) => s.name === cat) ||
+    (cat === "Web & Design" ? SKILLS.find((s) => s.name === "Web & Development") : null);
+
+  const shade = (hex, amt) => {
+    const n = hex.replace("#", "");
+    const v = (k) => Math.max(0, Math.min(255, parseInt(n.slice(k, k + 2), 16) + amt));
+    return `rgb(${v(0)}, ${v(2)}, ${v(4)})`;
+  };
+
+  function showVign(i) {
+    const skill = skillFor(CATEGORIES[i]);
+    if (!skill || !servVign) return;
+    document.querySelectorAll(".servrow").forEach((r) =>
+      r.classList.toggle("is-active", Number(r.dataset.i) === i)
+    );
+    servVign.innerHTML = `
+      <div class="servvign__thumb" aria-hidden="true"
+           style="background:linear-gradient(135deg, ${skill.color}, ${shade(skill.color, -38)})"></div>
+      <p class="servvign__text">${skill.desc}</p>`;
+    if (stickyNote) stickyNote.style.visibility = "hidden";
+    servVign.hidden = false;
+    requestAnimationFrame(() => servVign.classList.add("is-on"));
+  }
+
+  function hideVign() {
+    document.querySelectorAll(".servrow").forEach((r) => r.classList.remove("is-active"));
+    if (!servVign) return;
+    servVign.classList.remove("is-on");
+    servVign.hidden = true;
+    if (stickyNote) stickyNote.style.visibility = "";
+  }
+
+  if (canHover && servVign) {
+    document.querySelectorAll(".servrow").forEach((row) => {
+      const i = Number(row.dataset.i);
+      row.addEventListener("pointerenter", (e) => {
+        if (e.pointerType === "touch") return;
+        showVign(i);
+      });
+      row.addEventListener("pointerleave", hideVign);
+      row.addEventListener("focus", () => showVign(i));
+      row.addEventListener("blur", hideVign);
+    });
+  }
+
+  document.getElementById("footlinks").innerHTML = socialLinks(SOCIALS);
+</script>
