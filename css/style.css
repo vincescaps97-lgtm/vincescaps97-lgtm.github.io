@@ -854,7 +854,13 @@ body.menu-open{ overflow:hidden }
    pagina: niente colonna stretta con metà schermo vuoto a destra.
    Il `max-width` serve solo sui monitor larghissimi, dove senza
    un tetto la riga diventerebbe illeggibile. */
-.article{ max-width:52rem; margin-inline:auto }
+/* Allineato a sinistra, non centrato. Il titolo sta al bordo del
+   gutter (`.pagehead` ha la stessa padding di `.sec`), quindi con
+   `margin-inline:auto` il corpo finiva 22px più a destra del
+   titolo: due colonne diverse per lo stesso testo. La larghezza
+   massima di 52rem serve solo a tenere la riga sotto le ~84
+   caratteri, non a centrare. */
+.article{ max-width:52rem; margin-inline:0 }
 .article > * + *{ margin-top:1.25rem }
 .article p{ color:#2b2f36 }
 
@@ -918,9 +924,14 @@ ol.article__list{ list-style:decimal }
    34rem non ci starebbe con quattro colonne. Si allarga
    simmetricamente attorno al centro, così non resta appiccicata
    al testo né spacca la sezione. */
+/* Allineato a sinistra e larga quanto il corpo dell'articolo:
+   il `margin-inline:auto` con `46rem` fissi la lasciava 48px più
+   a destra del titolo e del testo intorno. Se la tabella è più
+   larga della colonna, scorre in orizzontale da sola invece di
+   spingere la pagina. */
 .tablewrap{
-  width:min(46rem,100vw - 2 * var(--pad));
-  margin-inline:auto;
+  max-width:52rem;
+  margin-inline:0;
   overflow-x:auto;
   margin-block:.5rem;
   -webkit-overflow-scrolling:touch;

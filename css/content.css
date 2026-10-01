@@ -258,10 +258,17 @@
 }
 .stat__l{ font-size:.85rem; color:var(--muted); margin-top:.3rem }
 
+/* Sotto i 600px la colonna del pallino e quella del testo
+   diventavano una sola: il pallino andava a capo sopra il titolo e
+   la linea verticale, restata nel gutter, passava dentro al testo
+   che partiva a 16px.
+
+   Qui il griglia resta a due colonne, quindi il testo comincia
+   dopo il pallino e la linea resta nel gutter. Basta accorciare
+   il gap verticale, che a una colonna singola serviva solo a
+   staccare il pallino dal titolo. */
 @media (max-width:600px){
-  .tl__item{ grid-template-columns:1fr; gap:.4rem }
-  .tl__item::before{ left:11px }
-  .tl__dot{ margin-bottom:.2rem }
+  .tl__item{ gap:.9rem 1rem }
 }
 /* ---------- CHI SONO: testo + colonna laterale ---------- */
 
