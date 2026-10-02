@@ -11,8 +11,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
 <script>(function(){try{var t=localStorage.getItem("theme");if(!t){t="dark";}document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme="dark";}})();</script>
-<link rel="stylesheet" href="/css/style.css?v=50">
-<link rel="stylesheet" href="/css/content.css?v=50">
+<link rel="stylesheet" href="/css/style.css?v=51">
+<link rel="stylesheet" href="/css/content.css?v=51">
 </head>
 <body>
 
@@ -204,30 +204,24 @@
     const attesaLunga = (s) => (s === nome ? attesaNome : attesaParola);
 
     (async () => {
-      // Il nome è già a schermo, intero. Gli do il tempo di essere
-      // letto, poi lo cancello col cursore e da lì parte il ciclo
-      // sulle parole chiave. Non lo riscrivo: è già scritto.
+      // Il nome è già a schermo, intero: è l'atterraggio. Gli do il
+      // tempo di essere letto, poi lo cancello col cursore e da lì
+      // parte il ciclo, che da questo momento è sempre lo stesso.
       await sleep(attesaLunga(nome));
-
-      titleEl.classList.add("is-erasing");
-      for (let i = nome.length; i > 0; i--) {
-        spanNome.textContent = nome.slice(0, i);
-        await sleep(40);
-      }
-      titleEl.classList.remove("is-erasing");
       spanNome.classList.remove("is-first");
-      spanNome.textContent = "";
 
-      // Da qui in poi il ciclo è solo di parole: il nome è già
-      // stato mostrato all'inizio, non serve ripeterlo subito.
       for (;;) {
-        for (const parola of KEYWORDS) {
-          spanParola.textContent = "";
+        // Il NOME rientra nel ciclo, dopo l'ultima parola: senza,
+        // compariva una volta sola e poi spariva per sempre, e chi
+        // guarda la home non lo rivede più.
+        for (const parola of CICLO) {
+          const target = parola === nome ? spanNome : spanParola;
+          target.textContent = "";
           await sleep(140); // pausa breve prima di iniziare a scrivere
 
           // scrive un carattere alla volta, col cursore
           for (const ch of parola) {
-            spanParola.textContent += ch;
+            target.textContent += ch;
             await sleep(58);
           }
 
@@ -237,16 +231,16 @@
           // cancella, come il tasto Canc
           titleEl.classList.add("is-erasing");
           for (let i = parola.length; i > 0; i--) {
-            spanParola.textContent = parola.slice(0, i);
+            target.textContent = parola.slice(0, i);
             await sleep(40);
           }
           titleEl.classList.remove("is-erasing");
-          spanParola.textContent = "";
+          target.textContent = "";
 
           // Niente pausa qui: il titolo resterebbe vuoto per qualche
           // decimo di secondo a ogni cambio e sembrerebbe un buco.
-          // La pausa di 180ms all'inizio del giro seguente fa lo
-          // stesso effetto senza staccare il testo da zero.
+          // La pausa all'inizio del giro seguente fa lo stesso
+          // effetto senza staccare il testo da zero.
         }
       }
     })();
