@@ -57,7 +57,7 @@ export function projectBg(p) {
 
 export function projectCard(p) {
   return `
-    <a class="pcard reveal" href="project.html?slug=${p.slug}">
+    <a class="pcard reveal" href="/progetti/${p.slug}/">
       <div class="pcard__media" data-year="${esc(p.year)}"
            style="background-image:${projectBg(p)}"></div>
       <div class="pcard__body">
@@ -76,10 +76,10 @@ export function postRow(p) {
     <li class="post reveal">
       <div>
         <time datetime="${p.date}">${readDate(p.date)}</time>
-        <h3 data-len="${titleLen(p.title)}"><a href="post.html?slug=${p.slug}">${esc(p.title)}</a></h3>
+        <h3 data-len="${titleLen(p.title)}"><a href="/blog/${p.slug}/">${esc(p.title)}</a></h3>
         <p>${esc(p.excerpt)}</p>
       </div>
-      <a class="post__thumb" href="post.html?slug=${p.slug}"
+      <a class="post__thumb" href="/blog/${p.slug}/"
          style="background-image:linear-gradient(145deg,${p.art[0]},${p.art[1]})"
          aria-label="${esc(p.title)}"></a>
     </li>`;
@@ -222,7 +222,7 @@ export function marqueeScroll(root) {
 
 export function blogRow(p) {
   return `
-    <a class="brow reveal" href="post.html?slug=${p.slug}">
+    <a class="brow reveal" href="/blog/${p.slug}/">
       <span class="brow__thumb" aria-hidden="true"
             style="background-image:linear-gradient(145deg,${p.art[0]},${p.art[1]})"></span>
       <span class="brow__title" data-len="${titleLen(p.title)}">${esc(p.title)}</span>

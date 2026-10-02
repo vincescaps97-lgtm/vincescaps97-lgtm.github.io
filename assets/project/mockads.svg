@@ -1,90 +1,63 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="MockAds: la stessa creatività mostrata nei formati storia, post e portrait">
+  <!--
+    COPERTINA 3 — MockAds, il tool per fare i mockup
+    L'idea del progetto in un'immagine: una sola creatività che
+    diventa tre formati diversi, con le frecce che collegano.
+    Forme semplici, due colori, niente testo. Palette: verde.
+  -->
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#155e75"/>
-      <stop offset=".55" stop-color="#0e7490"/>
-      <stop offset="1" stop-color="#a5f3fc"/>
+      <stop offset="0" stop-color="#047857"/>
+      <stop offset="1" stop-color="#6ee7b7"/>
     </linearGradient>
-
-    <!-- la creatività, identica nei tre formati -->
-    <linearGradient id="ad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#a5f3fc"/>
-      <stop offset=".55" stop-color="#38bdf8"/>
-      <stop offset="1" stop-color="#0f766e"/>
-    </linearGradient>
-
-    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
-      <stop offset=".45" stop-color="#041f2b" stop-opacity="0"/>
-      <stop offset="1" stop-color="#041f2b" stop-opacity=".62"/>
-    </linearGradient>
-
-    <!-- alone morbido: il raggio è generoso rispetto alla forma
-         che lo genera, altrimenti si vede il bordo dell'ellisse -->
-    <filter id="soft" x="-70%" y="-70%" width="240%" height="240%">
-      <feGaussianBlur stdDeviation="90"/>
-    </filter>
-
-    <clipPath id="c-story"><rect x="170" y="272" width="190" height="338" rx="26"/></clipPath>
-    <clipPath id="c-square"><rect x="424" y="286" width="332" height="332" rx="26"/></clipPath>
-    <clipPath id="c-portrait"><rect x="812" y="300" width="238" height="298" rx="26"/></clipPath>
   </defs>
 
   <rect width="1200" height="900" fill="url(#bg)"/>
 
-  <g filter="url(#soft)" opacity=".45">
-    <ellipse cx="600" cy="470" rx="430" ry="290" fill="#04283a"/>
+  <!-- la creatività, una sola: il quadrato al centro -->
+  <g>
+    <rect x="472" y="300" width="256" height="256" rx="22" fill="#f0fff9" opacity=".96"/>
+    <circle cx="530" cy="360" r="30" fill="#047857" opacity=".2"/>
+    <rect x="574" y="340" width="112" height="14" rx="7" fill="#047857" opacity=".75"/>
+    <rect x="574" y="366" width="78" height="14" rx="7" fill="#047857" opacity=".45"/>
+    <rect x="504" y="444" width="128" height="14" rx="7" fill="#047857" opacity=".55"/>
+    <rect x="504" y="470" width="96" height="14" rx="7" fill="#047857" opacity=".3"/>
+    <rect x="504" y="504" width="104" height="30" rx="15" fill="#047857"/>
   </g>
 
-  <!-- ============================================================
-       FORMATO 1 — STORIA 9:16
-       ============================================================ -->
-  <g clip-path="url(#c-story)">
-    <rect x="170" y="272" width="190" height="338" fill="#0b2430"/>
-    <rect x="170" y="272" width="190" height="338" fill="url(#ad)"/>
-    <circle cx="205" cy="322" r="20" fill="#041f2b" opacity=".5"/>
-    <rect x="196" y="428" width="138" height="15" rx="7.5" fill="#fff" opacity=".95"/>
-    <rect x="196" y="451" width="106" height="15" rx="7.5" fill="#fff" opacity=".7"/>
-    <rect x="196" y="486" width="74" height="26" rx="13" fill="#041f2b"/>
-    <rect x="170" y="272" width="190" height="338" fill="url(#scrim)"/>
+  <!-- formato storia, a sinistra -->
+  <g>
+    <rect x="150" y="252" width="152" height="272" rx="18" fill="#047857" opacity=".55"/>
+    <circle cx="190" cy="302" r="20" fill="#d3f9ec" opacity=".8"/>
+    <rect x="220" y="292" width="60" height="10" rx="5" fill="#d3f9ec" opacity=".8"/>
+    <rect x="220" y="310" width="40" height="10" rx="5" fill="#d3f9ec" opacity=".5"/>
+    <rect x="176" y="428" width="100" height="12" rx="6" fill="#d3f9ec" opacity=".75"/>
+    <rect x="176" y="450" width="72" height="12" rx="6" fill="#d3f9ec" opacity=".45"/>
+    <rect x="176" y="480" width="80" height="24" rx="12" fill="#0b3d2e" opacity=".6"/>
   </g>
-  <rect x="170" y="272" width="190" height="338" rx="26" fill="none" stroke="#ffffff" stroke-opacity=".22" stroke-width="3"/>
 
-  <!-- ============================================================
-       FORMATO 2 — POST 1:1, in primo piano
-       ============================================================ -->
-  <g clip-path="url(#c-square)">
-    <rect x="424" y="286" width="332" height="332" fill="#0b2430"/>
-    <rect x="424" y="286" width="332" height="332" fill="url(#ad)"/>
-    <circle cx="488" cy="360" r="34" fill="#041f2b" opacity=".5"/>
-    <rect x="472" y="470" width="238" height="24" rx="12" fill="#fff" opacity=".95"/>
-    <rect x="472" y="508" width="180" height="24" rx="12" fill="#fff" opacity=".7"/>
-    <rect x="472" y="558" width="126" height="38" rx="19" fill="#041f2b"/>
-    <rect x="424" y="286" width="332" height="332" fill="url(#scrim)"/>
+  <!-- formato portrait, a destra -->
+  <g>
+    <rect x="898" y="286" width="164" height="204" rx="18" fill="#047857" opacity=".55"/>
+    <circle cx="940" cy="332" r="21" fill="#d3f9ec" opacity=".8"/>
+    <rect x="972" y="322" width="66" height="10" rx="5" fill="#d3f9ec" opacity=".8"/>
+    <rect x="972" y="340" width="44" height="10" rx="5" fill="#d3f9ec" opacity=".5"/>
+    <rect x="926" y="424" width="108" height="12" rx="6" fill="#d3f9ec" opacity=".75"/>
+    <rect x="926" y="446" width="76" height="12" rx="6" fill="#d3f9ec" opacity=".45"/>
+    <rect x="926" y="474" width="86" height="24" rx="12" fill="#0b3d2e" opacity=".6"/>
   </g>
-  <rect x="424" y="286" width="332" height="332" rx="26" fill="none" stroke="#ffffff" stroke-opacity=".26" stroke-width="3"/>
 
-  <!-- ============================================================
-       FORMATO 3 — PORTRAIT 4:5
-       ============================================================ -->
-  <g clip-path="url(#c-portrait)">
-    <rect x="812" y="300" width="238" height="298" fill="#0b2430"/>
-    <rect x="812" y="300" width="238" height="298" fill="url(#ad)"/>
-    <circle cx="862" cy="368" r="27" fill="#041f2b" opacity=".5"/>
-    <rect x="842" y="470" width="176" height="20" rx="10" fill="#fff" opacity=".95"/>
-    <rect x="842" y="502" width="132" height="20" rx="10" fill="#fff" opacity=".7"/>
-    <rect x="842" y="544" width="96" height="32" rx="16" fill="#041f2b"/>
-    <rect x="812" y="300" width="238" height="298" fill="url(#scrim)"/>
+  <!-- le frecce: da una creatività ai tre formati -->
+  <g stroke="#eafff5" stroke-width="6" fill="none" stroke-linecap="round" opacity=".8">
+    <path d="M302 400 h150" />
+    <path d="M728 400 h150" />
   </g>
-  <rect x="812" y="300" width="238" height="298" rx="26" fill="none" stroke="#ffffff" stroke-opacity=".22" stroke-width="3"/>
+  <g fill="#eafff5" opacity=".8">
+    <path d="M452 400 l-20 -11 v22 z"/>
+    <path d="M878 400 l-20 -11 v22 z"/>
+  </g>
 
-  <!-- i due device laterali si agganciano a quello centrale:
-       stessa creatività, formati diversi -->
-  <g stroke="#ffffff" stroke-opacity=".38" stroke-width="3" stroke-linecap="round" fill="none">
-    <path d="M368 470h44"/>
-    <path d="M764 470h36"/>
-  </g>
-  <g fill="#ffffff" fill-opacity=".38">
-    <circle cx="416" cy="470" r="5"/>
-    <circle cx="804" cy="470" r="5"/>
-  </g>
+  <!-- il punto di partenza, aperto -->
+  <circle cx="302" cy="400" r="12" fill="#0b3d2e" stroke="#eafff5" stroke-width="6"/>
+  <circle cx="878" cy="400" r="12" fill="#0b3d2e" stroke="#eafff5" stroke-width="6"/>
 </svg>

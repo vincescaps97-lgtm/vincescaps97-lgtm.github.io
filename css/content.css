@@ -349,12 +349,57 @@
 /* Il ruolo sta un gradino sotto il sottotitolo: con i due alla
    stessa altezza non si capiva quale dei due fosse la presentazione
    e quale la promessa. */
+/* Ruolo + tratto a mano sotto.
+
+   Il testo sta in uno span per poterlo centrare indipendentemente
+   dal tratto, che invece è un SVG a tutta larghezza e pende sotto.
+   Il tratto è lo stesso segno della freccia sotto la dock: colore
+   d'accento, spessore 5, estremità tonde.
+
+   `width:fit-content` + `margin-inline:auto` invece di
+   `display:inline-block`: con l'inline-block e un figlio absolute
+   largo, il blocco si dimensionava sul tratto e il testo finiva
+   allineato a sinistra invece che al centro del titolo. */
 .hero__role{
+  position:relative;
+  width:fit-content;
+  max-width:92vw;
+  margin:1.4rem auto 0;
   font-family:var(--ui);
   font-size:clamp(1.1rem,1.7vw,1.45rem);
-  margin-top:1.4rem;
   color:var(--muted);
 }
+.hero__role-text{ position:relative; z-index:1; display:block }
+
+/* `preserveAspectRatio="none"` allarga il tratto su tutta la
+   larghezza del testo senza deformarlo in altezza. */
+.hero__role-underline{
+  position:absolute;
+  left:-2%;
+  right:-2%;
+  bottom:-.55rem;
+  width:104%;
+  height:.85rem;
+  color:var(--blue);
+  overflow:visible;
+  pointer-events:none;
+}
+
+/* Il path parte già disegnato e viene coperto da destra: la
+   lunghezza della tenda deve stare al massimo, altrimenti su
+   schermi larghi la penna finirebbe prima della fine. */
+.hero__role-line{
+  stroke-dasharray:620;
+  stroke-dashoffset:620;
+  animation:sottotrace 1.05s cubic-bezier(.55,.06,.2,1) 1.15s forwards;
+}
+@keyframes sottotrace{
+  to{ stroke-dashoffset:0 }
+}
+
+/* Tema scuro: il blu d'accento va schiarito, come per la freccia,
+   altrimenti sparisce sul fondo. */
+[data-theme="dark"] .hero__role-underline{ color:#5eead4 }
 
 /* ---------- stats: dt/dd nell'ordine giusto ---------- */
 

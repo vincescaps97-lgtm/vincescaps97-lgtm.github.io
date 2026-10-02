@@ -11,7 +11,7 @@
 export const PROFILE = {
   name: "Vincenzo Capasso",
   initials: "VC",
-  photo: "assets/vincenzo.jpg",
+  photo: "/assets/vincenzo.jpg",
   email: "vincenzo.capasso1297@gmail.com",
   role: "Performance & Marketing automation",
   roleLine: "Performance & Marketing automation | Paid Media, Tracking & AI",
@@ -75,7 +75,7 @@ export const PROJECTS = [
     role: "Paid media, framework creativo, lead generation",
     cats: ["Advertising & Paid Media", "Analytics & Tracking"],
     art: ["#0d9488", "#5eead4"],
-    img: "assets/project/centri-estetici.svg",
+    img: "/assets/project/centri-estetici.svg",
     excerpt:
       "Un'azienda beauty che vende un macchinario ai centri estetici ha ridotto il CPL del 57% in meno di 30 giorni su Meta Ads, con un metodo di test modulare.",
     body: [
@@ -115,7 +115,7 @@ export const PROJECTS = [
     role: "Performance branding, analytics, campagne multi-funnel",
     cats: ["Advertising & Paid Media", "Analytics & Tracking"],
     art: ["#0e7490", "#67e8f9"],
-    img: "assets/project/concessionaria.svg",
+    img: "/assets/project/concessionaria.svg",
     excerpt:
       "Le ricerche mensili di brand passano da 700 a 1.600 tra il 2023 e il 2026. A budget invariato, +69% di impression e +145% di click sulle query di brand organiche.",
     body: [
@@ -175,7 +175,7 @@ export const PROJECTS = [
     role: "Prodotto, design, sviluppo",
     cats: ["Web & Design", "Marketing Automation & AI"],
     art: ["#047857", "#6ee7b7"],
-    img: "assets/project/mockads.svg",
+    img: "/assets/project/mockads.svg",
     url: "https://mockads.net",
     excerpt:
       "Come ho ridotto il tempo dei mockup ads nelle proposte ai clienti: perché ho costruito MockAds, dove lo uso e cosa non risolve.",

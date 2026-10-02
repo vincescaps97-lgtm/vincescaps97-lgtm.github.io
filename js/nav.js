@@ -22,20 +22,20 @@ export const NAV = [
   {
     id: "about",
     label: "Chi Sono",
-    href: "about.html",
-    icon: "icons/about.avif",
+    href: "/chi-sono/",
+    icon: "/icons/about.avif",
   },
   {
     id: "projects",
     label: "Projects",
-    href: "projects.html",
-    icon: "icons/projects.avif",
+    href: "/progetti/",
+    icon: "/icons/projects.avif",
   },
   {
     id: "gallery",
     label: "Gallery",
     href: "gallery.html",
-    icon: "icons/gallery.avif",
+    icon: "/icons/gallery.avif",
     // nascosta per ora: togli questo campo per rimetterla nel
     // pannello e nella dock. `gallery.html` resta sul disco.
     hidden: true,
@@ -43,14 +43,14 @@ export const NAV = [
   {
     id: "journal",
     label: "Blog",
-    href: "journal.html",
-    icon: "icons/journal.avif",
+    href: "/blog/",
+    icon: "/icons/journal.avif",
   },
   {
     id: "contact",
     label: "Contatti",
-    href: "contact.html",
-    icon: "icons/contact.avif",
+    href: "/contatti/",
+    icon: "/icons/contact.avif",
     separator: true,
   },
 ];
@@ -59,7 +59,7 @@ import { SOCIALS } from "./data.js";
 export { SOCIALS };
 
 /** Home è solo nel pannello: non ha un'icona nella dock. */
-const HOME_ITEM = { id: "home", label: "Home", href: "index.html" };
+const HOME_ITEM = { id: "home", label: "Home", href: "/" };
 
 /** Le voci visibili: una sezione con `hidden` non finisce né nel
     pannello né nella dock, ma la pagina continua a esistere. */

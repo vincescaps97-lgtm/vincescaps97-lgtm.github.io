@@ -365,53 +365,151 @@ body.menu-open{ overflow:hidden }
   overflow:hidden;
 }
 
-.hero__inner{ position:relative; z-index:2; text-align:center; max-width:min(1100px,92vw) }
+/* Il contenitore dell'hero si allarga alla finestra, NON al suo
+   contenuto. Con `width:96vw` esplicito misura 96% dello schermo e
+   il titolo ha spazio davvero: prima, essendo un blocco che si
+   restringeva attorno all'`inline-block` del titolo, la colonna
+   restava stretta (728px su un 1920) e le parole lunghe andavano
+   a capo nonostante il corpo fosse tarato. */
+.hero__inner{
+  position:relative;
+  z-index:2;
+  text-align:center;
+  width:96vw;
+  max-width:96vw;
+}
 
 /* I titoli sono più grandi di quanto fossero con il Telegraf:
    Darker Grotesque è ~16% più stretto, quindi a parità di
    corpo il titolo occupa meno spazio e sembra più piccolo.
-   Alzare il corpo riporta la presenza visiva a quella di prima. */
+   Alzare il corpo riporta la presenza visiva a quella di prima.
+
+   Il corpo è calcolato sulla parola più lunga del ciclo, misurata
+   sul font reale con il canvas:
+
+     Vincenzo            3,70 corpi
+     Advertising         4,62
+     Digital Strategy    6,37
+     Funnel              2,62
+     Automation & AI     6,66  ← la più larga
+
+   Con 6,66 corpi, il corpo massimo che entra in 96vw con un 4% di
+   margine è 13,8vw. Uso 13,2vw: sta sotto il limite ma non è
+   appiccicato al bordo, così una differenza di rendering fra un
+   monitor e l'altro non fa saltare la riga. Prima usavo 12,8vw
+   sulla base e 9,6vw su finestre basse, e a 768px e 1440px le due
+   parole lunghe andavano a due righe. */
 .hero__title{
   position:relative;
   display:inline-block;
   font-family:var(--display);
-  font-size:clamp(3.2rem,15vw,11.5rem);
+  font-size:clamp(2.6rem,13.2vw,11.5rem);
   letter-spacing:.01em;
   line-height:.95;
   text-transform:none;
   -webkit-text-stroke:0;
 }
 
-/* Evidenziazione "selezione" dietro al nome, come nel riferimento:
-   banda azzurra + due liniette blu ai bordi (sinistra in alto,
-   destra in basso, come i cursori di selezione). La banda si
-   distende da sinistra all'atterraggio, le liniette compaiono dopo. */
-.hl{ position:relative; display:inline-block; white-space:nowrap }
-.hl-text{ position:relative; z-index:1 }
-.hl::before{
-  content:""; position:absolute; inset:0 -16px;
-  background:rgba(61,202,177,.1); z-index:0;
-  transform:scaleX(0); transform-origin:left center;
-  animation:hl-in .9s cubic-bezier(.6,0,.2,1) .55s forwards;
+/* L'evidenziatore a banda dietro al testo (`.hl`, `.hl-bar`) è
+   sparito: al suo posto, sotto il ruolo, c'è ora il tratto a mano
+   in `.hero__role-underline`. Le regole resterebbero come spazzatura
+   e i due trattamenti sullo stesso elemento si rimescolerebbero. */
+
+/* ---------- ROTAZIONE DELLE PAROLE-CHIAVE ----------
+
+   Dopo che il nome è stato letto, viene "cancellato" un
+   carattere alla volta e al suo posto si digitano le parole
+   chiave, una dopo l'altra, a ciclo.
+
+   Il testo reale vive in <span class="hero__words"> e viene
+   letto dagli screen reader: quello che si vede animarsi è
+   solo la copia dentro <span aria-hidden="true">. */
+.hero__title{ /* il titolo ospita anche le parole, stessa riga */
+  min-height:1em;
 }
-.hl-bar{
-  position:absolute; top:-4px; bottom:-4px; width:6px;
-  background:var(--blue); border-radius:97px; z-index:2;
-  opacity:0; animation:hl-bar-in .45s ease forwards;
+.hero__title.is-erasing .caret{ opacity:0 }
+
+/* Il NOME resta nel colore del titolo (bianco), le parole vanno
+   verdi. Stanno in due span separati per poterli colorare
+   diversamente mentre si cancellano e si riscrivono.
+
+   `display:contents` su quello che è vuoto: uno span vuoto con
+   padding occuperebbe spazio e il titolo saltellerebbe a ogni
+   cambio di parola. Così lo span sparisce dal flusso e resta
+   solo il testo. */
+.hero__nome:empty,
+.hero__parola:empty{ display:contents }
+/* Durante la prima pausa il nome è già scritto e deve restare
+   visibile: `is-first` annulla il `display:contents`, altrimenti
+   sparirebbe per un attimo prima che il ciclo lo riscriva. */
+.hero__nome.is-first{ display:inline }
+.hero__title .hero__nome{ color:var(--ink) }
+
+/* Copia per screen reader: fuori dal flusso, quindi invisibile.
+   `.hero__sr` è l'unica cosa che un lettore di schermo sente
+   qui dentro; la parte animata è tutta aria-hidden. */
+.hero__sr{
+  position:absolute;
+  width:1px; height:1px;
+  padding:0; margin:-1px;
+  overflow:hidden;
+  clip:rect(0 0 0 0);
+  white-space:nowrap;
+  border:0;
 }
-.hl-bar::after{
-  content:""; position:absolute; left:3px; right:-9px; height:12px;
-  background:var(--blue); border-radius:50%;
+/* Le parole del ciclo sono in verde acqua, il nome resta bianco:
+   così si distingue a colpo d'occhio che "Vincenzo" è la persona e
+   le altre sono le cose che fa. Il colore è lo stesso della dock
+   e dell'evidenziatore, quindi non è un colore nuovo.
+
+   In tema chiaro il verde acceso sparirebbe su fondo bianco, per
+   questo la variante scura sotto. */
+.hero__words-live{
+  display:inline;
+  /* verde acqua sulle parole del ciclo: distingue "Vincenzo"
+     (il colore del titolo) dalle cose che fa.
+
+     `--hero-word` perché il verde acceso che si vede bene su
+     fondo scuro sparisce su fondo bianco: in tema chiaro la
+     variante è un verde più scuro, la stessa tinta ma leggibile. */
+  color:var(--hero-word, #0f9b86);
+  /* lo spazio per il cursore: senza, il testo saltellerebbe
+     a ogni lettera aggiunta */
+  padding-right:.08em;
+  /* Il titolo non deve MAI andare a capo. Le parole del ciclo
+     sono separate da spazi, quindi il browser le tratterebbe
+     come testo normale e su schermi larghi "Automation & AI"
+     andava su due righe, allungando l'hero a ogni lettera.
+     nowrap lo impedisce a prescindere dai calcoli; i corpi
+     sono già tarati perché il testo entri nella colonna. */
+  white-space:nowrap;
 }
-.hl-bar--l{ left:-16px; animation-delay:1.25s }
-.hl-bar--l::after{ top:0 }
-.hl-bar--r{ right:-16px; animation-delay:1.4s }
-.hl-bar--r::after{ bottom:0 }
-@keyframes hl-in{ to{ transform:scaleX(1); } }
-@keyframes hl-bar-in{
-  from{ opacity:0; transform:translateY(8px); }
-  to{ opacity:1; transform:none; }
+.hero__caret{
+  display:inline-block;
+  width:.075em;
+  height:.72em;
+  margin-left:.02em;
+  vertical-align:-.04em;
+  /* verde come il testo che segue: era blu scuro e si perdeva */
+  background:var(--hero-word, #0f9b86);
+  border-radius:2px;
+  animation:caret 1.05s steps(1,end) infinite;
 }
+@keyframes caret{ 0%,50%{ opacity:1 } 51%,100%{ opacity:0 } }
+
+/* preferenza: niente animazioni, le parole restano tutte visibili
+   in fila e senza cursore */
+@media (prefers-reduced-motion:reduce){
+  .hero__caret{ display:none }
+  /* il tratto sotto il ruolo resta, ma già disegnato: senza
+     animazione deve comunque essere visibile */
+  .hero__role-line{ animation:none; stroke-dashoffset:0 }
+}
+
+/* La regola per schermi stretti sta in fondo al file, dopo quella
+   sull'altezza della finestra: vanno in ordine inverso rispetto
+   alla larghezza, altrimenti su un telefono stretto e basso
+   vince l'altezza e il titolo torna troppo grande. */
 
 .hero__sub{
   margin:1.75rem auto 0;
@@ -1125,12 +1223,31 @@ ol.article__list{ list-style:decimal }
    ============================================================ */
 
 @media (max-height:880px){
-  .hero__title{ font-size:clamp(2.8rem,10.5vw,8rem) }
+  /* Finestre basse: stessa regola, un gradino sotto. La parola più
+     lunga occupa 6,66 corpi, quindi 9,6vw starebbe al limite con
+     3,3 corpi disponibili. */
+  .hero__title{ font-size:clamp(2.4rem,9.6vw,8rem) }
   .hero__arrow{ width:clamp(54px,5.5vw,72px) }
   .hero__sub{ font-size:clamp(1.2rem,1.85vw,1.65rem) }
   .hero{ gap:clamp(1.1rem,3svh,2rem) }
   /* il blocco centrale si alza: la freccia ha il fondo libero */
   .hero__inner{ margin-bottom:clamp(2rem,7svh,4.5rem) }
+}
+
+/* Titolo su schermi stretti.
+
+   Sta QUI e non più in alto, di proposito: la regola
+   `max-height:880px` qui sopra vinceva lei, perché su un telefono
+   stretto la finestra è anche bassa e quindi il titolo tornava
+   grande, e la parola più lunga andava su due righe facendo
+   saltare l'hero a ogni lettera.
+
+   Corpo dalla stessa misura: 6,66 corpi per "Automation & AI".
+   A 360px il limite è 13,8vw, ma il gutter e il cursore mangiano
+   spazio, quindi scendo a 12,2vw con margine. */
+@media (max-width:400px){
+  .hero__title{ font-size:clamp(1.5rem,12.2vw,2.2rem) }
+  .hero__caret{ height:.6em; width:.055em }
 }
 
 @media (prefers-reduced-motion:reduce){
@@ -1161,6 +1278,8 @@ ol.article__list{ list-style:decimal }
   --muted:#9aa1ab;
   --line:#262a31;
   --shadow:0 24px 60px -22px rgba(0,0,0,.7);
+  /* verde acceso per le parole che ruotano nel titolo */
+  --hero-word:#3ccab1;
 }
 
 ::selection{ background:rgba(61,202,177,.28); }

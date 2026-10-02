@@ -1,9 +1,1066 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Vincenzo Capasso">
-  <!-- La mela dentro 24x24 viene spostata di 4px in un riquadro
-       32x32: il glifo ha così ~12% di margine su ogni lato. Senza,
-       a 16px di tab il disegno arriva al bordo e sembra enormous,
-       e le punte della mela si tagliano. -->
-  <g transform="translate(4 4)">
-    <path fill="#000" d="M20.205 11.012c-.017-3.883 3.17-5.748 3.315-5.842-1.79-2.634-4.63-2.99-5.63-3.03-2.396-.24-4.682 1.41-5.897 1.41-1.24 0-3.1-1.39-5.1-1.35-2.62.04-5.05 1.53-6.39 3.86-2.72 4.72-.69 11.68 1.94 15.5 1.29 1.87 2.81 3.96 4.82 3.89 1.93-.08 2.66-1.25 4.99-1.25 2.32 0 3 1.25 5.02 1.21 2.08-.04 3.4-1.9 4.67-3.78 1.47-2.17 2.08-4.27 2.1-4.38-.05-.02-4.03-1.55-4.05-6.15zM16.6 4.66c1.06-1.28 1.77-3.06 1.57-4.83-1.52.06-3.36 1.01-4.44 2.28-.97 1.12-1.83 2.91-1.6 4.63 1.69.13 3.42-.86 4.47-2.08z"/>
-  </g>
-</svg>
+<!DOCTYPE html>
+<html class="client-nojs vector-feature-language-in-header-enabled vector-feature-language-in-main-menu-disabled vector-feature-language-in-main-page-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref--excluded vector-feature-appearance-pinned-clientpref-1 skin-theme-clientpref-day vector-sticky-header-enabled vector-toc-available skin-thumbsize-clientpref-standard" lang="it" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>File:Apple logo black.svg - Wikipedia</title>
+<script>(function(){var className="client-js vector-feature-language-in-header-enabled vector-feature-language-in-main-menu-disabled vector-feature-language-in-main-page-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref--excluded vector-feature-appearance-pinned-clientpref-1 skin-theme-clientpref-day vector-sticky-header-enabled vector-toc-available skin-thumbsize-clientpref-standard";var cookie=document.cookie.match(/(?:^|; )itwikimwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","gennaio","febbraio","marzo","aprile","maggio","giugno","luglio","agosto","settembre","ottobre","novembre","dicembre"],"wgRequestId":"087b520c-4209-4c42-99c5-d7f16fb2db24","wgCanonicalNamespace":"File","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":6,"wgPageName":"File:Apple_logo_black.svg","wgTitle":"Apple logo black.svg","wgCurRevisionId":0,"wgRevisionId":0,"wgArticleId":0,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageViewLanguage":"it","wgPageContentLanguage":"it","wgPageContentModel":"wikitext","wgRelevantPageName":"File:Apple_logo_black.svg","wgRelevantArticleId":0,"wgTempUserName":null,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionCreate":[],"wgNoticeProject":"wikipedia","wgConfirmEditCaptchaNeededForGenericEdit":"hcaptcha","wgConfirmEditForceShowCaptcha":false,"wgConfirmEditHCaptchaSiteKey":"5d0c670e-a5f4-4258-ad16-1f42792c9c62","wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgMediaViewerMobileBeta":false,"wgPopupsFlags":0,"wgVisualEditor":{"pageLanguageCode":"it","pageLanguageDir":"ltr","pageVariantFallbacks":"it"},"wgMFDisplayWikibaseDescriptions":{"search":true,"watchlist":true,"tagline":true,"nearby":true},"wgWMESchemaEditAttemptStepOversample":false,"wgWMEPageLength":0,"wgTestKitchenUserExperiments":{"overrides":[],"enrolled":[],"assigned":[],"subject_ids":[]},"wgEditSubmitButtonLabelPublish":true,"wgVisualEditorPageIsDisambiguation":false,"wgULSPosition":"interlanguage","wgULSisCompactLinksEnabled":false,"wgVector2022LanguageInHeader":true,"wgULSisLanguageSelectorEmpty":true,"wgULSLanguageSelectorV2Enabled":true,"wgCheckUserClientHintsHeadersJsApi":["brands","architecture","bitness","fullVersionList","mobile","model","platform","platformVersion"],"wgCheckUserClientHintsInEditRequest":true};
+RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.wikimediamessages.styles":"ready","mediawiki.interface.helpers.styles":"ready","mediawiki.interface.helpers.linker.styles":"ready","mediawiki.action.view.filepage":"ready","skins.vector.search.codex.styles":"ready","skins.vector.styles":"ready","skins.vector.icons":"ready","filepage":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready"};RLPAGEMODULES=["mediawiki.action.view.metadata","site","mediawiki.page.ready","mediawiki.toc","skins.vector.js","ext.centralNotice.geoIP","ext.centralNotice.startUp","ext.gadget.HiddenCat","ext.gadget.ReferenceTooltips","ext.gadget.TitoloErrato","ext.gadget.stru-commonsupload","ext.gadget.NewSection","ext.gadget.RichiediRevisioneBozza","ext.gadget.codexTabs","ext.urlShortener.toolbar","ext.centralauth.centralautologin","ext.testKitchen","mmv.bootstrap","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.echo.centralauth","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.interface","ext.cx.eventlogging.campaigns","wikibase.databox.fromWikidata","ext.checkUser.clientHints"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=it&amp;modules=ext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediamessages.styles%7Cfilepage%7Cmediawiki.action.view.filepage%7Cmediawiki.interface.helpers.linker.styles%7Cmediawiki.interface.helpers.styles%7Cskins.vector.icons%2Cstyles%7Cskins.vector.search.codex.styles&amp;only=styles&amp;skin=vector-2022">
+<script async="" src="/w/load.php?lang=it&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector-2022"></script>
+<link rel="stylesheet" href="https://commons.wikimedia.org/w/index.php?title=MediaWiki:Filepage.css&amp;action=raw&amp;ctype=text/css">
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="/w/load.php?lang=it&amp;modules=site.styles&amp;only=styles&amp;skin=vector-2022">
+<meta name="generator" content="MediaWiki 1.47.0-wmf.22">
+<meta name="referrer" content="origin">
+<meta name="referrer" content="origin-when-cross-origin">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:image" content="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1280px-Apple_logo_black.svg.png?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail">
+<meta property="og:image:width" content="977">
+<meta property="og:image:height" content="1200">
+<meta name="viewport" content="width=1120">
+<meta property="og:title" content="File:Apple logo black.svg - Wikipedia">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="//thumb.wikimedia.org">
+<link rel="alternate" type="application/x-wiki" title="Modifica" href="/w/index.php?title=File:Apple_logo_black.svg&amp;action=edit">
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png">
+<link rel="icon" href="/static/favicon/wikipedia.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="/w/rest.php/v1/search" title="Wikipedia (it)">
+<link rel="EditURI" type="application/rsd+xml" href="//it.wikipedia.org/w/api.php?action=rsd">
+<link rel="canonical" href="https://commons.wikimedia.org/wiki/File:Apple_logo_black.svg">
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.it">
+<link rel="alternate" type="application/atom+xml" title="Feed Atom di Wikipedia" href="/w/index.php?title=Speciale:UltimeModifiche&amp;feed=atom">
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<link rel="dns-prefetch" href="auth.wikimedia.org">
+</head>
+<body class="skin--responsive skin-vector skin-vector-search-vue mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-6 ns-subject mw-editable page-File_Apple_logo_black_svg rootpage-File_Apple_logo_black_svg skin-vector-2022 action-view">
+<div id="mw-aria-live-region" class="mw-aria-live-region" aria-live="polite"></div><a class="mw-jump-link" href="#bodyContent">Vai al contenuto</a>
+<div class="vector-header-container">
+	<header class="vector-header mw-header no-font-mode-scale">
+		<div class="vector-header-start">
+			<nav class="vector-main-menu-landmark" aria-label="Sito">
+				
+<div id="vector-main-menu-dropdown" class="vector-dropdown vector-main-menu-dropdown vector-button-flush-left vector-button-flush-right"  title="Menu principale" >
+	<input type="checkbox" id="vector-main-menu-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-main-menu-dropdown" class="vector-dropdown-checkbox "  aria-label="Menu principale"   >
+	<label id="vector-main-menu-dropdown-label" for="vector-main-menu-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-menu mw-ui-icon-wikimedia-menu cdx-button__icon"></span>
+
+<span class="vector-dropdown-label-text">Menu principale</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+				<div id="vector-main-menu-unpinned-container" class="vector-unpinned-container">
+		
+<div id="vector-main-menu" class="vector-main-menu vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-main-menu-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="main-menu-pinned"
+	data-pinnable-element-id="vector-main-menu"
+	data-pinned-container-id="vector-main-menu-pinned-container"
+	data-unpinned-container-id="vector-main-menu-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Menu principale</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-main-menu.pin" aria-label="Move Menu principale to sidebar">sposta nella barra laterale</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-main-menu.unpin" aria-label="Hide Menu principale">nascondi</button>
+</div>
+
+	
+<div id="p-navigation" class="vector-menu mw-portlet mw-portlet-navigation"  >
+	<div class="vector-menu-heading">
+		Navigazione
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage-description" class="mw-list-item"><a href="/wiki/Pagina_principale" title="Visita la pagina principale [z]" accesskey="z"><span>Pagina principale</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="/wiki/Speciale:UltimeModifiche" title="Elenco delle ultime modifiche del sito [r]" accesskey="r"><span>Ultime modifiche</span></a></li><li id="n-randompage" class="mw-list-item"><a href="/wiki/Speciale:PaginaCasuale" title="Mostra una pagina a caso [x]" accesskey="x"><span>Una voce a caso</span></a></li><li id="n-nearby-pages-title" class="mw-list-item"><a href="/wiki/Speciale:NelleVicinanze"><span>Nelle vicinanze</span></a></li><li id="n-vetrina" class="mw-list-item"><a href="/wiki/Wikipedia:Vetrina"><span>Vetrina</span></a></li><li id="n-help" class="mw-list-item"><a href="/wiki/Aiuto:Aiuto" title="Pagine di aiuto"><span>Aiuto</span></a></li><li id="n-Sportello-informazioni" class="mw-list-item"><a href="/wiki/Aiuto:Sportello_informazioni"><span>Sportello informazioni</span></a></li><li id="n-specialpages" class="mw-list-item"><a href="/wiki/Speciale:PagineSpeciali" title="Elenco di tutte le pagine speciali [q]" accesskey="q"><span>Pagine speciali</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-Comunità" class="vector-menu mw-portlet mw-portlet-Comunità"  >
+	<div class="vector-menu-heading">
+		Comunità
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-portal" class="mw-list-item"><a href="/wiki/Portale:Comunit%C3%A0" title="Descrizione del progetto, cosa puoi fare, dove trovare le cose"><span>Portale Comunità</span></a></li><li id="n-villagepump" class="mw-list-item"><a href="/wiki/Wikipedia:Bar"><span>Bar</span></a></li><li id="n-wikipediano" class="mw-list-item"><a href="/wiki/Wikipedia:Wikipediano"><span>Il Wikipediano</span></a></li><li id="n-contactpage" class="mw-list-item"><a href="/wiki/Wikipedia:Contatti"><span>Contatti</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+</div>
+
+				</div>
+
+	</div>
+</div>
+
+		</nav>
+			
+<a href="/wiki/Pagina_principale" class="mw-logo">
+	<img class="mw-logo-icon" src="/static/images/icons/wikipedia.png" alt="" aria-hidden="true" height="50" width="50">
+	<span class="mw-logo-container skin-invert">
+		<img class="mw-logo-wordmark" alt="Wikipedia" src="/static/images/mobile/copyright/wikipedia-wordmark-en.svg" style="width: 7.5em; height: 1.125em;">
+		<img class="mw-logo-tagline" alt="L&#039;enciclopedia libera" src="/static/images/mobile/copyright/wikipedia-tagline-it.svg" width="117" height="13" style="width: 7.3125em; height: 0.8125em;">
+	</span>
+</a>
+
+		</div>
+		<div class="vector-header-end">
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-collapses vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<a href="/wiki/Speciale:Ricerca" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only search-toggle" title="Cerca in Wikipedia [f]" accesskey="f"><span class="vector-icon mw-ui-icon-search mw-ui-icon-wikimedia-search cdx-button__icon"></span>
+
+<span>Ricerca</span>
+	</a>
+	<div class="vector-typeahead-search-container">
+		<div class="cdx-typeahead-search cdx-typeahead-search--show-thumbnail cdx-typeahead-search--auto-expand-width">
+			<form action="/w/index.php" id="searchform" class="cdx-search-input cdx-search-input--has-end-button">
+				<div id="simpleSearch" class="cdx-search-input__input-wrapper"  data-search-loc="header-moved">
+					<div class="cdx-text-input cdx-text-input--has-start-icon">
+						<input
+							class="cdx-text-input__input mw-searchInput" autocomplete="off"
+							 type="search" name="search" placeholder="Cerca in Wikipedia" aria-label="Cerca in Wikipedia" autocapitalize="none" spellcheck="false" title="Cerca in Wikipedia [f]" accesskey="f" id="searchInput"
+							>
+						<span class="cdx-text-input__icon cdx-text-input__start-icon"></span>
+					</div>
+					<input type="hidden" name="title" value="Speciale:Ricerca">
+				</div>
+				<button class="cdx-button cdx-search-input__end-button">Ricerca</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+			<nav class="vector-user-links vector-user-links-wide" aria-label="Strumenti personali">
+	<div class="vector-user-links-main">
+	
+<div id="p-vector-user-menu-preferences" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-userpage" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	<nav class="vector-appearance-landmark" aria-label="Aspetto">
+		
+<div id="vector-appearance-dropdown" class="vector-dropdown "  title="Modifica la dimensione, la larghezza e il colore del testo" >
+	<input type="checkbox" id="vector-appearance-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-appearance-dropdown" class="vector-dropdown-checkbox "  aria-label="Aspetto"   >
+	<label id="vector-appearance-dropdown-label" for="vector-appearance-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-appearance mw-ui-icon-wikimedia-appearance cdx-button__icon"></span>
+
+<span class="vector-dropdown-label-text">Aspetto</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+			<div id="vector-appearance-unpinned-container" class="vector-unpinned-container">
+				
+			</div>
+		
+	</div>
+</div>
+
+	</nav>
+	
+<div id="p-vector-user-menu-notifications" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-overflow" class="vector-menu mw-portlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="pt-sitesupport-2" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="https://donate.wikimedia.org/?wmf_source=donate&amp;wmf_medium=sidebar&amp;wmf_campaign=it.wikipedia.org&amp;uselang=it" data-mw-donate-attempt="top_link" class=""><span>Fai una donazione</span></a>
+</li>
+<li id="pt-createaccount-2" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="/w/index.php?title=Speciale:CreaUtenza&amp;returnto=File%3AApple+logo+black.svg" title="Si consiglia di registrarsi e di effettuare l&#039;accesso, anche se non è obbligatorio" class=""><span>registrati</span></a>
+</li>
+<li id="pt-login-2" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="/w/index.php?title=Speciale:Entra&amp;returnto=File%3AApple+logo+black.svg" title="Si consiglia di effettuare l&#039;accesso, anche se non è obbligatorio [o]" accesskey="o" class=""><span>entra</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+	</div>
+	
+<div id="vector-user-links-dropdown" class="vector-dropdown vector-user-menu vector-button-flush-right vector-user-menu-logged-out vector-user-links-dropdown--collapsible"  title="Altre opzioni" >
+	<input type="checkbox" id="vector-user-links-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-user-links-dropdown" class="vector-dropdown-checkbox "  aria-label="Strumenti personali"   >
+	<label id="vector-user-links-dropdown-label" for="vector-user-links-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-userAvatar mw-ui-icon-wikimedia-userAvatar cdx-button__icon"></span>
+
+<span class="vector-dropdown-label-text">Strumenti personali</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+		
+<div id="p-personal" class="vector-menu mw-portlet mw-portlet-personal"  title="Menu utente" >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="pt-sitesupport" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="https://donate.wikimedia.org/?wmf_source=donate&amp;wmf_medium=sidebar&amp;wmf_campaign=it.wikipedia.org&amp;uselang=it" data-mw-donate-attempt="top_link" class=""><span class="vector-icon mw-ui-icon-heart mw-ui-icon-wikimedia-heart cdx-button__icon"></span>
+
+<span>Fai una donazione</span></a>
+</li>
+<li id="pt-createaccount" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="/w/index.php?title=Speciale:CreaUtenza&amp;returnto=File%3AApple+logo+black.svg" title="Si consiglia di registrarsi e di effettuare l&#039;accesso, anche se non è obbligatorio" class=""><span class="vector-icon mw-ui-icon-userAvatar mw-ui-icon-wikimedia-userAvatar cdx-button__icon"></span>
+
+<span>registrati</span></a>
+</li>
+<li id="pt-login" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="/w/index.php?title=Speciale:Entra&amp;returnto=File%3AApple+logo+black.svg" title="Si consiglia di effettuare l&#039;accesso, anche se non è obbligatorio [o]" accesskey="o" class=""><span class="vector-icon mw-ui-icon-logIn mw-ui-icon-wikimedia-logIn cdx-button__icon"></span>
+
+<span>entra</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+	</div>
+</div>
+
+</nav>
+
+		</div>
+	</header>
+</div>
+<div class="mw-page-container">
+	<div class="mw-page-container-inner">
+		<div class="vector-sitenotice-container">
+			<div id="siteNotice"><!-- CentralNotice --></div>
+		</div>
+		<div class="vector-column-start">
+			<div class="vector-main-menu-container">
+		<div id="mw-navigation">
+			<nav id="mw-panel" class="vector-main-menu-landmark" aria-label="Sito">
+				<div id="vector-main-menu-pinned-container" class="vector-pinned-container">
+				
+				</div>
+		</nav>
+		</div>
+	</div>
+	<div class="vector-sticky-pinned-container">
+				<nav id="mw-panel-toc" aria-label="Indice" data-event-name="ui.sidebar-toc" class="mw-table-of-contents-container vector-toc-landmark">
+					<div id="vector-toc-pinned-container" class="vector-pinned-container">
+					<div id="vector-toc" class="vector-toc vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-toc-pinnable-header vector-pinnable-header-pinned"
+	data-feature-name="toc-pinned"
+	data-pinnable-element-id="vector-toc"
+	data-pinned-container-id="vector-toc-pinned-container"
+	data-unpinned-container-id="vector-toc-unpinned-container"
+>
+	<h2 class="vector-pinnable-header-label">Indice</h2>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-toc.pin" aria-label="Move Indice to sidebar">sposta nella barra laterale</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-toc.unpin" aria-label="Hide Indice">nascondi</button>
+</div>
+
+
+	<ul class="vector-toc-contents" id="mw-panel-toc-list">
+		<li id="toc-mw-content-text"
+			class="vector-toc-list-item vector-toc-level-1">
+			<a href="#" class="vector-toc-link">
+				<div class="vector-toc-text">Inizio</div>
+			</a>
+		</li>
+		<li id="toc-file"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#file">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">1</span>
+				<span>File</span>
+			</div>
+		</a>
+		
+		<ul id="toc-file-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-filehistory"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#filehistory">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">2</span>
+				<span>Cronologia del file</span>
+			</div>
+		</a>
+		
+		<ul id="toc-filehistory-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-filelinks"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#filelinks">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">3</span>
+				<span>Pagine che usano questo file</span>
+			</div>
+		</a>
+		
+		<ul id="toc-filelinks-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-globalusage"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#globalusage">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">4</span>
+				<span>Utilizzo globale del file</span>
+			</div>
+		</a>
+		
+		<ul id="toc-globalusage-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-metadata"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#metadata">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">5</span>
+				<span>Metadati</span>
+			</div>
+		</a>
+		
+		<ul id="toc-metadata-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+</ul>
+</div>
+
+					</div>
+		</nav>
+			</div>
+		</div>
+		<div class="mw-content-container">
+			<main id="content" class="mw-body">
+				<header class="mw-body-header vector-page-titlebar no-font-mode-scale">
+					<nav aria-label="Indice" class="vector-toc-landmark">
+						
+<div id="vector-page-titlebar-toc" class="vector-dropdown vector-page-titlebar-toc vector-button-flush-left"  title="Indice" >
+	<input type="checkbox" id="vector-page-titlebar-toc-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-page-titlebar-toc" class="vector-dropdown-checkbox "  aria-label="Mostra/Nascondi l&#039;indice"   >
+	<label id="vector-page-titlebar-toc-label" for="vector-page-titlebar-toc-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-listBullet mw-ui-icon-wikimedia-listBullet cdx-button__icon"></span>
+
+<span class="vector-dropdown-label-text">Mostra/Nascondi l&#039;indice</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+							<div id="vector-page-titlebar-toc-unpinned-container" class="vector-unpinned-container">
+			</div>
+		
+	</div>
+</div>
+
+					</nav>
+					<h1 id="firstHeading" class="firstHeading mw-first-heading">File:Apple logo black.svg</h1>
+			
+<div id="p-lang-btn" class="vector-dropdown mw-portlet mw-portlet-lang mw-portlet-lang-icon-only"  >
+	<input type="checkbox" id="p-lang-btn-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-p-lang-btn" class="vector-dropdown-checkbox mw-interlanguage-selector-empty"  aria-label="Aggiungi lingue" aria-description="Questa voce è disponibile solo in questa lingua. Aggiungi la voce per altre lingue"  >
+	<label id="p-lang-btn-label" for="p-lang-btn-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only mw-portlet-lang-heading-empty" aria-hidden="true"  ><span class="vector-icon mw-ui-icon-language mw-ui-icon-wikimedia-language cdx-button__icon"></span>
+
+<span class="vector-dropdown-label-text">Aggiungi lingue</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+		<div class="mw-portlet-empty-language-selector-body">
+					Contenuti della pagina non supportati in altre lingue.
+				</div>
+		
+	</div>
+</div>
+</header>
+				<div class="vector-page-toolbar">
+					<div class="vector-page-toolbar-container">
+						<div id="left-navigation">
+							<nav aria-label="Namespace">
+								
+<div id="p-associated-pages" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-associated-pages"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="ca-nstab-image" class="selected mw-list-item vector-tab-noicon"><a data-mw-interface  href="/wiki/File:Apple_logo_black.svg" title="Vedi la pagina del file [c]" accesskey="c" class=""><span>File</span></a>
+</li>
+<li id="ca-talk" class="new mw-list-item vector-tab-noicon"><a data-mw-interface  href="/w/index.php?title=Discussioni_file:Apple_logo_black.svg&amp;action=edit&amp;redlink=1" rel="discussion" class="new" title="Vedi le discussioni relative a questa pagina (la pagina non esiste) [t]" accesskey="t"><span>Discussione</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+								
+<div id="vector-variants-dropdown" class="vector-dropdown emptyPortlet"  >
+	<input type="checkbox" id="vector-variants-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-variants-dropdown" class="vector-dropdown-checkbox " aria-label="Cambia versione linguistica"    >
+	<label id="vector-variants-dropdown-label" for="vector-variants-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet" aria-hidden="true"  ><span class="vector-dropdown-label-text">italiano</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+					
+<div id="p-variants" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+						<div id="right-navigation" class="vector-collapsible">
+							<nav aria-label="Visite">
+			    
+<div id="p-views" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-views"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="ca-view" class="selected mw-list-item vector-menu-item--collapsible vector-tab-noicon"><a data-mw-interface  href="/wiki/File:Apple_logo_black.svg" class=""><span>Leggi</span></a>
+</li>
+<li id="ca-view-foreign" class="mw-list-item vector-menu-item--collapsible vector-tab-noicon"><a data-mw-interface  href="https://commons.wikimedia.org/wiki/File:Apple_logo_black.svg" class=""><span>Vedi su Wikimedia Commons</span></a>
+</li>
+<li id="ca-ve-edit" class="mw-list-item vector-menu-item--collapsible vector-tab-noicon"><a data-mw-interface  href="/w/index.php?title=File:Apple_logo_black.svg&amp;veaction=edit" title="Create the local description page [v]" accesskey="v" class=""><span>Aggiungi descrizione locale</span></a>
+</li>
+<li id="ca-edit" class="collapsible mw-list-item vector-menu-item--collapsible vector-tab-noicon"><a data-mw-interface  href="/w/index.php?title=File:Apple_logo_black.svg&amp;action=edit" title="Create the source code of the local description page [e]" accesskey="e" class=""><span>Aggiungi descrizione locale con wikitesto</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+			</nav>
+
+							<nav class="vector-page-tools-landmark" aria-label="Strumenti pagine">
+								
+<div id="vector-page-tools-dropdown" class="vector-dropdown vector-page-tools-dropdown"  >
+	<input type="checkbox" id="vector-page-tools-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-page-tools-dropdown" class="vector-dropdown-checkbox "  aria-label="Strumenti"   >
+	<label id="vector-page-tools-dropdown-label" for="vector-page-tools-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-verticalEllipsis mw-ui-icon-wikimedia-verticalEllipsis cdx-button__icon"></span>
+
+<span class="vector-dropdown-label-text">Strumenti</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+									<div id="vector-page-tools-unpinned-container" class="vector-unpinned-container">
+						
+<div id="vector-page-tools" class="vector-page-tools vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-page-tools-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="page-tools-pinned"
+	data-pinnable-element-id="vector-page-tools"
+	data-pinned-container-id="vector-page-tools-pinned-container"
+	data-unpinned-container-id="vector-page-tools-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Strumenti</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-page-tools.pin" aria-label="Move Strumenti to sidebar">sposta nella barra laterale</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-page-tools.unpin" aria-label="Hide Strumenti">nascondi</button>
+</div>
+
+	
+<div id="p-cactions" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-has-collapsible-items"  >
+	<div class="vector-menu-heading">
+		Azioni
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="ca-view-more" class="selected mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="/wiki/File:Apple_logo_black.svg" class=""><span class="vector-icon mw-ui-icon-eye mw-ui-icon-wikimedia-eye cdx-button__icon"></span>
+
+<span>Leggi</span></a>
+</li>
+<li id="ca-view-foreign-more" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="https://commons.wikimedia.org/wiki/File:Apple_logo_black.svg" class=""><span class="vector-icon mw-ui-icon-eye mw-ui-icon-wikimedia-eye cdx-button__icon"></span>
+
+<span>Vedi su Wikimedia Commons</span></a>
+</li>
+<li id="ca-ve-edit-more" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="/w/index.php?title=File:Apple_logo_black.svg&amp;veaction=edit" title="Create the local description page [v]" accesskey="v" class=""><span class="vector-icon mw-ui-icon-edit mw-ui-icon-wikimedia-edit cdx-button__icon"></span>
+
+<span>Aggiungi descrizione locale</span></a>
+</li>
+<li id="ca-edit-more" class="collapsible mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="/w/index.php?title=File:Apple_logo_black.svg&amp;action=edit" title="Create the source code of the local description page [e]" accesskey="e" class=""><span class="vector-icon mw-ui-icon-wikiText mw-ui-icon-wikimedia-wikiText cdx-button__icon"></span>
+
+<span>Aggiungi descrizione locale con wikitesto</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-tb" class="vector-menu mw-portlet mw-portlet-tb"  >
+	<div class="vector-menu-heading">
+		Generale
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="/wiki/Speciale:PuntanoQui/File:Apple_logo_black.svg" title="Elenco di tutte le pagine che sono collegate a questa [j]" accesskey="j"><span>Puntano qui</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Versione stampabile di questa pagina [p]" accesskey="p"><span>Versione stampabile</span></a></li><li id="t-info" class="mw-list-item"><a href="/w/index.php?title=File:Apple_logo_black.svg&amp;action=info" title="Ulteriori informazioni su questa pagina"><span>Informazioni pagina</span></a></li><li id="t-urlshortener" class="mw-list-item"><a href="/w/index.php?title=Speciale:UrlShortener&amp;url=https%3A%2F%2Fit.wikipedia.org%2Fwiki%2FFile%3AApple_logo_black.svg"><span>Ottieni URL breve</span></a></li><li id="parsermigration-switch-to-legacy" class="mw-list-item"><a href="/w/index.php?title=File:Apple_logo_black.svg&amp;useparsoid=0"><span>Passa al parser legacy</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-wikibase-otherprojects" class="vector-menu mw-portlet mw-portlet-wikibase-otherprojects emptyPortlet"  >
+	<div class="vector-menu-heading">
+		In altri progetti
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+</div>
+
+									</div>
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+					</div>
+				</div>
+				<div class="vector-column-end no-font-mode-scale">
+					<div class="vector-sticky-pinned-container">
+						<nav class="vector-page-tools-landmark" aria-label="Strumenti pagine">
+							<div id="vector-page-tools-pinned-container" class="vector-pinned-container">
+				
+							</div>
+		</nav>
+						<nav class="vector-appearance-landmark" aria-label="Aspetto">
+							<div id="vector-appearance-pinned-container" class="vector-pinned-container">
+				<div id="vector-appearance" class="vector-appearance vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-appearance-pinnable-header vector-pinnable-header-pinned"
+	data-feature-name="appearance-pinned"
+	data-pinnable-element-id="vector-appearance"
+	data-pinned-container-id="vector-appearance-pinned-container"
+	data-unpinned-container-id="vector-appearance-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Aspetto</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-appearance.pin" aria-label="Move Aspetto to sidebar">sposta nella barra laterale</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-appearance.unpin" aria-label="Hide Aspetto">nascondi</button>
+</div>
+
+
+</div>
+
+							</div>
+		</nav>
+					</div>
+				</div>
+				<div id="bodyContent" class="vector-body" aria-labelledby="firstHeading" data-mw-ve-target-container>
+					<div class="vector-body-before-content">
+							<div class="mw-indicators">
+		<div id="mw-indicator-commons" class="mw-indicator"><span typeof="mw:File"><a href="https://commons.wikimedia.org/wiki/File:Apple_logo_black.svg" title="File proveniente da Wikimedia Commons. Clicca per visitare la pagina originale"><img alt="File proveniente da Wikimedia Commons. Clicca per visitare la pagina originale" src="//thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png?utm_source=it.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="30" height="40" class="mw-file-element" srcset="//thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/60px-Commons-logo.svg.png?utm_source=it.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x" data-file-width="1024" data-file-height="1376" /></a></span></div>
+		</div>
+
+						<div id="siteSub" class="noprint">Da Wikipedia, l&#039;enciclopedia libera.</div>
+						<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+						
+					</div>
+					
+					<div id="mw-content-text" class="mw-body-content"><ul id="filetoc"></ul>
+<div class="fullImageLink" id="file"><a href="//upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=original"><img alt="File:Apple logo black.svg" src="//thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/500px-Apple_logo_black.svg.png?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="488" height="600" srcset="//thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1280px-Apple_logo_black.svg.png?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail 2x" data-file-width="814" data-file-height="1000"></a><div class="mw-filepage-resolutioninfo">Size of the above preview of this SVG file: <a href="//thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/500px-Apple_logo_black.svg.png?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail" class="mw-thumbnail-link">500 × 614 pixel</a>. <span class="mw-filepage-other-resolutions">Altre risoluzioni: <a href="//thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/250px-Apple_logo_black.svg.png?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail" class="mw-thumbnail-link">250 × 307 pixel</a> | <a href="//thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/960px-Apple_logo_black.svg.png?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail" class="mw-thumbnail-link">960 × 1&#160;179 pixel</a> | <a href="//thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1920px-Apple_logo_black.svg.png?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail" class="mw-thumbnail-link">1&#160;920 × 2&#160;359 pixel</a>.</span></div></div>
+<div class="fullMedia"><bdi dir="ltr"><a href="//upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=original" class="internal" title="Apple logo black.svg">File originale</a></bdi> <span class="fileInfo">(file in formato SVG, dimensioni nominali 814 × 1&#160;000 pixel, dimensione del file: 660 byte)</span></div><meta property="mw:PageProp/toc" />
+<div class="sharedUploadNotice">
+<div style="clear:both;"></div>
+<table border="0" cellspacing="2" style="border:3px solid #307090; background: var(--background-color-neutral-subtle,#f8f9fa); color: inherit; margin:.2em auto .2em auto;">
+<tbody><tr>
+<td style="padding:0 5px;"><figure class="mw-halign-left" typeof="mw:File"><a href="/wiki/File:Commons-logo.svg" class="mw-file-description" title="Logo di Commons"><img alt="Logo di Commons" src="//thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png?utm_source=it.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="30" height="40" class="mw-file-element" srcset="//thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/60px-Commons-logo.svg.png?utm_source=it.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x" data-file-width="1024" data-file-height="1376" /></a><figcaption>Logo di Commons</figcaption></figure>
+</td>
+<td style="padding:0 5px;">Questo file e la <span class="plainlinks"><b><a class="external text" href="https://commons.wikimedia.org/wiki/Image:Apple_logo_black.svg?uselang=it">sua pagina di descrizione</a></b></span> (<a href="https://commons.wikimedia.org/wiki/Image_talk:Apple_logo_black.svg" class="extiw" title="commons:Image talk:Apple logo black.svg">discussione</a> · <a class="external text" data-mw-original-href="//commons.wikimedia.org/w/index.php?title=Image:Apple_logo_black.svg&amp;action=edit" href="https://commons.wikimedia.org/w/index.php?title=Image:Apple_logo_black.svg&amp;action=edit">modifica</a>) si trovano su <a href="https://commons.wikimedia.org/wiki/Pagina_principale" class="extiw" title="commons:Pagina principale">Wikimedia Commons</a> (<a href="https://commons.wikimedia.org/wiki/Commons:Benvenuto" class="extiw" title="commons:Commons:Benvenuto">?</a>)
+</td></tr></tbody></table>
+</div>
+<div id="shared-image-desc"><div class="mw-content-ltr mw-parser-output" lang="it" dir="ltr"><div class="mw-heading mw-heading2"><h2 id="Dettagli">Dettagli</h2></div>
+<div class="hproduct commons-file-information-table">
+<table class="fileinfotpl-type-information vevent" dir="ltr">
+
+<tbody><tr>
+<td id="fileinfotpl_desc" class="fileinfo-paramfield" lang="it">Descrizione<span class="summary fn" style="display:none">Apple logo black.svg</span></td>
+<td class="description">
+<div class="description be-tarask" dir="ltr" lang="be-tarask"><span class="language be-tarask" title="Belarusian (Taraškievica orthography)"><b>Беларуская (тарашкевіца): </b></span> Лягатып кампаніі Apple Inc.</div>
+<div class="description de" dir="ltr" lang="de"><span class="language de" title="tedesco"><b>Deutsch: </b></span> Logo des Unternehmens Apple Inc.</div>
+<div class="description en" dir="ltr" lang="en"><span class="language en" title="inglese"><b>English: </b></span> Logo of the company Apple Inc.</div>
+<div class="description fr" dir="ltr" lang="fr"><span class="language fr" title="francese"><b>Français&nbsp;: </b></span> Logo de la société Apple Inc.</div>
+<div class="description hr" dir="ltr" lang="hr"><span class="language hr" title="croato"><b>Hrvatski: </b></span> Logo tvrtke Apple Inc.</div>
+<div class="description pt" dir="ltr" lang="pt"><span class="language pt" title="portoghese"><b>Português: </b></span> Logotipo da empresa Apple Inc.</div>
+<div class="description nl" dir="ltr" lang="nl"><span class="language nl" title="olandese"><b>Nederlands: </b></span> Logo van het bedrijf Apple Inc.</div>
+<div class="description fi" dir="ltr" lang="fi"><span class="language fi" title="finlandese"><b>Suomi: </b></span> Applen logo.</div>
+<div class="description uk" dir="ltr" lang="uk"><span class="language uk" title="ucraino"><b>Українська: </b></span> Логотип компанії Apple Inc.</div>
+<div class="description hi" dir="ltr" lang="hi"><span class="language hi" title="hindi"><b>हिन्दी: </b></span> एप्पल का प्रतीक चिन्ह (लोगो)</div>
+<div class="description kn" dir="ltr" lang="kn"><span class="language kn" title="kannada"><b>ಕನ್ನಡ: </b></span> ಆಪಲ್ ಸಂಸ್ಥೆಯ ಚಿನ್ಹೆ</div>
+<div class="description bn" dir="ltr" lang="bn"><span class="language bn" title="bengalese"><b>বাংলা: </b></span> অ্যাপল ইনকর্পোরেটেডের লোগো</div>
+<div class="description th" dir="ltr" lang="th"><span class="language th" title="thailandese"><b>ไทย: </b></span> โลโก้ของบริษัทแอปเปิล</div></td>
+</tr>
+
+<tr>
+<td id="fileinfotpl_date" class="fileinfo-paramfield" lang="it">Data</td>
+<td lang="it">
+<div class="description en" dir="ltr" lang="en"><span class="language en" title="inglese"><b>English: </b></span> Application for trademark registration filed March 20, 1978 based on first use in commerce in 1977. See USPTO registration #1114431.</div>
+<div class="description ru" dir="ltr" lang="ru"><span class="language ru" title="russo"><b>Русский: </b></span> Заявка на регистрацию товарного знака подана 20 марта 1978 года на основании первого использования в торговле в 1977 году. См. регистрационный номер USPTO № 1114431.</div></td>
+</tr>
+
+<tr>
+<td id="fileinfotpl_src" class="fileinfo-paramfield" lang="it">Fonte</td>
+<td>
+<a rel="nofollow" class="external text" href="https://freepnglogo.com/apple-logo-png">Apple logo png</a></td>
+</tr>
+
+<tr>
+<td id="fileinfotpl_aut" class="fileinfo-paramfield" lang="it">Autore</td>
+<td>
+<b>Originale: </b> <a rel="nofollow" class="external text" href="https://robjanoff.com/">Rob Janoff</a></td>
+</tr>
+
+<tr>
+<td id="fileinfotpl_ver" class="fileinfo-paramfield" lang="it">Altre versioni</td>
+<td>
+<div style="font-size:85%;"><span class="editsection">[<span class="noprint plainlinks"><a class="external text" data-mw-original-href="//commons.wikimedia.org/w/index.php?title=Template:Other_versions/Apple_KAR_Inc._logos&amp;action=edit" href="https://commons.wikimedia.org/w/index.php?title=Template:Other_versions/Apple_KAR_Inc._logos&amp;action=edit">modifica</a></span>]</span><br clear="all">
+<ul class="gallery mw-gallery-traditional">
+		<li class="gallerybox" style="width: 71px">
+			<div class="thumb" style="width: 66px; height: 66px;"><span typeof="mw:File"><a href="//commons.wikimedia.org/wiki/File:Apple_Computer_Logo_rainbow.svg" class="mw-file-description" title="Rainbow"><img alt="Rainbow" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Apple_Computer_Logo_rainbow.svg/40px-Apple_Computer_Logo_rainbow.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="31" height="36" class="mw-file-element" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Apple_Computer_Logo_rainbow.svg/120px-Apple_Computer_Logo_rainbow.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x" data-file-width="512" data-file-height="596"></a></span></div>
+			<div class="gallerytext">Rainbow</div>
+		</li>
+		<li class="gallerybox" style="width: 71px">
+			<div class="thumb" style="width: 66px; height: 66px;"><span typeof="mw:File"><a href="//commons.wikimedia.org/wiki/File:Apple_logo_dark_grey.svg" class="mw-file-description" title="Dark Gray"><img alt="Dark Gray" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Apple_logo_dark_grey.svg/40px-Apple_logo_dark_grey.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="30" height="36" class="mw-file-element" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Apple_logo_dark_grey.svg/120px-Apple_logo_dark_grey.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x" data-file-width="842" data-file-height="1000"></a></span></div>
+			<div class="gallerytext">Dark Gray</div>
+		</li>
+		<li class="gallerybox" style="width: 71px">
+			<div class="thumb" style="width: 66px; height: 66px;"><span typeof="mw:File"><a href="//commons.wikimedia.org/wiki/File:Apple_logo_grey.svg" class="mw-file-description" title="Gray"><img alt="Gray" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Apple_logo_grey.svg/40px-Apple_logo_grey.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="30" height="36" class="mw-file-element" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Apple_logo_grey.svg/120px-Apple_logo_grey.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x" data-file-width="842" data-file-height="1000"></a></span></div>
+			<div class="gallerytext">Gray</div>
+		</li>
+		<li class="gallerybox" style="width: 71px">
+			<div class="thumb" style="width: 66px; height: 66px;"><span typeof="mw:File"><a href="//commons.wikimedia.org/wiki/File:Apple_logo_white.svg" class="mw-file-description" title="White"><img alt="White" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Apple_logo_white.svg/40px-Apple_logo_white.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="30" height="36" class="mw-file-element" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Apple_logo_white.svg/120px-Apple_logo_white.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x" data-file-width="842" data-file-height="1000"></a></span></div>
+			<div class="gallerytext">White</div>
+		</li>
+		<li class="gallerybox" style="width: 71px">
+			<div class="thumb" style="width: 66px; height: 66px;"><span typeof="mw:File"><a href="//commons.wikimedia.org/wiki/File:Apple_logo_black.svg" class="mw-file-description" title="Black"><img alt="Black" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/40px-Apple_logo_black.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="29" height="36" class="mw-file-element" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/60px-Apple_logo_black.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x" data-file-width="814" data-file-height="1000"></a></span></div>
+			<div class="gallerytext">Black</div>
+		</li>
+		<li class="gallerybox" style="width: 71px">
+			<div class="thumb" style="width: 66px; height: 66px;"><span typeof="mw:File"><a href="//commons.wikimedia.org/wiki/File:Vectorized_Apple_gray_logo.svg" class="mw-file-description" title="Gray (in box)"><img alt="Gray (in box)" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Vectorized_Apple_gray_logo.svg/40px-Vectorized_Apple_gray_logo.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="36" height="36" class="mw-file-element" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Vectorized_Apple_gray_logo.svg/120px-Vectorized_Apple_gray_logo.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x" data-file-width="600" data-file-height="600"></a></span></div>
+			<div class="gallerytext">Gray (in box)</div>
+		</li>
+		<li class="gallerybox" style="width: 71px">
+			<div class="thumb" style="width: 66px; height: 66px;"><span typeof="mw:File"><a href="//commons.wikimedia.org/wiki/File:Apple_logo_hollow.svg" class="mw-file-description" title="Hollow"><img alt="Hollow" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Apple_logo_hollow.svg/40px-Apple_logo_hollow.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="30" height="36" class="mw-file-element" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Apple_logo_hollow.svg/60px-Apple_logo_hollow.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x" data-file-width="512" data-file-height="610"></a></span></div>
+			<div class="gallerytext">Hollow</div>
+		</li>
+		<li class="gallerybox" style="width: 71px">
+			<div class="thumb" style="width: 66px; height: 66px;"><span typeof="mw:File"><a href="//commons.wikimedia.org/wiki/File:Apple_Logo.svg" class="mw-file-description" title="Logo"><img alt="Logo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Apple_Logo.svg/40px-Apple_Logo.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="30" height="36" class="mw-file-element" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Apple_Logo.svg/60px-Apple_Logo.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x" data-file-width="136" data-file-height="162"></a></span></div>
+			<div class="gallerytext">Logo</div>
+		</li>
+		<li class="gallerybox" style="width: 71px">
+			<div class="thumb" style="width: 66px; height: 66px;"><span typeof="mw:File"><a href="//commons.wikimedia.org/wiki/File:Icon-Mac.svg" class="mw-file-description" title="Mac"><img alt="Mac" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Icon-Mac.svg/40px-Icon-Mac.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="36" height="36" class="mw-file-element" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Icon-Mac.svg/120px-Icon-Mac.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x" data-file-width="256" data-file-height="256"></a></span></div>
+			<div class="gallerytext">Mac</div>
+		</li>
+		<li class="gallerybox" style="width: 71px">
+			<div class="thumb" style="width: 66px; height: 66px;"><span typeof="mw:File"><a href="//commons.wikimedia.org/wiki/File:Mac.svg" class="mw-file-description" title="Button"><img alt="Button" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Mac.svg/40px-Mac.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="36" height="36" class="mw-file-element" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Mac.svg/120px-Mac.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x" data-file-width="512" data-file-height="512"></a></span></div>
+			<div class="gallerytext">Button</div>
+		</li>
+		<li class="gallerybox" style="width: 71px">
+			<div class="thumb" style="width: 66px; height: 66px;"><span typeof="mw:File"><a href="//commons.wikimedia.org/wiki/File:Apple_Store_logo.svg" class="mw-file-description" title="Store"><img alt="Store" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Apple_Store_logo.svg/40px-Apple_Store_logo.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="36" height="36" class="mw-file-element" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Apple_Store_logo.svg/120px-Apple_Store_logo.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x" data-file-width="512" data-file-height="512"></a></span></div>
+			<div class="gallerytext">Store</div>
+		</li>
+</ul></div></td>
+</tr>
+
+<tr style="vertical-align: top"><td style="" class="fileinfo-paramfield">SVG&nbsp;sviluppo<div style="display: none;">InfoField</div></td><td style=""><div style="vertical-align:middle"><div style="display:table;width:auto;vertical-align:middle;direction:ltr;float:left;line-height:22px;height:24px;font-size:.96em;margin:0px;padding:2px 4px 2px 6px;color:var(--color-base,#000);background:var(--background-color-neutral-subtle,#F8F9FA);border:1px solid #BAB;border-collapse:separate;border-spacing:0px;padding:2px 4px 2px 0px;"><span typeof="mw:File"><a href="//commons.wikimedia.org/wiki/File:W3C_grn.svg" class="mw-file-description"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/W3C_grn.svg/40px-W3C_grn.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="24" height="15" class="mw-file-element" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/W3C_grn.svg/60px-W3C_grn.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x" data-file-width="288" data-file-height="174"></a></span>&nbsp;Il codice sorgente di questo <a href="//commons.wikimedia.org/wiki/Help:SVG" title="Help:SVG">file SVG</a> è <span class="plainlinks" style="background:var(--background-color-success-subtle, #dff2eb); color: inherit;"><a rel="nofollow" class="external text" href="https://validator.w3.org/check?uri=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FSpecial%3AFilepath%2FApple_logo_black.svg&amp;doctype=Inline">valido</a></span>.</div><div style="display:table;width:;vertical-align:middle;direction:ltr;float:left;line-height:22px;height:24px;font-size:.96em;margin:0px;padding:2px 4px 2px 6px;color:var(--color-base,#000);background:var(--background-color-neutral-subtle,#F8F9FA);border:1px solid #BAB;border-collapse:separate;border-spacing:0px;;float:left;vertical-align:middle"><span typeof="mw:File"><a href="//commons.wikimedia.org/wiki/File:Adobe-yes.svg" class="mw-file-description"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Adobe-yes.svg/40px-Adobe-yes.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="23" height="22" class="mw-file-element" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Adobe-yes.svg/60px-Adobe-yes.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x" data-file-width="342" data-file-height="322"></a></span>&nbsp;Questo  logotipo in <a href="https://it.wikipedia.org/wiki/grafica_vettoriale" class="extiw" title="it:grafica vettoriale">grafica vettoriale</a> è stato creato con <a href="https://it.wikipedia.org/wiki/Adobe_Illustrator" class="extiw" title="it:Adobe Illustrator">Adobe Illustrator</a>.</div></div></td>
+</tr>
+</tbody></table>
+</div>
+<div class="mw-heading mw-heading2"><h2 id="Licenza">Licenza</h2></div>
+<table class="licensetpl" style="display:none">
+<tbody><tr>
+<td><span class="licensetpl_short">Public domain</span><span class="licensetpl_long">Public domain</span><span class="licensetpl_link_req">false</span><span class="licensetpl_attr_req">false</span>
+</td></tr></tbody></table>
+<table style="width: 100%; clear: both; margin: 0.5em auto; background-color: var(--background-color-progressive-subtle, #f7f8ff); color: var(--color-base, #202122); border: var(--border-subtle, 2px solid #8888aa); border-spacing: 8px; padding: 0px;" dir="ltr" class="layouttemplate" lang="it">
+<tbody><tr>
+<td><span typeof="mw:File"><span><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/PD-icon.svg/120px-PD-icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="70" height="70" class="mw-file-element" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/PD-icon.svg/250px-PD-icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x" data-file-width="196" data-file-height="196"></span></span>
+</td>
+<td><div lang="it" dir="ltr" class="description it" style="display:inline;"><i>Quest'opera è nel <b><a href="https://it.wikipedia.org/wiki/pubblico_dominio" class="extiw" title="it:pubblico dominio">pubblico dominio</a></b> perché pubblicata negli Stati Uniti fra il 1931 e il 1977, inclusi, <b>senza un avviso di copyright</b>. A meno che l'autore non sia morto da molti anni, non è nel pubblico dominio nei Paesi o nelle aree che non applicano la <a href="https://it.wikipedia.org/wiki/regola_della_durata_pi%C3%B9_breve" class="extiw" title="it:regola della durata più breve">regola della durata più breve</a> per le opere statunitensi, come Canada (70 pma), Cina (50 pma, ma non Hong Kong o Macao), Germania (70 pma), Messico (100 pma), Svizzera (70 pma), e altri Paesi con trattati individuali. Vedi <a rel="nofollow" class="external text" href="https://copyright.cornell.edu/publicdomain">questa pagina</a> per ulteriori informazioni.</i></div>
+<hr>
+<p><span style="font-size:small;line-height:1.4" class="plainlinks noprint"><a class="external text" data-mw-original-href="//commons.wikimedia.org/wiki/Template:PD-US-no_notice/ar" href="https://commons.wikimedia.org/wiki/Template:PD-US-no_notice/ar"><bdi class="language lang-ar" lang="ar">العربية</bdi></a>&nbsp;<b>∙</b> <a class="external text" data-mw-original-href="//commons.wikimedia.org/wiki/Template:PD-US-no_notice/be-tarask" href="https://commons.wikimedia.org/wiki/Template:PD-US-no_notice/be-tarask"><bdi class="language lang-be-tarask" lang="be-tarask">беларуская (тарашкевіца)</bdi></a>&nbsp;<b>∙</b> <a class="external text" data-mw-original-href="//commons.wikimedia.org/wiki/Template:PD-US-no_notice/cs" href="https://commons.wikimedia.org/wiki/Template:PD-US-no_notice/cs"><bdi class="language lang-cs" lang="cs">čeština</bdi></a>&nbsp;<b>∙</b> <a class="external text" data-mw-original-href="//commons.wikimedia.org/wiki/Template:PD-US-no_notice/de" href="https://commons.wikimedia.org/wiki/Template:PD-US-no_notice/de"><bdi class="language lang-de" lang="de">Deutsch</bdi></a>&nbsp;<b>∙</b> <a class="external text" data-mw-original-href="//commons.wikimedia.org/wiki/Template:PD-US-no_notice/el" href="https://commons.wikimedia.org/wiki/Template:PD-US-no_notice/el"><bdi class="language lang-el" lang="el">Ελληνικά</bdi></a>&nbsp;<b>∙</b> <a class="external text" data-mw-original-href="//commons.wikimedia.org/wiki/Template:PD-US-no_notice/en" href="https://commons.wikimedia.org/wiki/Template:PD-US-no_notice/en"><bdi class="language lang-en" lang="en">English</bdi></a>&nbsp;<b>∙</b> <a class="external text" data-mw-original-href="//commons.wikimedia.org/wiki/Template:PD-US-no_notice/es" href="https://commons.wikimedia.org/wiki/Template:PD-US-no_notice/es"><bdi class="language lang-es" lang="es">español</bdi></a>&nbsp;<b>∙</b> <a class="external text" data-mw-original-href="//commons.wikimedia.org/wiki/Template:PD-US-no_notice/fa" href="https://commons.wikimedia.org/wiki/Template:PD-US-no_notice/fa"><bdi class="language lang-fa" lang="en">فارسی</bdi></a>&nbsp;<b>∙</b> <a class="external text" data-mw-original-href="//commons.wikimedia.org/wiki/Template:PD-US-no_notice/fr" href="https://commons.wikimedia.org/wiki/Template:PD-US-no_notice/fr"><bdi class="language lang-fr" lang="fr">français</bdi></a>&nbsp;<b>∙</b> <a class="external text" data-mw-original-href="//commons.wikimedia.org/wiki/Template:PD-US-no_notice/id" href="https://commons.wikimedia.org/wiki/Template:PD-US-no_notice/id"><bdi class="language lang-id" lang="id">Bahasa Indonesia</bdi></a>&nbsp;<b>∙</b> <a class="external text" data-mw-original-href="//commons.wikimedia.org/wiki/Template:PD-US-no_notice/it" href="https://commons.wikimedia.org/wiki/Template:PD-US-no_notice/it"><bdi class="language lang-it" lang="it">italiano</bdi></a>&nbsp;<b>∙</b> <a class="external text" data-mw-original-href="//commons.wikimedia.org/wiki/Template:PD-US-no_notice/ja" href="https://commons.wikimedia.org/wiki/Template:PD-US-no_notice/ja"><bdi class="language lang-ja" lang="ja">日本語</bdi></a>&nbsp;<b>∙</b> <a class="external text" data-mw-original-href="//commons.wikimedia.org/wiki/Template:PD-US-no_notice/ko" href="https://commons.wikimedia.org/wiki/Template:PD-US-no_notice/ko"><bdi class="language lang-ko" lang="ko">한국어</bdi></a>&nbsp;<b>∙</b> <a class="external text" data-mw-original-href="//commons.wikimedia.org/wiki/Template:PD-US-no_notice/mk" href="https://commons.wikimedia.org/wiki/Template:PD-US-no_notice/mk"><bdi class="language lang-mk" lang="mk">македонски</bdi></a>&nbsp;<b>∙</b> <a class="external text" data-mw-original-href="//commons.wikimedia.org/wiki/Template:PD-US-no_notice/nl" href="https://commons.wikimedia.org/wiki/Template:PD-US-no_notice/nl"><bdi class="language lang-nl" lang="nl">Nederlands</bdi></a>&nbsp;<b>∙</b> <a class="external text" data-mw-original-href="//commons.wikimedia.org/wiki/Template:PD-US-no_notice/pt" href="https://commons.wikimedia.org/wiki/Template:PD-US-no_notice/pt"><bdi class="language lang-pt" lang="pt">português</bdi></a>&nbsp;<b>∙</b> <a class="external text" data-mw-original-href="//commons.wikimedia.org/wiki/Template:PD-US-no_notice/ru" href="https://commons.wikimedia.org/wiki/Template:PD-US-no_notice/ru"><bdi class="language lang-ru" lang="ru">русский</bdi></a>&nbsp;<b>∙</b> <a class="external text" data-mw-original-href="//commons.wikimedia.org/wiki/Template:PD-US-no_notice/scn" href="https://commons.wikimedia.org/wiki/Template:PD-US-no_notice/scn"><bdi class="language lang-scn" lang="scn">sicilianu</bdi></a>&nbsp;<b>∙</b> <a class="external text" data-mw-original-href="//commons.wikimedia.org/wiki/Template:PD-US-no_notice/sl" href="https://commons.wikimedia.org/wiki/Template:PD-US-no_notice/sl"><bdi class="language lang-sl" lang="sl">slovenščina</bdi></a>&nbsp;<b>∙</b> <a class="external text" data-mw-original-href="//commons.wikimedia.org/wiki/Template:PD-US-no_notice/th" href="https://commons.wikimedia.org/wiki/Template:PD-US-no_notice/th"><bdi class="language lang-th" lang="th">ไทย</bdi></a>&nbsp;<b>∙</b> <a class="external text" data-mw-original-href="//commons.wikimedia.org/wiki/Template:PD-US-no_notice/vi" href="https://commons.wikimedia.org/wiki/Template:PD-US-no_notice/vi"><bdi class="language lang-vi" lang="vi">Tiếng Việt</bdi></a>&nbsp;<b>∙</b> <a class="external text" data-mw-original-href="//commons.wikimedia.org/wiki/Template:PD-US-no_notice/zh-hans" href="https://commons.wikimedia.org/wiki/Template:PD-US-no_notice/zh-hans"><bdi class="language lang-zh-hans" lang="zh-hans">中文（简体）</bdi></a>&nbsp;<b>∙</b> <a class="external text" data-mw-original-href="//commons.wikimedia.org/wiki/Template:PD-US-no_notice/zh-hant" href="https://commons.wikimedia.org/wiki/Template:PD-US-no_notice/zh-hant"><bdi class="language lang-zh-hant" lang="zh-hant">中文（繁體）</bdi></a>&nbsp;<b>∙</b> <small class="plainlinks"><a class="external text" data-mw-original-href="//commons.wikimedia.org/w/index.php?title=Template:PD-US-no_notice/lang&amp;action=edit" href="https://commons.wikimedia.org/w/index.php?title=Template:PD-US-no_notice/lang&amp;action=edit">+/−</a></small></span>
+</p>
+</td>
+<td><figure class="mw-halign-right mw-image-border noresize" typeof="mw:File"><span title="Flag of the United States"><img alt="Flag of the United States" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/120px-Flag_of_the_United_States.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="80" height="42" class="mw-file-element" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/250px-Flag_of_the_United_States.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x" data-file-width="1235" data-file-height="650"></span><figcaption>Flag of the United States</figcaption></figure>
+</td></tr></tbody></table> 
+<table style="width:100%; clear:both; margin:0.5em auto; border-spacing:8px; background-color:var(--background-color-neutral-subtle,#f7f8ff); border:2px solid #8888aa;color: inherit;" lang="it" dir="ltr" class="layouttemplate restrictiontemplate restriction-trademarked">
+<tbody><tr>
+<td style="border:none; width:64px;"><figure class="mw-halign-center" typeof="mw:File"><a href="//commons.wikimedia.org/wiki/Commons:Non-copyright_restrictions" title="Trademarked"><img alt="Trademarked" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Trademark_Warning_Symbol.svg/120px-Trademark_Warning_Symbol.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="64" height="64" class="mw-file-element" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Trademark_Warning_Symbol.svg/250px-Trademark_Warning_Symbol.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x" data-file-width="64" data-file-height="64"></a><figcaption>Trademarked</figcaption></figure>
+</td>
+<td style="border:none;">Quest'opera contiene materiale che potrebbe essere soggetto alle leggi sui <a href="https://it.wikipedia.org/wiki/Marchio_registrato" class="extiw" title="it:Marchio registrato">marchi registrati</a> in una o più giurisdizioni. Prima di usufruire di questo contenuto, per favore assicurati di avere il diritto di utilizzarlo nel rispetto della legge che si applica alle circostanze in cui intendi farne uso. Sei l'unico responsabile nell'assicurarti di non infrangere i diritti associati a tali marchi registrati. Vedi le nostre <a href="//commons.wikimedia.org/wiki/Commons:Avvertenze_generali" class="mw-redirect" title="Commons:Avvertenze generali">avvertenze generali</a>. L'uso di questo marchio registrato non indica in alcun modo approvazione o sostegno del titolare da parte di Wikimedia Commons o della <a href="https://foundation.wikimedia.org/wiki/Home" class="extiw" title="foundation:Home">Wikimedia Foundation</a>, o viceversa.<br><small><span class="mw-translate-fuzzy">Questo tag non indica lo status del copyright dell'opera ad esso associato. È quindi richiesto un normale tag di copyright. Vedi  <a href="//commons.wikimedia.org/wiki/Special:MyLanguage/Commons:Copyright_tags" title="Special:MyLanguage/Commons:Copyright tags">Commons:Licenze</a> per maggiori informazioni.</span></small>
+</td></tr></tbody></table>
+<div class="mw-heading mw-heading2"><h2 id="Registro_originale_del_caricamento">Registro originale del caricamento</h2></div>
+<div lang="it" dir="ltr" class="description it" style="display:inline;">La pagina di descrizione originale era <a class="external text" data-mw-original-href="//fr.wikipedia.org/w/index.php?title=File:Apple_Computer_logo.svg" href="https://fr.wikipedia.org/w/index.php?title=File:Apple_Computer_logo.svg">qui</a>. Tutti i nomi utente che seguono sono riferiti a fr.wikipedia.</div>
+<ul><li>2006-06-27 16:38 <a href="https://fr.wikipedia.org/wiki/User:Quark67" class="extiw" title="fr:User:Quark67">Quark67</a></li></ul>
+<p>101×121 (4682 bytes) <i>Logo de la société Apple Computer == Auteur == Image SVG créé par [[Utilisateur:Quark67]] avec Inkscape à l'aide de la police de caractère Helvetica fournie avec Mac OS X {{logo}}</i>
+</p>
+<ul><li>2006-06-27 16:25 <a href="https://fr.wikipedia.org/wiki/User:Quark67" class="extiw" title="fr:User:Quark67">Quark67</a></li></ul>
+<p>744×1052 (4793 bytes) <i>Logo de la société Apple Computer == Auteur == Image SVG créé par [[Utilisateur:Quark67]] avec Inkscape à l'aide de la police de caractère Helvetica fournie avec Mac OS X {{logo}}</i>
+</p>
+<ul><li>2006-06-27 15:50 <a href="https://fr.wikipedia.org/wiki/User:Quark67" class="extiw" title="fr:User:Quark67">Quark67</a></li></ul>
+<p>744×1052 (3232 bytes) <i>Logo de la société Apple Computer == Auteur == Image SVG créé avec Inkscape à l'aide de la police de caractère Helvetica fournie avec Mac OS X {{logo}}</i>
+</p>
+<dl><dd><a href="https://fr.wikipedia.org/wiki/Category:Apple" class="extiw" title="fr:Category:Apple">Catégorie:Apple</a></dd>
+<dd><a href="https://fr.wikipedia.org/wiki/Category:Cat%C3%A9gorie:Logo_vectoriel" class="extiw" title="fr:Category:Catégorie:Logo vectoriel">Catégorie:Logo vectoriel</a></dd>
+<dd><a href="https://fr.wikipedia.org/wiki/Category:Logo_de_fabricant_informatique" class="extiw" title="fr:Category:Logo de fabricant informatique">Catégorie:Logo de fabricant informatique</a></dd></dl><h1 class="mw-slot-header"><mediainfoslotheader></mediainfoslotheader></h1><mediainfoview style="display: none"><mediainfoviewcaptions><div class="wbmi-entityview-captionsPanel oo-ui-layout oo-ui-panelLayout oo-ui-panelLayout-framed"><h3 class="wbmi-entityview-captions-header">Didascalie</h3><div class="wbmi-entityview-caption oo-ui-layout oo-ui-horizontalLayout"><label class="wbmi-language-label oo-ui-widget oo-ui-widget-enabled oo-ui-labelElement-label oo-ui-labelElement oo-ui-labelWidget">italiano</label><div lang="it" dir="ltr" class="wbmi-caption-value">Logo Apple Inc. attuale</div></div><div style="display:none;" class="wbmi-entityview-caption wbmi-entityview-hideable oo-ui-layout oo-ui-horizontalLayout"><label class="wbmi-language-label oo-ui-widget oo-ui-widget-enabled oo-ui-labelElement-label oo-ui-labelElement oo-ui-labelWidget">inglese</label><div lang="en" dir="ltr" class="wbmi-caption-value">Logo of Apple Inc. since 1999</div></div><div style="display:none;" class="wbmi-entityview-caption wbmi-entityview-hideable oo-ui-layout oo-ui-horizontalLayout"><label class="wbmi-language-label oo-ui-widget oo-ui-widget-enabled oo-ui-labelElement-label oo-ui-labelElement oo-ui-labelWidget">tedesco</label><div lang="de" dir="ltr" class="wbmi-caption-value">aktuelles Logo des US-amerikanischen Unternehmens Apple</div></div><div style="display:none;" class="wbmi-entityview-caption wbmi-entityview-hideable oo-ui-layout oo-ui-horizontalLayout"><label class="wbmi-language-label oo-ui-widget oo-ui-widget-enabled oo-ui-labelElement-label oo-ui-labelElement oo-ui-labelWidget">russo</label><div lang="ru" dir="ltr" class="wbmi-caption-value">Логотип компании Apple Inc.</div></div><div style="display:none;" class="wbmi-entityview-caption wbmi-entityview-hideable oo-ui-layout oo-ui-horizontalLayout"><label class="wbmi-language-label oo-ui-widget oo-ui-widget-enabled oo-ui-labelElement-label oo-ui-labelElement oo-ui-labelWidget">cinese tradizionale</label><div lang="zh-hant" dir="ltr" class="wbmi-caption-value">蘋果公司logo</div></div><div style="display:none;" class="wbmi-entityview-caption wbmi-entityview-hideable oo-ui-layout oo-ui-horizontalLayout"><label class="wbmi-language-label oo-ui-widget oo-ui-widget-enabled oo-ui-labelElement-label oo-ui-labelElement oo-ui-labelWidget">turco</label><div lang="tr" dir="ltr" class="wbmi-caption-value">Apple Inc. şirketinin kurumsal logosu</div></div><div style="display:none;" class="wbmi-entityview-caption wbmi-entityview-hideable oo-ui-layout oo-ui-horizontalLayout"><label class="wbmi-language-label oo-ui-widget oo-ui-widget-enabled oo-ui-labelElement-label oo-ui-labelElement oo-ui-labelWidget">ceco</label><div lang="cs" dir="ltr" class="wbmi-caption-value">aktuální logo společnosti Apple Inc.</div></div><div style="display:none;" class="wbmi-entityview-caption wbmi-entityview-hideable oo-ui-layout oo-ui-horizontalLayout"><label class="wbmi-language-label oo-ui-widget oo-ui-widget-enabled oo-ui-labelElement-label oo-ui-labelElement oo-ui-labelWidget">slovacco</label><div lang="sk" dir="ltr" class="wbmi-caption-value">aktuálne logo spoločnosti Apple Inc.</div></div><div style="display:none;" class="wbmi-entityview-caption wbmi-entityview-hideable oo-ui-layout oo-ui-horizontalLayout"><label class="wbmi-language-label oo-ui-widget oo-ui-widget-enabled oo-ui-labelElement-label oo-ui-labelElement oo-ui-labelWidget">nepalese</label><div lang="ne" dir="ltr" class="wbmi-caption-value">एप्पल चिन्ह</div></div><div style="display:none;" class="wbmi-entityview-caption wbmi-entityview-hideable oo-ui-layout oo-ui-horizontalLayout"><label class="wbmi-language-label oo-ui-widget oo-ui-widget-enabled oo-ui-labelElement-label oo-ui-labelElement oo-ui-labelWidget">spagnolo</label><div lang="es" dir="ltr" class="wbmi-caption-value">logotipo de Apple Inc. Desde 1999</div></div><div style="display:none;" class="wbmi-entityview-caption wbmi-entityview-hideable oo-ui-layout oo-ui-horizontalLayout"><label class="wbmi-language-label oo-ui-widget oo-ui-widget-enabled oo-ui-labelElement-label oo-ui-labelElement oo-ui-labelWidget">hindi</label><div lang="hi" dir="ltr" class="wbmi-caption-value">एप्पल का प्रतीक चिन्ह (लोगो)</div></div><div style="display:none;" class="wbmi-entityview-caption wbmi-entityview-hideable oo-ui-layout oo-ui-horizontalLayout"><label class="wbmi-language-label oo-ui-widget oo-ui-widget-enabled oo-ui-labelElement-label oo-ui-labelElement oo-ui-labelWidget">francese</label><div lang="fr" dir="ltr" class="wbmi-caption-value">logo d'Apple Inc.</div></div><div style="display:none;" class="wbmi-entityview-caption wbmi-entityview-hideable oo-ui-layout oo-ui-horizontalLayout"><label class="wbmi-language-label oo-ui-widget oo-ui-widget-enabled oo-ui-labelElement-label oo-ui-labelElement oo-ui-labelWidget">arabo</label><div lang="ar" dir="rtl" class="wbmi-caption-value">تفاحة</div></div><div style="display:none;" class="wbmi-entityview-caption wbmi-entityview-hideable oo-ui-layout oo-ui-horizontalLayout"><label class="wbmi-language-label oo-ui-widget oo-ui-widget-enabled oo-ui-labelElement-label oo-ui-labelElement oo-ui-labelWidget">ucraino</label><div lang="uk" dir="ltr" class="wbmi-caption-value">Логотип компанії Apple Inc.</div></div><div style="display:none;" class="wbmi-entityview-caption wbmi-entityview-hideable oo-ui-layout oo-ui-horizontalLayout"><label class="wbmi-language-label oo-ui-widget oo-ui-widget-enabled oo-ui-labelElement-label oo-ui-labelElement oo-ui-labelWidget">giapponese</label><div lang="ja" dir="ltr" class="wbmi-caption-value">Appleのロゴマーク</div></div><div style="display:none;" class="wbmi-entityview-caption wbmi-entityview-hideable oo-ui-layout oo-ui-horizontalLayout"><label class="wbmi-language-label oo-ui-widget oo-ui-widget-enabled oo-ui-labelElement-label oo-ui-labelElement oo-ui-labelWidget">polacco</label><div lang="pl" dir="ltr" class="wbmi-caption-value">Logo firmy Apple Inc.</div></div><div style="display:none;" class="wbmi-entityview-caption wbmi-entityview-hideable oo-ui-layout oo-ui-horizontalLayout"><label class="wbmi-language-label oo-ui-widget oo-ui-widget-enabled oo-ui-labelElement-label oo-ui-labelElement oo-ui-labelWidget">telugu</label><div lang="te" dir="ltr" class="wbmi-caption-value">ఆపిల్ ఇంక్. వారి చిహ్నం</div></div><div style="display:none;" class="wbmi-entityview-caption wbmi-entityview-hideable oo-ui-layout oo-ui-horizontalLayout"><label class="wbmi-language-label oo-ui-widget oo-ui-widget-enabled oo-ui-labelElement-label oo-ui-labelElement oo-ui-labelWidget">coreano</label><div lang="ko" dir="ltr" class="wbmi-caption-value">애플의 로고</div></div><div style="display:none;" class="wbmi-entityview-caption wbmi-entityview-hideable oo-ui-layout oo-ui-horizontalLayout"><label class="wbmi-language-label oo-ui-widget oo-ui-widget-enabled oo-ui-labelElement-label oo-ui-labelElement oo-ui-labelWidget">lussemburghese</label><div lang="lb" dir="ltr" class="wbmi-caption-value">Apple Inc. Logo säit 1999</div></div><div style="display:none;" class="wbmi-entityview-caption wbmi-entityview-hideable oo-ui-layout oo-ui-horizontalLayout"><label class="wbmi-language-label oo-ui-widget oo-ui-widget-enabled oo-ui-labelElement-label oo-ui-labelElement oo-ui-labelWidget">vietnamita</label><div lang="vi" dir="ltr" class="wbmi-caption-value">Biểu trưng Apple Inc. từ 1999</div></div><div style="display:none;" class="wbmi-entityview-caption wbmi-entityview-hideable oo-ui-layout oo-ui-horizontalLayout"><label class="wbmi-language-label oo-ui-widget oo-ui-widget-enabled oo-ui-labelElement-label oo-ui-labelElement oo-ui-labelWidget">portoghese</label><div lang="pt" dir="ltr" class="wbmi-caption-value">Logo da Apple Inc Desde 1999</div></div><div style="display:none;" class="wbmi-entityview-caption wbmi-entityview-hideable oo-ui-layout oo-ui-horizontalLayout"><label class="wbmi-language-label oo-ui-widget oo-ui-widget-enabled oo-ui-labelElement-label oo-ui-labelElement oo-ui-labelWidget">indonesiano</label><div lang="id" dir="ltr" class="wbmi-caption-value">Logo Apple Inc. Sejak 1999</div></div><div style="display:none;" class="wbmi-entityview-caption wbmi-entityview-hideable oo-ui-layout oo-ui-horizontalLayout"><label class="wbmi-language-label oo-ui-widget oo-ui-widget-enabled oo-ui-labelElement-label oo-ui-labelElement oo-ui-labelWidget">malese</label><div lang="ms" dir="ltr" class="wbmi-caption-value">Logo Apple Inc. Sejak 1999</div></div><div style="display:none;" class="wbmi-entityview-caption wbmi-entityview-hideable oo-ui-layout oo-ui-horizontalLayout"><label class="wbmi-language-label oo-ui-widget oo-ui-widget-enabled oo-ui-labelElement-label oo-ui-labelElement oo-ui-labelWidget">thailandese</label><div lang="th" dir="ltr" class="wbmi-caption-value">ซอฟแวร์ios18เราได้ลงและใส่ใบอณุญาติพร้อมให้บริการได้หากได้รับสรับสนุน</div></div><div style="display:none;" class="wbmi-entityview-caption wbmi-entityview-hideable oo-ui-layout oo-ui-horizontalLayout"><label class="wbmi-language-label oo-ui-widget oo-ui-widget-enabled oo-ui-labelElement-label oo-ui-labelElement oo-ui-labelWidget">cinese semplificato</label><div lang="zh-hans" dir="ltr" class="wbmi-caption-value">苹果公司的商标</div></div><div style="display:none;" class="wbmi-entityview-caption wbmi-entityview-hideable oo-ui-layout oo-ui-horizontalLayout"><label class="wbmi-language-label oo-ui-widget oo-ui-widget-enabled oo-ui-labelElement-label oo-ui-labelElement oo-ui-labelWidget">tigrino</label><div lang="ti" dir="ltr" class="wbmi-caption-value">ድwww.google.com</div></div></div></mediainfoviewcaptions><mediainfoviewstatements><div id="P180" data-mw-property="P180" data-mw-statements="[{&quot;mainsnak&quot;:{&quot;snaktype&quot;:&quot;value&quot;,&quot;property&quot;:&quot;P180&quot;,&quot;hash&quot;:&quot;39fb27f2d1a4db25786d780c071661f9272f1b0b&quot;,&quot;datavalue&quot;:{&quot;value&quot;:{&quot;entity-type&quot;:&quot;item&quot;,&quot;numeric-id&quot;:13218275,&quot;id&quot;:&quot;Q13218275&quot;},&quot;type&quot;:&quot;wikibase-entityid&quot;}},&quot;type&quot;:&quot;statement&quot;,&quot;qualifiers&quot;:{&quot;P462&quot;:[{&quot;snaktype&quot;:&quot;value&quot;,&quot;property&quot;:&quot;P462&quot;,&quot;hash&quot;:&quot;4af9c81cc458bf6b99699673fd9268b43ad0c4d4&quot;,&quot;datavalue&quot;:{&quot;value&quot;:{&quot;entity-type&quot;:&quot;item&quot;,&quot;numeric-id&quot;:23445,&quot;id&quot;:&quot;Q23445&quot;},&quot;type&quot;:&quot;wikibase-entityid&quot;}}]},&quot;qualifiers-order&quot;:[&quot;P462&quot;],&quot;id&quot;:&quot;M10472152$f5552ea8-4c38-cf51-d71f-fa0ead7ab8a2&quot;,&quot;rank&quot;:&quot;preferred&quot;}]" data-mw-formatvalue="{&quot;{\&quot;value\&quot;:{\&quot;entity-type\&quot;:\&quot;property\&quot;,\&quot;numeric-id\&quot;:180,\&quot;id\&quot;:\&quot;P180\&quot;},\&quot;type\&quot;:\&quot;wikibase-entityid\&quot;}&quot;:{&quot;text\/html&quot;:{&quot;it&quot;:{&quot;&quot;:&quot;<a target=\&quot;_blank\&quot; title=\&quot;d:Special:EntityPage\/P180\&quot; href=\&quot;https:\/\/www.wikidata.org\/wiki\/Special:EntityPage\/P180\&quot;>raffigura<\/a>&quot;}},&quot;text\/plain&quot;:{&quot;it&quot;:{&quot;&quot;:&quot;raffigura&quot;}}},&quot;{\&quot;value\&quot;:{\&quot;entity-type\&quot;:\&quot;item\&quot;,\&quot;numeric-id\&quot;:13218275,\&quot;id\&quot;:\&quot;Q13218275\&quot;},\&quot;type\&quot;:\&quot;wikibase-entityid\&quot;}&quot;:{&quot;text\/html&quot;:{&quot;it&quot;:{&quot;P180&quot;:&quot;<a target=\&quot;_blank\&quot; title=\&quot;d:Special:EntityPage\/Q13218275\&quot; href=\&quot;https:\/\/www.wikidata.org\/wiki\/Special:EntityPage\/Q13218275\&quot;>logo della Apple<\/a>&quot;}},&quot;text\/plain&quot;:{&quot;it&quot;:{&quot;P180&quot;:&quot;logo della Apple&quot;}}},&quot;{\&quot;value\&quot;:{\&quot;entity-type\&quot;:\&quot;property\&quot;,\&quot;numeric-id\&quot;:462,\&quot;id\&quot;:\&quot;P462\&quot;},\&quot;type\&quot;:\&quot;wikibase-entityid\&quot;}&quot;:{&quot;text\/html&quot;:{&quot;it&quot;:{&quot;&quot;:&quot;<a target=\&quot;_blank\&quot; title=\&quot;d:Special:EntityPage\/P462\&quot; href=\&quot;https:\/\/www.wikidata.org\/wiki\/Special:EntityPage\/P462\&quot;>colore<\/a>&quot;}},&quot;text\/plain&quot;:{&quot;it&quot;:{&quot;&quot;:&quot;colore&quot;}}},&quot;{\&quot;value\&quot;:{\&quot;entity-type\&quot;:\&quot;item\&quot;,\&quot;numeric-id\&quot;:23445,\&quot;id\&quot;:\&quot;Q23445\&quot;},\&quot;type\&quot;:\&quot;wikibase-entityid\&quot;}&quot;:{&quot;text\/html&quot;:{&quot;it&quot;:{&quot;P462&quot;:&quot;<a target=\&quot;_blank\&quot; title=\&quot;d:Special:EntityPage\/Q23445\&quot; href=\&quot;https:\/\/www.wikidata.org\/wiki\/Special:EntityPage\/Q23445\&quot;>nero<\/a>&quot;}},&quot;text\/plain&quot;:{&quot;it&quot;:{&quot;P462&quot;:&quot;nero&quot;}}}}" class="wbmi-entityview-statementsGroup wbmi-entityview-statementsGroup-P180 oo-ui-layout oo-ui-panelLayout oo-ui-panelLayout-framed"><div class="wbmi-statements-widget"><div class="wbmi-statement-header"><div class="wbmi-entity-data"><div class="wbmi-entity-title"><h3 class="wbmi-statements-title">Elementi ritratti in questo file</h3><h4 class="wbmi-entity-label"><bdi><a target="_blank" title="d:Special:EntityPage/P180" href="https://www.wikidata.org/wiki/Special:EntityPage/P180">raffigura</a></bdi></h4></div></div></div><div class="wbmi-content-items-group"><div class="wbmi-item wbmi-item-read"><div class="wbmi-item-container"><div class="wbmi-entity-header"><div class="wbmi-entity-data"><div class="wbmi-entity-title"><h4 class="wbmi-entity-label"><bdi><a target="_blank" title="d:Special:EntityPage/Q13218275" href="https://www.wikidata.org/wiki/Special:EntityPage/Q13218275">logo della Apple</a></bdi></h4></div></div></div><div class="wbmi-item-qualifiers"><div class="wbmi-snaklist-container"><div class="wbmi-snaklist-content"><div class="wbmi-snak"><div class="wbmi-snak-value"><a target="_blank" title="d:Special:EntityPage/P462" href="https://www.wikidata.org/wiki/Special:EntityPage/P462">colore</a><span class="wbmi-snak-value-separator">: </span><span class="wbmi-snak-value--value"><a target="_blank" title="d:Special:EntityPage/Q23445" href="https://www.wikidata.org/wiki/Special:EntityPage/Q23445">nero</a></span></div></div></div></div></div></div></div></div></div></div><div id="P6216" data-mw-property="P6216" data-mw-statements="[{&quot;mainsnak&quot;:{&quot;snaktype&quot;:&quot;value&quot;,&quot;property&quot;:&quot;P6216&quot;,&quot;hash&quot;:&quot;f69dc45ce9c48664155022498b34100d801bd549&quot;,&quot;datavalue&quot;:{&quot;value&quot;:{&quot;entity-type&quot;:&quot;item&quot;,&quot;numeric-id&quot;:19652,&quot;id&quot;:&quot;Q19652&quot;},&quot;type&quot;:&quot;wikibase-entityid&quot;}},&quot;type&quot;:&quot;statement&quot;,&quot;qualifiers&quot;:{&quot;P459&quot;:[{&quot;snaktype&quot;:&quot;value&quot;,&quot;property&quot;:&quot;P459&quot;,&quot;hash&quot;:&quot;2c008f2cbd9dd3c1063361b03b7a68f8ee577fad&quot;,&quot;datavalue&quot;:{&quot;value&quot;:{&quot;entity-type&quot;:&quot;item&quot;,&quot;numeric-id&quot;:47012574,&quot;id&quot;:&quot;Q47012574&quot;},&quot;type&quot;:&quot;wikibase-entityid&quot;}}]},&quot;qualifiers-order&quot;:[&quot;P459&quot;],&quot;id&quot;:&quot;M10472152$4B73704B-A9DF-47A4-8419-9E4A8E191DBF&quot;,&quot;rank&quot;:&quot;normal&quot;}]" data-mw-formatvalue="{&quot;{\&quot;value\&quot;:{\&quot;entity-type\&quot;:\&quot;property\&quot;,\&quot;numeric-id\&quot;:6216,\&quot;id\&quot;:\&quot;P6216\&quot;},\&quot;type\&quot;:\&quot;wikibase-entityid\&quot;}&quot;:{&quot;text\/html&quot;:{&quot;it&quot;:{&quot;&quot;:&quot;<a target=\&quot;_blank\&quot; title=\&quot;d:Special:EntityPage\/P6216\&quot; href=\&quot;https:\/\/www.wikidata.org\/wiki\/Special:EntityPage\/P6216\&quot;>stato del copyright<\/a>&quot;}},&quot;text\/plain&quot;:{&quot;it&quot;:{&quot;&quot;:&quot;stato del copyright&quot;}}},&quot;{\&quot;value\&quot;:{\&quot;entity-type\&quot;:\&quot;item\&quot;,\&quot;numeric-id\&quot;:19652,\&quot;id\&quot;:\&quot;Q19652\&quot;},\&quot;type\&quot;:\&quot;wikibase-entityid\&quot;}&quot;:{&quot;text\/html&quot;:{&quot;it&quot;:{&quot;P6216&quot;:&quot;<a target=\&quot;_blank\&quot; title=\&quot;d:Special:EntityPage\/Q19652\&quot; href=\&quot;https:\/\/www.wikidata.org\/wiki\/Special:EntityPage\/Q19652\&quot;>pubblico dominio<\/a>&quot;}},&quot;text\/plain&quot;:{&quot;it&quot;:{&quot;P6216&quot;:&quot;pubblico dominio&quot;}}},&quot;{\&quot;value\&quot;:{\&quot;entity-type\&quot;:\&quot;property\&quot;,\&quot;numeric-id\&quot;:459,\&quot;id\&quot;:\&quot;P459\&quot;},\&quot;type\&quot;:\&quot;wikibase-entityid\&quot;}&quot;:{&quot;text\/html&quot;:{&quot;it&quot;:{&quot;&quot;:&quot;<a target=\&quot;_blank\&quot; title=\&quot;d:Special:EntityPage\/P459\&quot; href=\&quot;https:\/\/www.wikidata.org\/wiki\/Special:EntityPage\/P459\&quot;>metodo di determinazione<\/a>&quot;}},&quot;text\/plain&quot;:{&quot;it&quot;:{&quot;&quot;:&quot;metodo di determinazione&quot;}}},&quot;{\&quot;value\&quot;:{\&quot;entity-type\&quot;:\&quot;item\&quot;,\&quot;numeric-id\&quot;:47012574,\&quot;id\&quot;:\&quot;Q47012574\&quot;},\&quot;type\&quot;:\&quot;wikibase-entityid\&quot;}&quot;:{&quot;text\/html&quot;:{&quot;it&quot;:{&quot;P459&quot;:&quot;<a target=\&quot;_blank\&quot; title=\&quot;d:Special:EntityPage\/Q47012574\&quot; href=\&quot;https:\/\/www.wikidata.org\/wiki\/Special:EntityPage\/Q47012574\&quot; lang=\&quot;en\&quot;>no copyright due to missing copyright notice<\/a>\u00a0<sup class=\&quot;wb-language-fallback-indicator\&quot;>inglese<\/sup>&quot;}},&quot;text\/plain&quot;:{&quot;it&quot;:{&quot;P459&quot;:&quot;no copyright due to missing copyright notice&quot;}}}}" class="wbmi-entityview-statementsGroup wbmi-entityview-statementsGroup-P6216 oo-ui-layout oo-ui-panelLayout oo-ui-panelLayout-framed"><div class="wbmi-statements-widget"><div class="wbmi-statement-header"><div class="wbmi-entity-data"><div class="wbmi-entity-title"><h4 class="wbmi-entity-label"><bdi><a target="_blank" title="d:Special:EntityPage/P6216" href="https://www.wikidata.org/wiki/Special:EntityPage/P6216">stato del copyright</a></bdi></h4></div></div></div><div class="wbmi-content-items-group"><div class="wbmi-item wbmi-item-read"><div class="wbmi-item-container"><div class="wbmi-entity-header"><div class="wbmi-entity-data"><div class="wbmi-entity-title"><h4 class="wbmi-entity-label"><bdi><a target="_blank" title="d:Special:EntityPage/Q19652" href="https://www.wikidata.org/wiki/Special:EntityPage/Q19652">pubblico dominio</a></bdi></h4></div></div></div><div class="wbmi-item-qualifiers"><div class="wbmi-snaklist-container"><div class="wbmi-snaklist-content"><div class="wbmi-snak"><div class="wbmi-snak-value"><a target="_blank" title="d:Special:EntityPage/P459" href="https://www.wikidata.org/wiki/Special:EntityPage/P459">metodo di determinazione</a><span class="wbmi-snak-value-separator">: </span><span class="wbmi-snak-value--value"><a target="_blank" title="d:Special:EntityPage/Q47012574" href="https://www.wikidata.org/wiki/Special:EntityPage/Q47012574" lang="en">no copyright due to missing copyright notice</a>&nbsp;<sup class="wb-language-fallback-indicator">inglese</sup></span></div></div></div></div></div></div></div></div></div></div><div id="P1163" data-mw-property="P1163" data-mw-statements="[{&quot;mainsnak&quot;:{&quot;snaktype&quot;:&quot;value&quot;,&quot;property&quot;:&quot;P1163&quot;,&quot;hash&quot;:&quot;636199d1806c7cdbae57b4d4298f38fade12d052&quot;,&quot;datavalue&quot;:{&quot;value&quot;:&quot;image\/svg+xml&quot;,&quot;type&quot;:&quot;string&quot;}},&quot;type&quot;:&quot;statement&quot;,&quot;id&quot;:&quot;M10472152$8B68C996-55A2-403E-A3E9-62D6C5DE502A&quot;,&quot;rank&quot;:&quot;normal&quot;}]" data-mw-formatvalue="{&quot;{\&quot;value\&quot;:{\&quot;entity-type\&quot;:\&quot;property\&quot;,\&quot;numeric-id\&quot;:1163,\&quot;id\&quot;:\&quot;P1163\&quot;},\&quot;type\&quot;:\&quot;wikibase-entityid\&quot;}&quot;:{&quot;text\/html&quot;:{&quot;it&quot;:{&quot;&quot;:&quot;<a target=\&quot;_blank\&quot; title=\&quot;d:Special:EntityPage\/P1163\&quot; href=\&quot;https:\/\/www.wikidata.org\/wiki\/Special:EntityPage\/P1163\&quot;>tipo di file<\/a>&quot;}},&quot;text\/plain&quot;:{&quot;it&quot;:{&quot;&quot;:&quot;tipo di file&quot;}}},&quot;{\&quot;value\&quot;:\&quot;image\\\/svg+xml\&quot;,\&quot;type\&quot;:\&quot;string\&quot;}&quot;:{&quot;text\/html&quot;:{&quot;it&quot;:{&quot;P1163&quot;:&quot;image\/svg+xml&quot;}},&quot;text\/plain&quot;:{&quot;it&quot;:{&quot;P1163&quot;:&quot;image\/svg+xml&quot;}}}}" class="wbmi-entityview-statementsGroup wbmi-entityview-statementsGroup-P1163 oo-ui-layout oo-ui-panelLayout oo-ui-panelLayout-framed"><div class="wbmi-statements-widget"><div class="wbmi-statement-header"><div class="wbmi-entity-data"><div class="wbmi-entity-title"><h4 class="wbmi-entity-label"><bdi><a target="_blank" title="d:Special:EntityPage/P1163" href="https://www.wikidata.org/wiki/Special:EntityPage/P1163">tipo di file</a></bdi></h4></div></div></div><div class="wbmi-content-items-group"><div class="wbmi-item wbmi-item-read"><div class="wbmi-item-container"><div class="wbmi-entity-header"><div class="wbmi-entity-data"><div class="wbmi-entity-title"><h4 class="wbmi-entity-label"><bdi>image/svg+xml</bdi></h4></div></div></div></div></div></div></div></div><div id="P4092" data-mw-property="P4092" data-mw-statements="[{&quot;mainsnak&quot;:{&quot;snaktype&quot;:&quot;value&quot;,&quot;property&quot;:&quot;P4092&quot;,&quot;hash&quot;:&quot;3af752db9db4694632ce88f0b84d80220a1199c0&quot;,&quot;datavalue&quot;:{&quot;value&quot;:&quot;d946195781dd40defa310b6a8d2f29b86df6a4ed&quot;,&quot;type&quot;:&quot;string&quot;}},&quot;type&quot;:&quot;statement&quot;,&quot;qualifiers&quot;:{&quot;P459&quot;:[{&quot;snaktype&quot;:&quot;value&quot;,&quot;property&quot;:&quot;P459&quot;,&quot;hash&quot;:&quot;75dff03c151b13fbab93742164121c16a6aa0de1&quot;,&quot;datavalue&quot;:{&quot;value&quot;:{&quot;entity-type&quot;:&quot;item&quot;,&quot;numeric-id&quot;:13414952,&quot;id&quot;:&quot;Q13414952&quot;},&quot;type&quot;:&quot;wikibase-entityid&quot;}}]},&quot;qualifiers-order&quot;:[&quot;P459&quot;],&quot;id&quot;:&quot;M10472152$9930DFD5-5CCD-4658-A43F-8882966A8744&quot;,&quot;rank&quot;:&quot;normal&quot;}]" data-mw-formatvalue="{&quot;{\&quot;value\&quot;:{\&quot;entity-type\&quot;:\&quot;property\&quot;,\&quot;numeric-id\&quot;:4092,\&quot;id\&quot;:\&quot;P4092\&quot;},\&quot;type\&quot;:\&quot;wikibase-entityid\&quot;}&quot;:{&quot;text\/html&quot;:{&quot;it&quot;:{&quot;&quot;:&quot;<a target=\&quot;_blank\&quot; title=\&quot;d:Special:EntityPage\/P4092\&quot; href=\&quot;https:\/\/www.wikidata.org\/wiki\/Special:EntityPage\/P4092\&quot;>checksum<\/a>&quot;}},&quot;text\/plain&quot;:{&quot;it&quot;:{&quot;&quot;:&quot;checksum&quot;}}},&quot;{\&quot;value\&quot;:\&quot;d946195781dd40defa310b6a8d2f29b86df6a4ed\&quot;,\&quot;type\&quot;:\&quot;string\&quot;}&quot;:{&quot;text\/html&quot;:{&quot;it&quot;:{&quot;P4092&quot;:&quot;d946195781dd40defa310b6a8d2f29b86df6a4ed&quot;}},&quot;text\/plain&quot;:{&quot;it&quot;:{&quot;P4092&quot;:&quot;d946195781dd40defa310b6a8d2f29b86df6a4ed&quot;}}},&quot;{\&quot;value\&quot;:{\&quot;entity-type\&quot;:\&quot;property\&quot;,\&quot;numeric-id\&quot;:459,\&quot;id\&quot;:\&quot;P459\&quot;},\&quot;type\&quot;:\&quot;wikibase-entityid\&quot;}&quot;:{&quot;text\/html&quot;:{&quot;it&quot;:{&quot;&quot;:&quot;<a target=\&quot;_blank\&quot; title=\&quot;d:Special:EntityPage\/P459\&quot; href=\&quot;https:\/\/www.wikidata.org\/wiki\/Special:EntityPage\/P459\&quot;>metodo di determinazione<\/a>&quot;}},&quot;text\/plain&quot;:{&quot;it&quot;:{&quot;&quot;:&quot;metodo di determinazione&quot;}}},&quot;{\&quot;value\&quot;:{\&quot;entity-type\&quot;:\&quot;item\&quot;,\&quot;numeric-id\&quot;:13414952,\&quot;id\&quot;:\&quot;Q13414952\&quot;},\&quot;type\&quot;:\&quot;wikibase-entityid\&quot;}&quot;:{&quot;text\/html&quot;:{&quot;it&quot;:{&quot;P459&quot;:&quot;<a target=\&quot;_blank\&quot; title=\&quot;d:Special:EntityPage\/Q13414952\&quot; href=\&quot;https:\/\/www.wikidata.org\/wiki\/Special:EntityPage\/Q13414952\&quot; lang=\&quot;mul\&quot;>SHA-1<\/a>&quot;}},&quot;text\/plain&quot;:{&quot;it&quot;:{&quot;P459&quot;:&quot;SHA-1&quot;}}}}" class="wbmi-entityview-statementsGroup wbmi-entityview-statementsGroup-P4092 oo-ui-layout oo-ui-panelLayout oo-ui-panelLayout-framed"><div class="wbmi-statements-widget"><div class="wbmi-statement-header"><div class="wbmi-entity-data"><div class="wbmi-entity-title"><h4 class="wbmi-entity-label"><bdi><a target="_blank" title="d:Special:EntityPage/P4092" href="https://www.wikidata.org/wiki/Special:EntityPage/P4092">checksum</a></bdi></h4></div></div></div><div class="wbmi-content-items-group"><div class="wbmi-item wbmi-item-read"><div class="wbmi-item-container"><div class="wbmi-entity-header"><div class="wbmi-entity-data"><div class="wbmi-entity-title"><h4 class="wbmi-entity-label"><bdi>d946195781dd40defa310b6a8d2f29b86df6a4ed</bdi></h4></div></div></div><div class="wbmi-item-qualifiers"><div class="wbmi-snaklist-container"><div class="wbmi-snaklist-content"><div class="wbmi-snak"><div class="wbmi-snak-value"><a target="_blank" title="d:Special:EntityPage/P459" href="https://www.wikidata.org/wiki/Special:EntityPage/P459">metodo di determinazione</a><span class="wbmi-snak-value-separator">: </span><span class="wbmi-snak-value--value"><a target="_blank" title="d:Special:EntityPage/Q13414952" href="https://www.wikidata.org/wiki/Special:EntityPage/Q13414952" lang="mul">SHA-1</a></span></div></div></div></div></div></div></div></div></div></div><div id="P3575" data-mw-property="P3575" data-mw-statements="[{&quot;mainsnak&quot;:{&quot;snaktype&quot;:&quot;value&quot;,&quot;property&quot;:&quot;P3575&quot;,&quot;hash&quot;:&quot;72a89803dae33f1293c949070dda69a4fc0c6179&quot;,&quot;datavalue&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;+660&quot;,&quot;unit&quot;:&quot;http:\/\/www.wikidata.org\/entity\/Q8799&quot;},&quot;type&quot;:&quot;quantity&quot;}},&quot;type&quot;:&quot;statement&quot;,&quot;id&quot;:&quot;M10472152$D6BA2796-8C86-491F-99A7-854AD17815E1&quot;,&quot;rank&quot;:&quot;normal&quot;}]" data-mw-formatvalue="{&quot;{\&quot;value\&quot;:{\&quot;entity-type\&quot;:\&quot;property\&quot;,\&quot;numeric-id\&quot;:3575,\&quot;id\&quot;:\&quot;P3575\&quot;},\&quot;type\&quot;:\&quot;wikibase-entityid\&quot;}&quot;:{&quot;text\/html&quot;:{&quot;it&quot;:{&quot;&quot;:&quot;<a target=\&quot;_blank\&quot; title=\&quot;d:Special:EntityPage\/P3575\&quot; href=\&quot;https:\/\/www.wikidata.org\/wiki\/Special:EntityPage\/P3575\&quot;>dimensione dati<\/a>&quot;}},&quot;text\/plain&quot;:{&quot;it&quot;:{&quot;&quot;:&quot;dimensione dati&quot;}}},&quot;{\&quot;value\&quot;:{\&quot;amount\&quot;:\&quot;+660\&quot;,\&quot;unit\&quot;:\&quot;http:\\\/\\\/www.wikidata.org\\\/entity\\\/Q8799\&quot;},\&quot;type\&quot;:\&quot;quantity\&quot;}&quot;:{&quot;text\/html&quot;:{&quot;it&quot;:{&quot;P3575&quot;:&quot;660 <span class=\&quot;wb-unit\&quot;>byte<\/span>&quot;}},&quot;text\/plain&quot;:{&quot;it&quot;:{&quot;P3575&quot;:&quot;660 byte&quot;}}}}" class="wbmi-entityview-statementsGroup wbmi-entityview-statementsGroup-P3575 oo-ui-layout oo-ui-panelLayout oo-ui-panelLayout-framed"><div class="wbmi-statements-widget"><div class="wbmi-statement-header"><div class="wbmi-entity-data"><div class="wbmi-entity-title"><h4 class="wbmi-entity-label"><bdi><a target="_blank" title="d:Special:EntityPage/P3575" href="https://www.wikidata.org/wiki/Special:EntityPage/P3575">dimensione dati</a></bdi></h4></div></div></div><div class="wbmi-content-items-group"><div class="wbmi-item wbmi-item-read"><div class="wbmi-item-container"><div class="wbmi-entity-header"><div class="wbmi-entity-data"><div class="wbmi-entity-title"><h4 class="wbmi-entity-label"><bdi>660 <span class="wb-unit">byte</span></bdi></h4></div></div></div></div></div></div></div></div><div id="P2048" data-mw-property="P2048" data-mw-statements="[{&quot;mainsnak&quot;:{&quot;snaktype&quot;:&quot;value&quot;,&quot;property&quot;:&quot;P2048&quot;,&quot;hash&quot;:&quot;18978756e90b338e80a982a0f3e22a3f51f8a66b&quot;,&quot;datavalue&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;+1000&quot;,&quot;unit&quot;:&quot;http:\/\/www.wikidata.org\/entity\/Q355198&quot;},&quot;type&quot;:&quot;quantity&quot;}},&quot;type&quot;:&quot;statement&quot;,&quot;id&quot;:&quot;M10472152$97CDE131-0D16-40D7-839B-F4C98D90955E&quot;,&quot;rank&quot;:&quot;normal&quot;}]" data-mw-formatvalue="{&quot;{\&quot;value\&quot;:{\&quot;entity-type\&quot;:\&quot;property\&quot;,\&quot;numeric-id\&quot;:2048,\&quot;id\&quot;:\&quot;P2048\&quot;},\&quot;type\&quot;:\&quot;wikibase-entityid\&quot;}&quot;:{&quot;text\/html&quot;:{&quot;it&quot;:{&quot;&quot;:&quot;<a target=\&quot;_blank\&quot; title=\&quot;d:Special:EntityPage\/P2048\&quot; href=\&quot;https:\/\/www.wikidata.org\/wiki\/Special:EntityPage\/P2048\&quot;>altezza<\/a>&quot;}},&quot;text\/plain&quot;:{&quot;it&quot;:{&quot;&quot;:&quot;altezza&quot;}}},&quot;{\&quot;value\&quot;:{\&quot;amount\&quot;:\&quot;+1000\&quot;,\&quot;unit\&quot;:\&quot;http:\\\/\\\/www.wikidata.org\\\/entity\\\/Q355198\&quot;},\&quot;type\&quot;:\&quot;quantity\&quot;}&quot;:{&quot;text\/html&quot;:{&quot;it&quot;:{&quot;P2048&quot;:&quot;1\u00a0000 <span class=\&quot;wb-unit\&quot;>pixel<\/span>&quot;}},&quot;text\/plain&quot;:{&quot;it&quot;:{&quot;P2048&quot;:&quot;1\u00a0000 pixel&quot;}}}}" class="wbmi-entityview-statementsGroup wbmi-entityview-statementsGroup-P2048 oo-ui-layout oo-ui-panelLayout oo-ui-panelLayout-framed"><div class="wbmi-statements-widget"><div class="wbmi-statement-header"><div class="wbmi-entity-data"><div class="wbmi-entity-title"><h4 class="wbmi-entity-label"><bdi><a target="_blank" title="d:Special:EntityPage/P2048" href="https://www.wikidata.org/wiki/Special:EntityPage/P2048">altezza</a></bdi></h4></div></div></div><div class="wbmi-content-items-group"><div class="wbmi-item wbmi-item-read"><div class="wbmi-item-container"><div class="wbmi-entity-header"><div class="wbmi-entity-data"><div class="wbmi-entity-title"><h4 class="wbmi-entity-label"><bdi>1&nbsp;000 <span class="wb-unit">pixel</span></bdi></h4></div></div></div></div></div></div></div></div><div id="P2049" data-mw-property="P2049" data-mw-statements="[{&quot;mainsnak&quot;:{&quot;snaktype&quot;:&quot;value&quot;,&quot;property&quot;:&quot;P2049&quot;,&quot;hash&quot;:&quot;54111040a3fd4d19f125870e918919ae3594285b&quot;,&quot;datavalue&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;+814&quot;,&quot;unit&quot;:&quot;http:\/\/www.wikidata.org\/entity\/Q355198&quot;},&quot;type&quot;:&quot;quantity&quot;}},&quot;type&quot;:&quot;statement&quot;,&quot;id&quot;:&quot;M10472152$C4C37FDF-7025-49E5-ABB6-6EF3D71D939A&quot;,&quot;rank&quot;:&quot;normal&quot;}]" data-mw-formatvalue="{&quot;{\&quot;value\&quot;:{\&quot;entity-type\&quot;:\&quot;property\&quot;,\&quot;numeric-id\&quot;:2049,\&quot;id\&quot;:\&quot;P2049\&quot;},\&quot;type\&quot;:\&quot;wikibase-entityid\&quot;}&quot;:{&quot;text\/html&quot;:{&quot;it&quot;:{&quot;&quot;:&quot;<a target=\&quot;_blank\&quot; title=\&quot;d:Special:EntityPage\/P2049\&quot; href=\&quot;https:\/\/www.wikidata.org\/wiki\/Special:EntityPage\/P2049\&quot;>larghezza<\/a>&quot;}},&quot;text\/plain&quot;:{&quot;it&quot;:{&quot;&quot;:&quot;larghezza&quot;}}},&quot;{\&quot;value\&quot;:{\&quot;amount\&quot;:\&quot;+814\&quot;,\&quot;unit\&quot;:\&quot;http:\\\/\\\/www.wikidata.org\\\/entity\\\/Q355198\&quot;},\&quot;type\&quot;:\&quot;quantity\&quot;}&quot;:{&quot;text\/html&quot;:{&quot;it&quot;:{&quot;P2049&quot;:&quot;814 <span class=\&quot;wb-unit\&quot;>pixel<\/span>&quot;}},&quot;text\/plain&quot;:{&quot;it&quot;:{&quot;P2049&quot;:&quot;814 pixel&quot;}}}}" class="wbmi-entityview-statementsGroup wbmi-entityview-statementsGroup-P2049 oo-ui-layout oo-ui-panelLayout oo-ui-panelLayout-framed"><div class="wbmi-statements-widget"><div class="wbmi-statement-header"><div class="wbmi-entity-data"><div class="wbmi-entity-title"><h4 class="wbmi-entity-label"><bdi><a target="_blank" title="d:Special:EntityPage/P2049" href="https://www.wikidata.org/wiki/Special:EntityPage/P2049">larghezza</a></bdi></h4></div></div></div><div class="wbmi-content-items-group"><div class="wbmi-item wbmi-item-read"><div class="wbmi-item-container"><div class="wbmi-entity-header"><div class="wbmi-entity-data"><div class="wbmi-entity-title"><h4 class="wbmi-entity-label"><bdi>814 <span class="wb-unit">pixel</span></bdi></h4></div></div></div></div></div></div></div></div></mediainfoviewstatements></mediainfoview>
+<!-- 
+NewPP limit report
+Parsed by mw‐api‐int.eqiad.main‐5558c9bc9f‐mrz9k
+Cached time: 20260925133531
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [prevent‐selective‐update]
+CPU time usage: 0.156 seconds
+Real time usage: 0.220 seconds
+Preprocessor visited node count: 5863/1000000
+Revision size: 2618/2097152 bytes
+Post‐expand include size: 71689/2097152 bytes
+Template argument size: 10956/2097152 bytes
+Highest expansion depth: 32/100
+Expensive parser function count: 1/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 9603/5000000 bytes
+Lua time usage: 0.060/10.000 seconds
+Lua memory usage: 1839867/52428800 bytes
+Number of Wikibase entities loaded: 1/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  198.979      1 -total
+ 78.68%  156.551      1 Template:Information
+ 31.87%   63.417      1 Template:Igen
+ 27.69%   55.106      1 Template:Information_field
+ 18.65%   37.100      1 Template:Created_with_Adobe_Illustrator
+  9.83%   19.563      2 Template:Created_with/layout
+  8.03%   15.986      1 Template:SVGvalid
+  7.58%   15.081      1 Template:Trademark
+  7.53%   14.992      1 Template:Created_with/it
+  7.50%   14.926      1 Template:Ifsvg
+-->
+
+<!-- Render ID fa351df5-b8e5-11f1-b140-b9b2fa04de41 -->
+
+<!-- Saved in parser cache with key commonswiki:pcache:10472152:|#|:idhash:userlang=it!wb=3!wbMobile=0 and timestamp 20260925133531 and revision id 1247716739. Rendering was triggered because: page_view
+ -->
+</div></div>
+<h2 id="filehistory">Cronologia del file</h2>
+<div id="mw-imagepage-section-filehistory">
+<p>Fare clic su un gruppo data/ora per vedere il file come si presentava nel momento indicato.
+</p><div class="mw-pager-navigation-bar">(<span class="mw-firstlink">ultima</span> | <a href="/w/index.php?title=File:Apple_logo_black.svg&amp;dir=prev" class="mw-lastlink">prima</a>) Vedi (<span class="mw-prevlink">10 più recenti</span>  |  <a href="/w/index.php?title=File:Apple_logo_black.svg&amp;offset=20160520160458" rel="next" class="mw-nextlink">10 meno recenti</a>) (<span class="mw-numlink">10</span> | <a href="/w/index.php?title=File:Apple_logo_black.svg&amp;offset=&amp;limit=20" class="mw-numlink">20</a> | <a href="/w/index.php?title=File:Apple_logo_black.svg&amp;offset=&amp;limit=50" class="mw-numlink">50</a> | <a href="/w/index.php?title=File:Apple_logo_black.svg&amp;offset=&amp;limit=100" class="mw-numlink">100</a> | <a href="/w/index.php?title=File:Apple_logo_black.svg&amp;offset=&amp;limit=250" class="mw-numlink">250</a> | <a href="/w/index.php?title=File:Apple_logo_black.svg&amp;offset=&amp;limit=500" class="mw-numlink">500</a>).</div>
+<table class="wikitable filehistory">
+<tr><th></th><th>Data/Ora</th><th>Miniatura</th><th>Dimensioni</th><th>Utente</th><th>Commento</th></tr>
+<tr><td>attuale</td><td class="filehistory-selected" style="white-space: nowrap;"><a href="//upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=original">12:41, 29 giu 2025</a></td><td><a href="//upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=original"><img alt="Miniatura della versione delle 12:41, 29 giu 2025" src="//thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/120px-Apple_logo_black.svg.png?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="98" height="120" data-file-width="814" data-file-height="1000"></a></td><td>814 × 1 000 <span style="white-space: nowrap;">(660 byte)</span></td><td><a href="/wiki/Utente:YehudaHubert" class="mw-userlink" title="Utente:YehudaHubert"><bdi>YehudaHubert</bdi></a></td><td dir="ltr">Reverted to version as of 12:19, 21 August 2022 (UTC)</td></tr>
+<tr><td></td><td style="white-space: nowrap;"><a href="//upload.wikimedia.org/wikipedia/commons/archive/f/fa/20250629104140%21Apple_logo_black.svg">12:40, 29 giu 2025</a></td><td><a href="//upload.wikimedia.org/wikipedia/commons/archive/f/fa/20250629104140%21Apple_logo_black.svg?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=original"><img alt="Miniatura della versione delle 12:40, 29 giu 2025" src="//thumb.wikimedia.org/wikipedia/commons/thumb/archive/f/fa/20250629104140%21Apple_logo_black.svg/120px-Apple_logo_black.svg.png?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="98" height="120" data-file-width="814" data-file-height="1000"></a></td><td>814 × 1 000 <span style="white-space: nowrap;">(980 byte)</span></td><td><a href="/wiki/Utente:YehudaHubert" class="mw-userlink" title="Utente:YehudaHubert"><bdi>YehudaHubert</bdi></a></td><td dir="ltr">Reverted to version as of 17:08, 18 December 2021 (UTC)</td></tr>
+<tr><td></td><td style="white-space: nowrap;"><a href="//upload.wikimedia.org/wikipedia/commons/archive/f/fa/20250629104052%21Apple_logo_black.svg">14:19, 21 ago 2022</a></td><td><a href="//upload.wikimedia.org/wikipedia/commons/archive/f/fa/20250629104052%21Apple_logo_black.svg?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=original"><img alt="Miniatura della versione delle 14:19, 21 ago 2022" src="//thumb.wikimedia.org/wikipedia/commons/thumb/archive/f/fa/20250629104052%21Apple_logo_black.svg/120px-Apple_logo_black.svg.png?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="98" height="120" data-file-width="814" data-file-height="1000"></a></td><td>814 × 1 000 <span style="white-space: nowrap;">(660 byte)</span></td><td><a href="/w/index.php?title=Utente:Smasongarrison&amp;action=edit&amp;redlink=1" class="mw-userlink new" title="Utente:Smasongarrison (la pagina non esiste)"><bdi>Smasongarrison</bdi></a></td><td dir="ltr">slimmed down with svgomg // Editing SVG source code using <a href="https://commons.wikimedia.org/wiki/User:Rillke/SVGedit.js" class="extiw" title="c:User:Rillke/SVGedit.js">c:User:Rillke/SVGedit.js</a></td></tr>
+<tr><td></td><td style="white-space: nowrap;"><a href="//upload.wikimedia.org/wikipedia/commons/archive/f/fa/20220821121932%21Apple_logo_black.svg">19:08, 18 dic 2021</a></td><td><a href="//upload.wikimedia.org/wikipedia/commons/archive/f/fa/20220821121932%21Apple_logo_black.svg?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=original"><img alt="Miniatura della versione delle 19:08, 18 dic 2021" src="//thumb.wikimedia.org/wikipedia/commons/thumb/archive/f/fa/20220821121932%21Apple_logo_black.svg/120px-Apple_logo_black.svg.png?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="98" height="120" data-file-width="814" data-file-height="1000"></a></td><td>814 × 1 000 <span style="white-space: nowrap;">(980 byte)</span></td><td><a href="/wiki/Utente:Teo.raff" class="mw-userlink" title="Utente:Teo.raff"><bdi>Teo.raff</bdi></a></td><td dir="ltr">-</td></tr>
+<tr><td></td><td style="white-space: nowrap;"><a href="//upload.wikimedia.org/wikipedia/commons/archive/f/fa/20211218170822%21Apple_logo_black.svg">07:35, 31 gen 2021</a></td><td><a href="//upload.wikimedia.org/wikipedia/commons/archive/f/fa/20211218170822%21Apple_logo_black.svg?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=original"><img alt="Miniatura della versione delle 07:35, 31 gen 2021" src="//thumb.wikimedia.org/wikipedia/commons/thumb/archive/f/fa/20211218170822%21Apple_logo_black.svg/120px-Apple_logo_black.svg.png?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="101" height="120" data-file-width="842" data-file-height="1000"></a></td><td>842 × 1 000 <span style="white-space: nowrap;">(386 byte)</span></td><td><a href="/w/index.php?title=Utente:Behnam_N&amp;action=edit&amp;redlink=1" class="mw-userlink new" title="Utente:Behnam N (la pagina non esiste)"><bdi>Behnam N</bdi></a></td><td dir="ltr">Special optimization - Dedicated to Apple inc!</td></tr>
+<tr><td></td><td style="white-space: nowrap;"><a href="//upload.wikimedia.org/wikipedia/commons/archive/f/fa/20210131053506%21Apple_logo_black.svg">20:47, 23 gen 2021</a></td><td><a href="//upload.wikimedia.org/wikipedia/commons/archive/f/fa/20210131053506%21Apple_logo_black.svg?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=original"><img alt="Miniatura della versione delle 20:47, 23 gen 2021" src="//thumb.wikimedia.org/wikipedia/commons/thumb/archive/f/fa/20210131053506%21Apple_logo_black.svg/120px-Apple_logo_black.svg.png?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="101" height="120" data-file-width="842" data-file-height="1000"></a></td><td>842 × 1 000 <span style="white-space: nowrap;">(3 KB)</span></td><td><a href="/w/index.php?title=Utente:UncleBubba&amp;action=edit&amp;redlink=1" class="mw-userlink new" title="Utente:UncleBubba (la pagina non esiste)"><bdi>UncleBubba</bdi></a></td><td dir="ltr">Reverted to version as of 13:24, 28 December 2020 (UTC) Recently uploaded image appears defective.</td></tr>
+<tr><td></td><td style="white-space: nowrap;"><a href="//upload.wikimedia.org/wikipedia/commons/archive/f/fa/20210123184756%21Apple_logo_black.svg">19:56, 23 gen 2021</a></td><td><a href="//upload.wikimedia.org/wikipedia/commons/archive/f/fa/20210123184756%21Apple_logo_black.svg?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=original"><img alt="Miniatura della versione delle 19:56, 23 gen 2021" src="//thumb.wikimedia.org/wikipedia/commons/thumb/archive/f/fa/20210123184756%21Apple_logo_black.svg/120px-Apple_logo_black.svg.png?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="101" height="120" data-file-width="842" data-file-height="1000"></a></td><td>842 × 1 000 <span style="white-space: nowrap;">(536 byte)</span></td><td><a href="/w/index.php?title=Utente:Behnam_N&amp;action=edit&amp;redlink=1" class="mw-userlink new" title="Utente:Behnam N (la pagina non esiste)"><bdi>Behnam N</bdi></a></td><td dir="ltr">Dedicated to the original designer for low volume size file.</td></tr>
+<tr><td></td><td style="white-space: nowrap;"><a href="//upload.wikimedia.org/wikipedia/commons/archive/f/fa/20210123175557%21Apple_logo_black.svg">15:24, 28 dic 2020</a></td><td><a href="//upload.wikimedia.org/wikipedia/commons/archive/f/fa/20210123175557%21Apple_logo_black.svg?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=original"><img alt="Miniatura della versione delle 15:24, 28 dic 2020" src="//thumb.wikimedia.org/wikipedia/commons/thumb/archive/f/fa/20210123175557%21Apple_logo_black.svg/120px-Apple_logo_black.svg.png?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="101" height="120" data-file-width="842" data-file-height="1000"></a></td><td>842 × 1 000 <span style="white-space: nowrap;">(3 KB)</span></td><td><a href="/w/index.php?title=Utente:Nikon1803&amp;action=edit&amp;redlink=1" class="mw-userlink new" title="Utente:Nikon1803 (la pagina non esiste)"><bdi>Nikon1803</bdi></a></td><td dir="ltr">resize</td></tr>
+<tr><td></td><td style="white-space: nowrap;"><a href="//upload.wikimedia.org/wikipedia/commons/archive/f/fa/20201228132421%21Apple_logo_black.svg">18:00, 25 set 2019</a></td><td><a href="//upload.wikimedia.org/wikipedia/commons/archive/f/fa/20201228132421%21Apple_logo_black.svg?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=original"><img alt="Miniatura della versione delle 18:00, 25 set 2019" src="//thumb.wikimedia.org/wikipedia/commons/thumb/archive/f/fa/20201228132421%21Apple_logo_black.svg/120px-Apple_logo_black.svg.png?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="101" height="120" data-file-width="1000" data-file-height="1187"></a></td><td>1 000 × 1 187 <span style="white-space: nowrap;">(3 KB)</span></td><td><a href="/w/index.php?title=Utente:Nikon1803&amp;action=edit&amp;redlink=1" class="mw-userlink new" title="Utente:Nikon1803 (la pagina non esiste)"><bdi>Nikon1803</bdi></a></td><td dir="ltr">Fit size</td></tr>
+<tr><td></td><td style="white-space: nowrap;"><a href="//upload.wikimedia.org/wikipedia/commons/archive/f/fa/20190925160036%21Apple_logo_black.svg">18:04, 20 mag 2016</a></td><td><a href="//upload.wikimedia.org/wikipedia/commons/archive/f/fa/20190925160036%21Apple_logo_black.svg?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=original"><img alt="Miniatura della versione delle 18:04, 20 mag 2016" src="//thumb.wikimedia.org/wikipedia/commons/thumb/archive/f/fa/20190925160036%21Apple_logo_black.svg/120px-Apple_logo_black.svg.png?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="120" height="120" data-file-width="170" data-file-height="170"></a></td><td>170 × 170 <span style="white-space: nowrap;">(1 KB)</span></td><td><a href="/w/index.php?title=Utente:Totie&amp;action=edit&amp;redlink=1" class="mw-userlink new" title="Utente:Totie (la pagina non esiste)"><bdi>Totie</bdi></a></td><td dir="ltr">The last image was an official vector image from apple.com. Please state where you got yours from before you override it.</td></tr>
+</table>
+<div class="mw-pager-navigation-bar">(<span class="mw-firstlink">ultima</span> | <a href="/w/index.php?title=File:Apple_logo_black.svg&amp;dir=prev" class="mw-lastlink">prima</a>) Vedi (<span class="mw-prevlink">10 più recenti</span>  |  <a href="/w/index.php?title=File:Apple_logo_black.svg&amp;offset=20160520160458" rel="next" class="mw-nextlink">10 meno recenti</a>) (<span class="mw-numlink">10</span> | <a href="/w/index.php?title=File:Apple_logo_black.svg&amp;offset=&amp;limit=20" class="mw-numlink">20</a> | <a href="/w/index.php?title=File:Apple_logo_black.svg&amp;offset=&amp;limit=50" class="mw-numlink">50</a> | <a href="/w/index.php?title=File:Apple_logo_black.svg&amp;offset=&amp;limit=100" class="mw-numlink">100</a> | <a href="/w/index.php?title=File:Apple_logo_black.svg&amp;offset=&amp;limit=250" class="mw-numlink">250</a> | <a href="/w/index.php?title=File:Apple_logo_black.svg&amp;offset=&amp;limit=500" class="mw-numlink">500</a>).</div>
+</div>
+<h2 id="filelinks">Pagine che usano questo file</h2>
+<div id='mw-imagepage-section-linkstoimage'>
+<p>Le seguenti 39 pagine usano questo file:
+</p><ul class="mw-imagepage-linkstoimage">
+<li class="mw-imagepage-linkstoimage-ns0"><a href="/wiki/Acquisizioni_di_Apple" title="Acquisizioni di Apple">Acquisizioni di Apple</a></li>
+<li class="mw-imagepage-linkstoimage-ns0"><a href="/wiki/Apple" title="Apple">Apple</a></li>
+<li class="mw-imagepage-linkstoimage-ns0"><a href="/wiki/Apple_TV" title="Apple TV">Apple TV</a></li>
+<li class="mw-imagepage-linkstoimage-ns0"><a href="/wiki/Apple_Watch" title="Apple Watch">Apple Watch</a></li>
+<li class="mw-imagepage-linkstoimage-ns0"><a href="/wiki/Apple_Watch_Series_2" title="Apple Watch Series 2">Apple Watch Series 2</a></li>
+<li class="mw-imagepage-linkstoimage-ns0"><a href="/wiki/Apple_Watch_Series_4" title="Apple Watch Series 4">Apple Watch Series 4</a></li>
+<li class="mw-imagepage-linkstoimage-ns0"><a href="/wiki/Apple_Watch_Series_5" title="Apple Watch Series 5">Apple Watch Series 5</a></li>
+<li class="mw-imagepage-linkstoimage-ns0"><a href="/wiki/Apple_Watch_Series_6" title="Apple Watch Series 6">Apple Watch Series 6</a></li>
+<li class="mw-imagepage-linkstoimage-ns0"><a href="/wiki/Apple_Watch_Series_7" title="Apple Watch Series 7">Apple Watch Series 7</a></li>
+<li class="mw-imagepage-linkstoimage-ns0"><a href="/wiki/Apple_Watch_Series_8" title="Apple Watch Series 8">Apple Watch Series 8</a></li>
+<li class="mw-imagepage-linkstoimage-ns0"><a href="/wiki/Apple_Watch_Series_9" title="Apple Watch Series 9">Apple Watch Series 9</a></li>
+<li class="mw-imagepage-linkstoimage-ns0"><a href="/wiki/Apple_Watch_Ultra" title="Apple Watch Ultra">Apple Watch Ultra</a></li>
+<li class="mw-imagepage-linkstoimage-ns0"><a href="/wiki/Controcultura_degli_anni_1960" title="Controcultura degli anni 1960">Controcultura degli anni 1960</a></li>
+<li class="mw-imagepage-linkstoimage-ns0"><a href="/wiki/John_Sculley" title="John Sculley">John Sculley</a></li>
+<li class="mw-imagepage-linkstoimage-ns0"><a href="/wiki/Logo" title="Logo">Logo</a></li>
+<li class="mw-imagepage-linkstoimage-ns0"><a href="/wiki/Michael_Scott_(informatico)" title="Michael Scott (informatico)">Michael Scott (informatico)</a></li>
+<li class="mw-imagepage-linkstoimage-ns0"><a href="/wiki/Michael_Spindler" title="Michael Spindler">Michael Spindler</a></li>
+<li class="mw-imagepage-linkstoimage-ns0"><a href="/wiki/Mike_Markkula" title="Mike Markkula">Mike Markkula</a></li>
+<li class="mw-imagepage-linkstoimage-ns0"><a href="/wiki/Steve_Jobs" title="Steve Jobs">Steve Jobs</a></li>
+<li class="mw-imagepage-linkstoimage-ns0"><a href="/wiki/Tim_Cook" title="Tim Cook">Tim Cook</a></li>
+<li class="mw-imagepage-linkstoimage-ns2"><a href="/wiki/Utente:Carlo_Dani/GAFAM" title="Utente:Carlo Dani/GAFAM">Utente:Carlo Dani/GAFAM</a></li>
+<li class="mw-imagepage-linkstoimage-ns2"><a href="/wiki/Utente:Enryonthecloud" title="Utente:Enryonthecloud">Utente:Enryonthecloud</a></li>
+<li class="mw-imagepage-linkstoimage-ns2"><a href="/wiki/Utente:Gabrielemac/Sandbox2" title="Utente:Gabrielemac/Sandbox2">Utente:Gabrielemac/Sandbox2</a></li>
+<li class="mw-imagepage-linkstoimage-ns2"><a href="/wiki/Utente:Incomplete_list/Sandbox" title="Utente:Incomplete list/Sandbox">Utente:Incomplete list/Sandbox</a></li>
+<li class="mw-imagepage-linkstoimage-ns2"><a href="/wiki/Utente:Kairine" title="Utente:Kairine">Utente:Kairine</a></li>
+<li class="mw-imagepage-linkstoimage-ns2"><a href="/wiki/Utente:Kikkotm" title="Utente:Kikkotm">Utente:Kikkotm</a></li>
+<li class="mw-imagepage-linkstoimage-ns2"><a href="/wiki/Utente:Kikkotm/babelfish" title="Utente:Kikkotm/babelfish">Utente:Kikkotm/babelfish</a></li>
+<li class="mw-imagepage-linkstoimage-ns2"><a href="/wiki/Utente:Loomjo" title="Utente:Loomjo">Utente:Loomjo</a></li>
+<li class="mw-imagepage-linkstoimage-ns2"><a href="/wiki/Utente:Manuelarosi" title="Utente:Manuelarosi">Utente:Manuelarosi</a></li>
+<li class="mw-imagepage-linkstoimage-ns2"><a href="/wiki/Utente:Manuelarosi/chi_sono" title="Utente:Manuelarosi/chi sono">Utente:Manuelarosi/chi sono</a></li>
+<li class="mw-imagepage-linkstoimage-ns2"><a href="/wiki/Utente:Morry39" title="Utente:Morry39">Utente:Morry39</a></li>
+<li class="mw-imagepage-linkstoimage-ns2"><a href="/wiki/Utente:Nickropes" title="Utente:Nickropes">Utente:Nickropes</a></li>
+<li class="mw-imagepage-linkstoimage-ns2"><a href="/wiki/Utente:Nickropes/Babel" title="Utente:Nickropes/Babel">Utente:Nickropes/Babel</a></li>
+<li class="mw-imagepage-linkstoimage-ns2"><a href="/wiki/Utente:PazEr" title="Utente:PazEr">Utente:PazEr</a></li>
+<li class="mw-imagepage-linkstoimage-ns2"><a href="/wiki/Utente:Rick_Briga" title="Utente:Rick Briga">Utente:Rick Briga</a></li>
+<li class="mw-imagepage-linkstoimage-ns2"><a href="/wiki/Utente:Simscar" title="Utente:Simscar">Utente:Simscar</a></li>
+<li class="mw-imagepage-linkstoimage-ns2"><a href="/wiki/Utente:Tinette/bozzaBabel" title="Utente:Tinette/bozzaBabel">Utente:Tinette/bozzaBabel</a></li>
+<li class="mw-imagepage-linkstoimage-ns14"><a href="/wiki/Categoria:Apple" title="Categoria:Apple">Categoria:Apple</a></li>
+<li class="mw-imagepage-linkstoimage-ns100"><a href="/wiki/Portale:Apple/In_evidenza" title="Portale:Apple/In evidenza">Portale:Apple/In evidenza</a></li>
+</ul>
+</div>
+<h2 id="globalusage">Utilizzo globale del file</h2>
+<div id="mw-imagepage-section-globalusage"><p>Anche i seguenti wiki usano questo file:
+</p><ul class="plainlinks"><li class='mw-gu-onwiki-af_wikipedia_org'>Usato nelle seguenti pagine di af.wikipedia.org:
+<ul>	<li><a class="external" data-mw-original-href="//af.wikipedia.org/wiki/Gebruiker:Puvircho" href="https://af.wikipedia.org/wiki/Gebruiker:Puvircho">Gebruiker:Puvircho</a></li>
+	<li><a class="external" data-mw-original-href="//af.wikipedia.org/wiki/Apple_Inc." href="https://af.wikipedia.org/wiki/Apple_Inc.">Apple Inc.</a></li>
+	<li><a class="external" data-mw-original-href="//af.wikipedia.org/wiki/Sjabloon:Gebruiker_Apple" href="https://af.wikipedia.org/wiki/Sjabloon:Gebruiker_Apple">Sjabloon:Gebruiker Apple</a></li>
+	<li><a class="external" data-mw-original-href="//af.wikipedia.org/wiki/Wikipedia:Voorbladartikels_2020" href="https://af.wikipedia.org/wiki/Wikipedia:Voorbladartikels_2020">Wikipedia:Voorbladartikels 2020</a></li>
+	<li><a class="external" data-mw-original-href="//af.wikipedia.org/wiki/Wikipedia:Voorbladartikel_week_20_2020" href="https://af.wikipedia.org/wiki/Wikipedia:Voorbladartikel_week_20_2020">Wikipedia:Voorbladartikel week 20 2020</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-als_wikipedia_org'>Usato nelle seguenti pagine di als.wikipedia.org:
+<ul>	<li><a class="external" data-mw-original-href="//als.wikipedia.org/wiki/Apple" href="https://als.wikipedia.org/wiki/Apple">Apple</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-am_wikipedia_org'>Usato nelle seguenti pagine di am.wikipedia.org:
+<ul>	<li><a class="external" data-mw-original-href="//am.wikipedia.org/wiki/%E1%8A%A0%E1%8D%95%E1%88%8D_%E1%8A%AE%E1%88%AD%E1%8D%96%E1%88%AC%E1%88%BD%E1%8A%95" href="https://am.wikipedia.org/wiki/%E1%8A%A0%E1%8D%95%E1%88%8D_%E1%8A%AE%E1%88%AD%E1%8D%96%E1%88%AC%E1%88%BD%E1%8A%95">አፕል ኮርፖሬሽን</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-ang_wikipedia_org'>Usato nelle seguenti pagine di ang.wikipedia.org:
+<ul>	<li><a class="external" data-mw-original-href="//ang.wikipedia.org/wiki/Apple_Inc." href="https://ang.wikipedia.org/wiki/Apple_Inc.">Apple Inc.</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-anp_wikipedia_org'>Usato nelle seguenti pagine di anp.wikipedia.org:
+<ul>	<li><a class="external" data-mw-original-href="//anp.wikipedia.org/wiki/%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A5%80%E0%A4%B5_%E0%A4%9C%E0%A5%89%E0%A4%AC%E0%A5%8D%E0%A4%B8" href="https://anp.wikipedia.org/wiki/%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A5%80%E0%A4%B5_%E0%A4%9C%E0%A5%89%E0%A4%AC%E0%A5%8D%E0%A4%B8">स्टीव जॉब्स</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-an_wikipedia_org'>Usato nelle seguenti pagine di an.wikipedia.org:
+<ul>	<li><a class="external" data-mw-original-href="//an.wikipedia.org/wiki/Apple" href="https://an.wikipedia.org/wiki/Apple">Apple</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-ar_wikipedia_org'>Usato nelle seguenti pagine di ar.wikipedia.org:
+<ul>	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%B3%D8%AA%D9%8A%D9%81_%D8%AC%D9%88%D8%A8%D8%B2" href="https://ar.wikipedia.org/wiki/%D8%B3%D8%AA%D9%8A%D9%81_%D8%AC%D9%88%D8%A8%D8%B2">ستيف جوبز</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D9%82%D8%B1%D8%B5_%D9%85%D8%B1%D9%86" href="https://ar.wikipedia.org/wiki/%D9%82%D8%B1%D8%B5_%D9%85%D8%B1%D9%86">قرص مرن</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%A3%D9%88%D8%A8%D9%86_%D8%A3%D9%88%D9%81%D9%8A%D8%B3.%D8%A3%D9%88%D8%B1%D8%AC" href="https://ar.wikipedia.org/wiki/%D8%A3%D9%88%D8%A8%D9%86_%D8%A3%D9%88%D9%81%D9%8A%D8%B3.%D8%A3%D9%88%D8%B1%D8%AC">أوبن أوفيس.أورج</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D9%85%D8%A7%D9%83_%D8%A3%D9%88_%D8%A5%D8%B3" href="https://ar.wikipedia.org/wiki/%D9%85%D8%A7%D9%83_%D8%A3%D9%88_%D8%A5%D8%B3">ماك أو إس</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D9%85%D8%A7%D9%83%D9%86%D8%AA%D9%88%D8%B4" href="https://ar.wikipedia.org/wiki/%D9%85%D8%A7%D9%83%D9%86%D8%AA%D9%88%D8%B4">ماكنتوش</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%B3%D9%81%D8%A7%D8%B1%D9%8A_(%D9%85%D8%AA%D8%B5%D9%81%D8%AD_%D9%88%D9%8A%D8%A8)" href="https://ar.wikipedia.org/wiki/%D8%B3%D9%81%D8%A7%D8%B1%D9%8A_(%D9%85%D8%AA%D8%B5%D9%81%D8%AD_%D9%88%D9%8A%D8%A8)">سفاري (متصفح ويب)</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%A3%D9%85%D8%A7%D9%8A%D8%A7_(%D9%85%D8%AA%D8%B5%D9%81%D8%AD)" href="https://ar.wikipedia.org/wiki/%D8%A3%D9%85%D8%A7%D9%8A%D8%A7_(%D9%85%D8%AA%D8%B5%D9%81%D8%AD)">أمايا (متصفح)</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%A3%D8%A8%D9%8A_%D9%88%D8%B1%D8%AF" href="https://ar.wikipedia.org/wiki/%D8%A3%D8%A8%D9%8A_%D9%88%D8%B1%D8%AF">أبي ورد</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%A3%D8%AF%D9%88%D8%A8%D9%8A" href="https://ar.wikipedia.org/wiki/%D8%A3%D8%AF%D9%88%D8%A8%D9%8A">أدوبي</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%A8%D9%88%D8%A7%D8%A8%D8%A9:%D8%A7%D9%84%D9%88%D9%84%D8%A7%D9%8A%D8%A7%D8%AA_%D8%A7%D9%84%D9%85%D8%AA%D8%AD%D8%AF%D8%A9" href="https://ar.wikipedia.org/wiki/%D8%A8%D9%88%D8%A7%D8%A8%D8%A9:%D8%A7%D9%84%D9%88%D9%84%D8%A7%D9%8A%D8%A7%D8%AA_%D8%A7%D9%84%D9%85%D8%AA%D8%AD%D8%AF%D8%A9">بوابة:الولايات المتحدة</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%A3%D8%A8%D9%84" href="https://ar.wikipedia.org/wiki/%D8%A3%D8%A8%D9%84">أبل</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%A3%D8%AF%D9%88%D8%A8%D9%8A_%D9%81%D9%88%D8%AA%D9%88%D8%B4%D9%88%D8%A8" href="https://ar.wikipedia.org/wiki/%D8%A3%D8%AF%D9%88%D8%A8%D9%8A_%D9%81%D9%88%D8%AA%D9%88%D8%B4%D9%88%D8%A8">أدوبي فوتوشوب</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%A5%D9%85_%D8%A8%D9%84%D8%A7%D9%8A%D8%B1" href="https://ar.wikipedia.org/wiki/%D8%A5%D9%85_%D8%A8%D9%84%D8%A7%D9%8A%D8%B1">إم بلاير</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%A2%D9%8A_%D8%A8%D9%88%D8%AF" href="https://ar.wikipedia.org/wiki/%D8%A2%D9%8A_%D8%A8%D9%88%D8%AF">آي بود</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%A2%D9%8A%D9%81%D9%88%D9%86" href="https://ar.wikipedia.org/wiki/%D8%A2%D9%8A%D9%81%D9%88%D9%86">آيفون</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%A2%D9%84_%D8%AC%D9%88%D8%B1" href="https://ar.wikipedia.org/wiki/%D8%A2%D9%84_%D8%AC%D9%88%D8%B1">آل جور</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%A3%D8%AF%D9%88%D8%A8%D9%8A_%D8%A3%D9%83%D8%B1%D9%88%D8%A8%D8%A7%D8%AA" href="https://ar.wikipedia.org/wiki/%D8%A3%D8%AF%D9%88%D8%A8%D9%8A_%D8%A3%D9%83%D8%B1%D9%88%D8%A8%D8%A7%D8%AA">أدوبي أكروبات</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%A2%D9%8A_%D8%AA%D9%8A%D9%88%D9%86%D8%B2" href="https://ar.wikipedia.org/wiki/%D8%A2%D9%8A_%D8%AA%D9%8A%D9%88%D9%86%D8%B2">آي تيونز</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%AF%D8%A7%D8%B1%D9%88%D9%8A%D9%86_(%D9%86%D8%B8%D8%A7%D9%85_%D8%AA%D8%B4%D8%BA%D9%8A%D9%84)" href="https://ar.wikipedia.org/wiki/%D8%AF%D8%A7%D8%B1%D9%88%D9%8A%D9%86_(%D9%86%D8%B8%D8%A7%D9%85_%D8%AA%D8%B4%D8%BA%D9%8A%D9%84)">داروين (نظام تشغيل)</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%A3%D8%A8%D9%84_%D8%AA%D9%8A_%D9%81%D9%8A" href="https://ar.wikipedia.org/wiki/%D8%A3%D8%A8%D9%84_%D8%AA%D9%8A_%D9%81%D9%8A">أبل تي في</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%A5%D9%83%D8%B3_%D8%B4%D8%A7%D8%AA" href="https://ar.wikipedia.org/wiki/%D8%A5%D9%83%D8%B3_%D8%B4%D8%A7%D8%AA">إكس شات</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%A3%D8%AF%D9%88%D8%A8%D9%8A_%D8%A3%D9%81%D8%AA%D8%B1_%D8%A5%D9%81%D9%83%D8%AA%D8%B3" href="https://ar.wikipedia.org/wiki/%D8%A3%D8%AF%D9%88%D8%A8%D9%8A_%D8%A3%D9%81%D8%AA%D8%B1_%D8%A5%D9%81%D9%83%D8%AA%D8%B3">أدوبي أفتر إفكتس</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D9%85%D8%B9%D9%8A%D8%A7%D8%B1_%D8%AA%D9%82%D9%86%D9%8A" href="https://ar.wikipedia.org/wiki/%D9%85%D8%B9%D9%8A%D8%A7%D8%B1_%D8%AA%D9%82%D9%86%D9%8A">معيار تقني</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%A3%D8%AF%D9%88%D8%A8%D9%8A_%D8%A5%D9%84%D9%8A%D8%B3%D8%AA%D8%B1%D9%8A%D8%AA%D9%88%D8%B1" href="https://ar.wikipedia.org/wiki/%D8%A3%D8%AF%D9%88%D8%A8%D9%8A_%D8%A5%D9%84%D9%8A%D8%B3%D8%AA%D8%B1%D9%8A%D8%AA%D9%88%D8%B1">أدوبي إليستريتور</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%A3%D8%AF%D9%88%D8%A8%D9%8A_%D9%83%D8%B1%D9%8A%D9%8A%D8%AA%D9%81_%D8%B3%D9%88%D9%8A%D8%AA" href="https://ar.wikipedia.org/wiki/%D8%A3%D8%AF%D9%88%D8%A8%D9%8A_%D9%83%D8%B1%D9%8A%D9%8A%D8%AA%D9%81_%D8%B3%D9%88%D9%8A%D8%AA">أدوبي كرييتف سويت</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%A7%D9%84%D9%85%D8%BA%D8%A7%D9%88%D9%8A%D8%B1_2:_%D8%B1%D8%AC%D8%A7%D9%84_%D8%A7%D9%84%D8%B4%D8%AC%D8%A7%D8%B9%D8%A9" href="https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D9%85%D8%BA%D8%A7%D9%88%D9%8A%D8%B1_2:_%D8%B1%D8%AC%D8%A7%D9%84_%D8%A7%D9%84%D8%B4%D8%AC%D8%A7%D8%B9%D8%A9">المغاوير 2: رجال الشجاعة</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%A3%D9%86%D8%B8%D9%85%D8%A9_%D8%AA%D8%B4%D8%BA%D9%8A%D9%84_%D9%85%D8%A7%D9%83%D9%8A%D9%86%D8%AA%D9%88%D8%B4" href="https://ar.wikipedia.org/wiki/%D8%A3%D9%86%D8%B8%D9%85%D8%A9_%D8%AA%D8%B4%D8%BA%D9%8A%D9%84_%D9%85%D8%A7%D9%83%D9%8A%D9%86%D8%AA%D9%88%D8%B4">أنظمة تشغيل ماكينتوش</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%A2%D9%8A_%D8%A2%D8%B1_%D8%A5%D8%B3_%D8%A5%D8%B3_%D8%A2%D9%8A" href="https://ar.wikipedia.org/wiki/%D8%A2%D9%8A_%D8%A2%D8%B1_%D8%A5%D8%B3_%D8%A5%D8%B3_%D8%A2%D9%8A">آي آر إس إس آي</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D9%85%D8%A7%D9%83_%D8%A8%D9%88%D9%83_%D8%A2%D9%8A%D8%B1" href="https://ar.wikipedia.org/wiki/%D9%85%D8%A7%D9%83_%D8%A8%D9%88%D9%83_%D8%A2%D9%8A%D8%B1">ماك بوك آير</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D9%88%D9%8A%D8%A8_%D9%83%D9%8A%D8%AA" href="https://ar.wikipedia.org/wiki/%D9%88%D9%8A%D8%A8_%D9%83%D9%8A%D8%AA">ويب كيت</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%AA%D8%B5%D9%86%D9%8A%D9%81:%D9%85%D8%A7%D9%83%D9%86%D8%AA%D9%88%D8%B4" href="https://ar.wikipedia.org/wiki/%D8%AA%D8%B5%D9%86%D9%8A%D9%81:%D9%85%D8%A7%D9%83%D9%86%D8%AA%D9%88%D8%B4">تصنيف:ماكنتوش</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%A3%D9%83%D9%88%D8%A7_(%D9%88%D8%A7%D8%AC%D9%87%D8%A9_%D9%85%D8%B3%D8%AA%D8%AE%D8%AF%D9%85)" href="https://ar.wikipedia.org/wiki/%D8%A3%D9%83%D9%88%D8%A7_(%D9%88%D8%A7%D8%AC%D9%87%D8%A9_%D9%85%D8%B3%D8%AA%D8%AE%D8%AF%D9%85)">أكوا (واجهة مستخدم)</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D9%86%D9%8A%D9%88_%D8%A3%D9%88%D9%81%D9%8A%D8%B3" href="https://ar.wikipedia.org/wiki/%D9%86%D9%8A%D9%88_%D8%A3%D9%88%D9%81%D9%8A%D8%B3">نيو أوفيس</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%A3%D8%AF%D9%88%D8%A8%D9%8A_%D8%A8%D8%B1%D9%8A%D8%AF%D8%AC" href="https://ar.wikipedia.org/wiki/%D8%A3%D8%AF%D9%88%D8%A8%D9%8A_%D8%A8%D8%B1%D9%8A%D8%AF%D8%AC">أدوبي بريدج</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%A3%D8%AF%D9%88%D8%A8%D9%8A_%D8%AF%D9%8A%D9%81%D8%A7%D9%8A%D8%B3_%D8%B3%D9%86%D8%AA%D8%B1%D8%A7%D9%84" href="https://ar.wikipedia.org/wiki/%D8%A3%D8%AF%D9%88%D8%A8%D9%8A_%D8%AF%D9%8A%D9%81%D8%A7%D9%8A%D8%B3_%D8%B3%D9%86%D8%AA%D8%B1%D8%A7%D9%84">أدوبي ديفايس سنترال</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D9%81%D8%A7%D9%8A%D9%86%D8%AF%D8%B1" href="https://ar.wikipedia.org/wiki/%D9%81%D8%A7%D9%8A%D9%86%D8%AF%D8%B1">فايندر</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%AA%D8%B5%D9%86%D9%8A%D9%81:%D8%A3%D9%88%D8%A8%D9%86_%D8%A3%D9%88%D9%81%D9%8A%D8%B3.%D8%A3%D9%88%D8%B1%D8%AC" href="https://ar.wikipedia.org/wiki/%D8%AA%D8%B5%D9%86%D9%8A%D9%81:%D8%A3%D9%88%D8%A8%D9%86_%D8%A3%D9%88%D9%81%D9%8A%D8%B3.%D8%A3%D9%88%D8%B1%D8%AC">تصنيف:أوبن أوفيس.أورج</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%AA%D8%B5%D9%86%D9%8A%D9%81:%D8%A8%D8%B1%D9%85%D8%AC%D9%8A%D8%A7%D8%AA_%D8%A3%D8%A8%D9%84" href="https://ar.wikipedia.org/wiki/%D8%AA%D8%B5%D9%86%D9%8A%D9%81:%D8%A8%D8%B1%D9%85%D8%AC%D9%8A%D8%A7%D8%AA_%D8%A3%D8%A8%D9%84">تصنيف:برمجيات أبل</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D8%AF%D9%8A%D9%81_%D9%87%D8%A7%D9%8A%D8%AA" href="https://ar.wikipedia.org/wiki/%D8%AF%D9%8A%D9%81_%D9%87%D8%A7%D9%8A%D8%AA">ديف هايت</a></li>
+	<li><a class="external" data-mw-original-href="//ar.wikipedia.org/wiki/%D9%85%D8%A7%D9%83%D9%86%D8%AA%D9%88%D8%B4_%D9%83%D9%84%D8%A7%D8%B3%D9%8A%D9%83" href="https://ar.wikipedia.org/wiki/%D9%85%D8%A7%D9%83%D9%86%D8%AA%D9%88%D8%B4_%D9%83%D9%84%D8%A7%D8%B3%D9%8A%D9%83">ماكنتوش كلاسيك</a></li>
+</ul></li>
+</ul>
+<p>Visualizza l'<a href="/wiki/Speciale:UsoGlobale/Apple_logo_black.svg" title="Speciale:UsoGlobale/Apple logo black.svg">utilizzo globale</a> di questo file.
+</p></div><h2 id="metadata">Metadati</h2>
+<div class="mw-imagepage-section-metadata"><p>Questo file contiene informazioni aggiuntive, probabilmente aggiunte dalla fotocamera o dallo scanner usati per crearlo o digitalizzarlo. Se il file è stato modificato, alcuni dettagli potrebbero non corrispondere alla realtà.</p><table id="mw&#95;metadata" class="mw&#95;metadata collapsed">
+<tbody><tr class="exif-imagewidth mw-metadata-collapsible"><th>Larghezza</th><td>814</td></tr><tr class="exif-imagelength mw-metadata-collapsible"><th>Altezza</th><td>1000</td></tr></tbody></table>
+</div><noscript><img src="https://it.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat=desktop&amp;type=1x1&amp;usesul3=1" alt="" width="1" height="1" style="border: none; position: absolute;"></noscript>
+<div class="printfooter" data-nosnippet="">Estratto da "<a dir="ltr" href="https://it.wikipedia.org/wiki/File:Apple_logo_black.svg">https://it.wikipedia.org/wiki/File:Apple_logo_black.svg</a>"</div></div>
+					<div id="catlinks" class="catlinks catlinks-allhidden" data-mw-interface=""></div>
+				</div>
+			</main>
+			
+		</div>
+		<div class="mw-footer-container">
+			<footer id="footer" class="mw-footer" >
+				<ul id="footer-info" class="mw-portlet mw-portlet-footer-info">
+	<li id="footer-info-copyright">Il testo è disponibile secondo la <a rel="nofollow" class="external text" href="https://creativecommons.org/licenses/by-sa/4.0/deed.it">licenza Creative Commons Attribuzione-Condividi allo stesso modo</a>; possono applicarsi condizioni ulteriori. Vedi le <a class="external text" href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use/it">condizioni d'uso</a> per i dettagli.</li>
+</ul>
+
+				<ul id="footer-places" class="mw-portlet mw-portlet-footer-places">
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy/it">Informativa sulla privacy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:Sala_stampa/Wikipedia">Informazioni su Wikipedia</a></li>
+	<li id="footer-places-disclaimers"><a href="/wiki/Wikipedia:Avvertenze_generali">Avvertenze</a></li>
+	<li id="footer-places-legal-safety-contacts"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Legal:Wikimedia_Foundation_Legal_and_Safety_Contact_Information">Contatti legali e di sicurezza</a></li>
+	<li id="footer-places-wm-codeofconduct"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Universal_Code_of_Conduct">Codice di condotta</a></li>
+	<li id="footer-places-developers"><a href="https://developer.wikimedia.org">Sviluppatori</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/it.wikipedia.org">Statistiche</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement">Dichiarazione sui cookie</a></li>
+	<li id="footer-places-mobileview"><a href="//it.wikipedia.org/w/index.php?title=File:Apple_logo_black.svg&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Versione mobile</a></li>
+</ul>
+
+				<ul id="footer-icons" class="mw-portlet mw-portlet-footer-icons noprint">
+	<li id="footer-copyrightico"><a href="https://www.wikimedia.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><picture><source media="(min-width: 500px)" srcset="/static/images/footer/wikimedia-button.svg" width="84" height="29"><img src="/static/images/footer/wikimedia.svg" width="25" height="25" alt="Wikimedia Foundation" lang="en" loading="lazy"></picture></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><picture><source media="(min-width: 500px)" srcset="/w/resources/assets/poweredby_mediawiki.svg" width="88" height="31"><img src="/w/resources/assets/mediawiki_compact.svg" alt="Powered by MediaWiki" lang="en" width="25" height="25" loading="lazy"></picture></a></li>
+</ul>
+
+			</footer>
+		</div>
+	</div> 
+</div> 
+<div class="vector-header-container vector-sticky-header-container no-font-mode-scale">
+	<div id="vector-sticky-header" class="vector-sticky-header">
+		<div class="vector-sticky-header-start">
+			<div class="vector-sticky-header-icon-start vector-button-flush-left" aria-hidden="true">
+				<button class="cdx-button cdx-button--weight-quiet cdx-button--icon-only vector-sticky-header-search-toggle" tabindex="-1" data-event-name="ui.vector-sticky-search-form.icon"><span class="vector-icon mw-ui-icon-search mw-ui-icon-wikimedia-search cdx-button__icon"></span>
+
+<span>Ricerca</span>
+			</button>
+		</div>
+			
+		<div role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box">
+			<div class="vector-typeahead-search-container">
+				<div class="cdx-typeahead-search cdx-typeahead-search--show-thumbnail">
+					<form action="/w/index.php" id="vector-sticky-search-form" class="cdx-search-input cdx-search-input--has-end-button">
+						<div  class="cdx-search-input__input-wrapper"  data-search-loc="header-moved">
+							<div class="cdx-text-input cdx-text-input--has-start-icon">
+								<input
+									class="cdx-text-input__input mw-searchInput" autocomplete="off"
+									
+									type="search" name="search" placeholder="Cerca in Wikipedia">
+								<span class="cdx-text-input__icon cdx-text-input__start-icon"></span>
+							</div>
+							<input type="hidden" name="title" value="Speciale:Ricerca">
+						</div>
+						<button class="cdx-button cdx-search-input__end-button">Ricerca</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="vector-sticky-header-context-bar">
+				<nav aria-label="Indice" class="vector-toc-landmark">
+						
+					<div id="vector-sticky-header-toc" class="vector-dropdown mw-portlet mw-portlet-sticky-header-toc vector-sticky-header-toc vector-button-flush-left"  >
+						<input type="checkbox" id="vector-sticky-header-toc-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-sticky-header-toc" class="vector-dropdown-checkbox "  aria-label="Mostra/Nascondi l&#039;indice"   >
+						<label id="vector-sticky-header-toc-label" for="vector-sticky-header-toc-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-listBullet mw-ui-icon-wikimedia-listBullet cdx-button__icon"></span>
+
+<span class="vector-dropdown-label-text">Mostra/Nascondi l&#039;indice</span>
+						</label>
+						<div class="vector-dropdown-content">
+					
+						<div id="vector-sticky-header-toc-unpinned-container" class="vector-unpinned-container">
+						</div>
+					
+						</div>
+					</div>
+			</nav>
+				<div class="vector-sticky-header-context-bar-primary" aria-hidden="true" >File:Apple logo black.svg</div>
+			</div>
+		</div>
+		<div class="vector-sticky-header-end" aria-hidden="true">
+			<div class="vector-sticky-header-icons">
+				<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-talk-sticky-header" tabindex="-1" data-event-name="talk-sticky-header"><span class="vector-icon mw-ui-icon-speechBubbles mw-ui-icon-wikimedia-speechBubbles cdx-button__icon"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-subject-sticky-header" tabindex="-1" data-event-name="subject-sticky-header"><span class="vector-icon mw-ui-icon-article mw-ui-icon-wikimedia-article cdx-button__icon"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-history-sticky-header" tabindex="-1" data-event-name="history-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-history mw-ui-icon-wikimedia-wikimedia-history cdx-button__icon"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only mw-watchlink" id="ca-watchstar-sticky-header" tabindex="-1" data-event-name="watch-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-star mw-ui-icon-wikimedia-wikimedia-star cdx-button__icon"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-ve-edit-sticky-header" tabindex="-1" data-event-name="ve-edit-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-edit mw-ui-icon-wikimedia-wikimedia-edit cdx-button__icon"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-edit-sticky-header" tabindex="-1" data-event-name="wikitext-edit-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-wikiText mw-ui-icon-wikimedia-wikimedia-wikiText cdx-button__icon"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-viewsource-sticky-header" tabindex="-1" data-event-name="ve-edit-protected-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-editLock mw-ui-icon-wikimedia-wikimedia-editLock cdx-button__icon"></span>
+
+<span></span>
+			</a>
+		</div>
+			<div class="vector-sticky-header-buttons">
+				<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--action-progressive" id="ca-addsection-sticky-header" tabindex="-1" data-event-name="addsection-sticky-header"><span class="vector-icon mw-ui-icon-speechBubbleAdd-progressive mw-ui-icon-wikimedia-speechBubbleAdd-progressive cdx-button__icon"></span>
+
+<span>Aggiungi argomento</span>
+			</a>
+		</div>
+			<div class="vector-sticky-header-icon-end">
+				<div class="vector-user-links">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="mw-portlet mw-portlet-dock-bottom emptyPortlet" id="p-dock-bottom">
+	<ul>
+		
+	</ul>
+</div>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgHostname":"mw-web.eqiad.main-64476665b5-mgxfc","wgBackendResponseTime":288,"wgPageParseReport":{"limitreport":{"cputime":"0.001","walltime":"0.001","ppvisitednodes":{"value":1,"limit":1000000},"revisionsize":{"value":466,"limit":2097152},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":1,"limit":100},"expensivefunctioncount":{"value":0,"limit":500},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"entityaccesscount":{"value":0,"limit":500},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"origin":"mw-web.eqiad.main-64476665b5-mgxfc","timestamp":"20261001194953","ttl":2592000,"transientcontent":false}}});});</script>
+</body>
+</html>

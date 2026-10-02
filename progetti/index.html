@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Progetti — Vincenzo Capasso</title>
+<meta name="description" content="Casi di studio su paid media, tracking e marketing automation: 3 progetti con numeri e metodo.">
+<link rel="canonical" href="https://vincenzocapasso.com/progetti/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Progetti — Vincenzo Capasso">
+<meta property="og:description" content="Casi di studio su paid media, tracking e marketing automation: 3 progetti con numeri e metodo.">
+<meta property="og:url" content="https://vincenzocapasso.com/progetti/">
+<meta property="og:site_name" content="Vincenzo Capasso">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Progetti — Vincenzo Capasso">
+<meta name="twitter:description" content="Casi di studio su paid media, tracking e marketing automation: 3 progetti con numeri e metodo.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+<script>(function(){try{var t=localStorage.getItem("theme");if(!t){t="dark";}document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme="dark";}})();</script>
+<link rel="stylesheet" href="/css/style.css?v=50">
+<link rel="stylesheet" href="/css/content.css?v=50">
+</head>
+<body>
+
+<main class="page" id="app">
+  <header class="pagehead">
+    <h1 class="pagehead__title" data-len="1">Progetti</h1>
+    <p class="pagehead__lede">3 casi di studio, con il metodo e i numeri.</p>
+  </header>
+  <section class="sec sec--tight">
+    <div class="chips" id="chips" role="group" aria-label="Filtra i progetti per disciplina">
+      <button class="chip" data-cat="All" aria-pressed="true">All</button>
+    <button class="chip" data-cat="Advertising &amp; Paid Media" aria-pressed="false">Advertising &amp; Paid Media</button>
+    <button class="chip" data-cat="Marketing Automation &amp; AI" aria-pressed="false">Marketing Automation &amp; AI</button>
+    <button class="chip" data-cat="Analytics &amp; Tracking" aria-pressed="false">Analytics &amp; Tracking</button>
+    <button class="chip" data-cat="Web &amp; Design" aria-pressed="false">Web &amp; Design</button>
+    </div>
+    <p class="sec__note" id="count" style="margin-bottom:1.5rem">3 progetti</p>
+    <div class="pgrid" id="grid"><a class="pcard reveal" href="/progetti/caso-studio-meta-ads-centri-estetici/" data-cats="Advertising &amp; Paid Media|Analytics &amp; Tracking">
+  <div class="pcard__media" data-year="2026" style="background-image:url('/assets/project/centri-estetici.svg'),linear-gradient(145deg,#0d9488,#5eead4)"></div>
+  <div class="pcard__body">
+    <h3 class="pcard__title" data-len="2">Meta Ads per centri estetici: caso studio, CPL -57%</h3>
+    <p class="pcard__excerpt">Un'azienda beauty che vende un macchinario ai centri estetici ha ridotto il CPL del 57% in meno di 30 giorni su Meta Ads, con un metodo di test modulare.</p>
+    <div class="pcard__cats"><span class="tag">Advertising &amp; Paid Media</span><span class="tag">Analytics &amp; Tracking</span></div>
+    <span class="pcard__cta">Apri progetto</span>
+  </div>
+</a>
+
+<a class="pcard reveal" href="/progetti/concessionaria-performance-branding/" data-cats="Advertising &amp; Paid Media|Analytics &amp; Tracking">
+  <div class="pcard__media" data-year="2026" style="background-image:url('/assets/project/concessionaria.svg'),linear-gradient(145deg,#0e7490,#67e8f9)"></div>
+  <div class="pcard__body">
+    <h3 class="pcard__title" data-len="2">Performance branding per una concessionaria locale</h3>
+    <p class="pcard__excerpt">Le ricerche mensili di brand passano da 700 a 1.600 tra il 2023 e il 2026. A budget invariato, +69% di impression e +145% di click sulle query di brand organiche.</p>
+    <div class="pcard__cats"><span class="tag">Advertising &amp; Paid Media</span><span class="tag">Analytics &amp; Tracking</span></div>
+    <span class="pcard__cta">Apri progetto</span>
+  </div>
+</a>
+
+<a class="pcard reveal" href="/progetti/mockup-ads-mockads/" data-cats="Web &amp; Design|Marketing Automation &amp; AI">
+  <div class="pcard__media" data-year="2025" style="background-image:url('/assets/project/mockads.svg'),linear-gradient(145deg,#047857,#6ee7b7)"></div>
+  <div class="pcard__body">
+    <h3 class="pcard__title" data-len="2">Mockup ads: perché ho costruito un tool per farli</h3>
+    <p class="pcard__excerpt">Come ho ridotto il tempo dei mockup ads nelle proposte ai clienti: perché ho costruito MockAds, dove lo uso e cosa non risolve.</p>
+    <div class="pcard__cats"><span class="tag">Web &amp; Design</span><span class="tag">Marketing Automation &amp; AI</span></div>
+    <span class="pcard__cta">Apri progetto</span>
+  </div>
+</a>
+</div>
+  </section>
+</main>
+<footer class="foot">
+  <p>&copy; <span data-year></span> Vincenzo Capasso. Tutti i diritti riservati.</p>
+  <p id="footlinks"></p>
+</footer>
+
+<script>
+(function () {
+  var grid = document.getElementById("grid");
+  var chips = document.getElementById("chips");
+  var count = document.getElementById("count");
+  var cards = Array.prototype.slice.call(grid.querySelectorAll(".pcard"));
+  var fromUrl = new URLSearchParams(location.search).get("cat");
+  if (!fromUrl) fromUrl = history.replaceState && location.hash.replace(/^#/, "");
+  var attivo = fromUrl || "All";
+
+  function filtra(cat) {
+    var n = 0;
+    cards.forEach(function (c) {
+      var cats = (c.getAttribute("data-cats") || "").split("|");
+      var mostra = cat === "All" || cats.indexOf(cat) > -1;
+      c.hidden = !mostra;
+      if (mostra) n++;
+    });
+    chips.querySelectorAll(".chip").forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b.dataset.cat === cat));
+    });
+    count.textContent = n === cards.length
+      ? cards.length + " progetti"
+      : n + " progetti in " + cat;
+  }
+
+  chips.addEventListener("click", function (e) {
+    var b = e.target.closest(".chip");
+    if (!b) return;
+    filtra(b.dataset.cat);
+    history.replaceState(null, "", b.dataset.cat === "All" ? "/progetti/" : "/progetti/?cat=" + encodeURIComponent(b.dataset.cat));
+  });
+
+  filtra(attivo);
+})();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script type="module">
+  import { boot } from "/js/site.js";
+  boot({ page: "projects" });
+</script>
+
+</body>
+</html>

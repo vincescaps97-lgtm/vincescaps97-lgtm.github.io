@@ -2,79 +2,10 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Blog — Vincenzo Capasso</title>
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="icon" href="favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
-<script>(function(){try{var t=localStorage.getItem("theme");if(!t){t="dark";}document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme="dark";}})();</script>
-<link rel="stylesheet" href="css/style.css?v=32">
-<link rel="stylesheet" href="css/content.css?v=32">
+<title>Articolo — Vincenzo Capasso</title>
+<link rel="canonical" href="/blog/">
+<meta http-equiv="refresh" content="0; url=/blog/">
+<script>location.replace("/blog/" + (new URLSearchParams(location.search).get("slug") || "") + (new URLSearchParams(location.search).get("slug") ? "/" : ""));</script>
 </head>
-<body>
-
-<main class="page" id="app"></main>
-
-<footer class="foot">
-  <p>&copy; <span data-year></span> Vincenzo Capasso. Tutti i diritti riservati.</p>
-  <p id="footlinks"></p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script type="module">
-  import { boot } from "./js/site.js";
-  import { POSTS, byslug, readDate, SOCIALS } from "./js/data.js";
-  import { postBody, titleLen, socialLinks } from "./js/render.js";
-
-  boot({ page: "journal" });
-
-  const slug = new URLSearchParams(location.search).get("slug");
-  const p = byslug(POSTS, slug);
-  const app = document.getElementById("app");
-
-  if (!p) {
-    document.title = "Non trovato — Vincenzo Capasso";
-    app.innerHTML = `
-      <header class="pagehead">
-        <h1 class="pagehead__title">Non trovato</h1>
-        <p class="pagehead__lede">Questo articolo non esiste.</p>
-      </header>
-      <section class="sec sec--tight"><a class="backlink" href="journal.html">&larr; Tutti gli articoli</a></section>`;
-  } else {
-    document.title = p.title + " — Vincenzo Capasso";
-    const next = POSTS[(POSTS.indexOf(p) + 1) % POSTS.length];
-
-    app.innerHTML = `
-      <header class="pagehead">
-        <a class="backlink" href="journal.html">&larr; Tutti gli articoli</a>
-        <h1 class="pagehead__title" data-len="${titleLen(p.title)}">${p.title}</h1>
-        <p class="article__meta"><span><b>Pubblicato</b> ${readDate(p.date)}</span></p>
-      </header>
-
-      <section class="sec sec--tight">
-        <div class="article">
-          <p class="lede">${p.excerpt}</p>
-          ${postBody(p.body)}
-          ${p.url ? `<p class="article__src"><a href="${p.url}" target="_blank" rel="noopener">Leggi l'articolo originale su LinkedIn &nearr;</a></p>` : ""}
-        </div>
-      </section>
-
-      <section class="sec" style="border-top:1px solid var(--line)">
-        <div class="sec__head"><h2 class="sec__title">Prossimo articolo</h2></div>
-        <a class="pcard reveal" href="post.html?slug=${next.slug}" style="max-width:420px">
-          <div class="pcard__media" style="background-image:linear-gradient(145deg,${next.art[0]},${next.art[1]})"></div>
-          <div class="pcard__body">
-            <h3 class="pcard__title" data-len="${titleLen(next.title)}">${next.title}</h3>
-            <span class="pcard__cta">Leggi</span>
-          </div>
-        </a>
-      </section>`;
-  }
-
-  document.getElementById("footlinks").innerHTML = socialLinks(SOCIALS);
-</script>
-</body>
+<body><p>Questa pagina si è spostata in <a href="/blog/">/blog/</a>.</p></body>
 </html>

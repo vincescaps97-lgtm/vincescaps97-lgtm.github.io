@@ -14,7 +14,10 @@
    tratti bianchi senza toccare le opacità.
    ============================================================ */
 
-const DOODLE_ASSETS = "assets/doodle/";
+/* Percorso ASSOLUTO: le pagine stanno anche dentro /blog/<slug>/ e
+   /progetti/<slug>/, dove "assets/doodle/" cercherebbe il file nella
+   sottocartella e restituirebbe 404. */
+const DOODLE_ASSETS = "/assets/doodle/";
 
 /* Le stesse sette immagini, nelle stesse posizioni del riferimento. */
 const DOODLES = [

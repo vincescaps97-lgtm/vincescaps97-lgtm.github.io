@@ -1,132 +1,81 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="Il metodo di test modulare: la griglia di sei varianti con una cella cambiata, il macchinario del centro estetico e il costo per lead in discesa">
+  <!--
+    COPERTINA 1 — caso studio centri estetici
+    Il metodo del progetto in un'immagine: la matrice 3×2 delle
+    varianti con una sola cella cambiata (cambiare solo ciò che non
+    funziona), il macchinario, e la curva del CPL che scende.
+    Forme semplici, due colori, niente testo: è una copertina, non
+    uno screenshot. Palette: verde acqua.
+  -->
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#047857"/>
-      <stop offset=".55" stop-color="#0d9488"/>
+      <stop offset="0" stop-color="#0d9488"/>
       <stop offset="1" stop-color="#5eead4"/>
     </linearGradient>
-
-    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#a7f3d0"/>
-      <stop offset="1" stop-color="#5eead4"/>
-    </linearGradient>
-
-    <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#6ee7b7" stop-opacity="0"/>
-      <stop offset="1" stop-color="#6ee7b7" stop-opacity=".34"/>
-    </linearGradient>
-
-    <linearGradient id="hot" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#d1fae5"/>
-      <stop offset="1" stop-color="#5eead4"/>
-    </linearGradient>
-
-    <linearGradient id="machine" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#ecfdf5"/>
-      <stop offset="1" stop-color="#86efac"/>
-    </linearGradient>
-
-    <filter id="soft" x="-70%" y="-70%" width="240%" height="240%">
-      <feGaussianBlur stdDeviation="90"/>
-    </filter>
   </defs>
 
   <rect width="1200" height="900" fill="url(#bg)"/>
 
-  <g filter="url(#soft)" opacity=".4">
-    <ellipse cx="600" cy="470" rx="470" ry="300" fill="#04301f"/>
+  <!-- macchinario, a sinistra -->
+  <g opacity=".92">
+    <rect x="118" y="404" width="26" height="188" rx="13" fill="#ccfbf1"/>
+    <rect x="86" y="578" width="90" height="26" rx="13" fill="#ccfbf1"/>
+    <rect x="120" y="248" width="30" height="162" rx="15" fill="#ccfbf1"/>
+    <path d="M135 250 L232 196" stroke="#ccfbf1" stroke-width="30" stroke-linecap="round"/>
+    <rect x="212" y="168" width="96" height="42" rx="21" fill="#5eead4" transform="rotate(-27 260 189)"/>
   </g>
 
-  <!-- ============================================================
-       IL MACCHINARIO — l'apparecchio che il cliente vende ai
-       centri estetici. Torre, braccio, testa con due ugelli: la
-       sagoma basta, è un segno e non un prodotto illustrato.
+  <!-- la matrice 3×2: una cella accesa e una con bordo tratteggiato -->
+  <g>
+    <!-- riga 1 -->
+    <rect x="392" y="182" width="200" height="118" rx="14" fill="#0b4f47" opacity=".72"/>
+    <rect x="420" y="216" width="96" height="11" rx="5.5" fill="#7fded0" opacity=".85"/>
+    <rect x="420" y="240" width="140" height="9" rx="4.5" fill="#7fded0" opacity=".5"/>
 
-       Sta a sinistra ed è il punto di partenza: la griglia a
-       destra è il metodo per farlo funzionare.
-       ============================================================ -->
-  <g transform="translate(84 176)">
-    <rect x="0" y="336" width="236" height="44" rx="22" fill="url(#machine)"/>
-    <rect x="86" y="120" width="64" height="224" rx="20" fill="url(#machine)"/>
-    <g transform="rotate(-18 118 140)">
-      <rect x="118" y="106" width="150" height="52" rx="26" fill="url(#machine)"/>
-      <rect x="238" y="62" width="128" height="86" rx="34" fill="url(#machine)"/>
-      <rect x="272" y="140" width="26" height="34" rx="13" fill="#047857"/>
-      <rect x="316" y="140" width="26" height="34" rx="13" fill="#047857"/>
-    </g>
-    <rect x="102" y="164" width="32" height="32" rx="10" fill="#047857" opacity=".6"/>
+    <rect x="628" y="182" width="200" height="118" rx="14" fill="#0b4f47" opacity=".72"/>
+    <rect x="656" y="216" width="96" height="11" rx="5.5" fill="#7fded0" opacity=".85"/>
+    <rect x="656" y="240" width="140" height="9" rx="4.5" fill="#7fded0" opacity=".5"/>
+
+    <!-- la cella vincente: riempita di chiaro, con la freccia -->
+    <rect x="864" y="182" width="200" height="118" rx="14" fill="#eafff9"/>
+    <rect x="892" y="216" width="96" height="11" rx="5.5" fill="#0d9488"/>
+    <rect x="892" y="240" width="140" height="9" rx="4.5" fill="#0d9488" opacity=".45"/>
+    <path d="M1024 214 h40 a8 8 0 0 1 8 8 v22 a8 8 0 0 1-8 8 h-40 z" fill="#0d9488" opacity=".14"/>
+    <path d="M1028 240 l14 -13 0 9 12 0 -14 13 0 -9 z" fill="#0d9488"/>
+
+    <!-- riga 2 -->
+    <rect x="392" y="334" width="200" height="118" rx="14" fill="#0b4f47" opacity=".72"/>
+    <rect x="420" y="368" width="96" height="11" rx="5.5" fill="#7fded0" opacity=".85"/>
+    <rect x="420" y="392" width="140" height="9" rx="4.5" fill="#7fded0" opacity=".5"/>
+
+    <rect x="628" y="334" width="200" height="118" rx="14" fill="#0b4f47" opacity=".72"/>
+    <rect x="656" y="368" width="96" height="11" rx="5.5" fill="#7fded0" opacity=".85"/>
+    <rect x="656" y="392" width="140" height="9" rx="4.5" fill="#7fded0" opacity=".5"/>
+
+    <!-- la cella da cambiare: bordo tratteggiato, ancora scura -->
+    <rect x="864" y="334" width="200" height="118" rx="14" fill="#0b4f47" opacity=".35"
+          stroke="#5eead4" stroke-width="3.5" stroke-dasharray="13 10"/>
+    <rect x="892" y="368" width="96" height="11" rx="5.5" fill="#5eead4" opacity=".55"/>
+    <rect x="892" y="392" width="140" height="9" rx="4.5" fill="#5eead4" opacity=".3"/>
   </g>
 
-  <!-- aggancio: dal macchinario alla griglia. Il metodo nasce
-       dal prodotto, non il contrario. -->
-  <g stroke="#ecfdf5" stroke-opacity=".5" stroke-width="4" stroke-linecap="round" stroke-dasharray="3 12" fill="none">
-    <path d="M370 358h62"/>
-  </g>
-  <circle cx="440" cy="358" r="7" fill="#ecfdf5" fill-opacity=".5"/>
+  <!-- i due angoli della matrice, per chiudere il riferimento -->
+  <path d="M364 176 h-20 M364 176 v-20" stroke="#7fded0" stroke-width="3" opacity=".55" fill="none" stroke-linecap="round"/>
+  <path d="M1092 458 h20 M1092 458 v20" stroke="#7fded0" stroke-width="3" opacity=".55" fill="none" stroke-linecap="round"/>
 
-  <!-- ============================================================
-       IL FOCUS — la griglia di 6 varianti.
-
-       3 hook × 2 body × 1 CTA = 6 celle. Una sola è stata
-       cambiata: bordo tratteggiato e fondo scuro, mentre la
-       vincitrice è piena e si stacca con una freccia. È il
-       punto del caso, quindi sta al centro e domina.
-       ============================================================ -->
-  <g transform="translate(468 196)">
-    <rect x="0"   y="0"   width="204" height="118" rx="20" fill="#0a3a26" fill-opacity=".55" stroke="#ffffff" stroke-opacity=".2" stroke-width="4"/>
-    <rect x="228" y="0"   width="204" height="118" rx="20" fill="#0a3a26" fill-opacity=".55" stroke="#ffffff" stroke-opacity=".2" stroke-width="4"/>
-    <rect x="456" y="0"   width="204" height="118" rx="20" fill="url(#hot)" stroke="#ecfdf5" stroke-width="5"/>
-
-    <rect x="0"   y="142" width="204" height="118" rx="20" fill="#0a3a26" fill-opacity=".55" stroke="#ffffff" stroke-opacity=".2" stroke-width="4"/>
-    <rect x="228" y="142" width="204" height="118" rx="20" fill="#0a3a26" fill-opacity=".55" stroke="#ffffff" stroke-opacity=".2" stroke-width="4"/>
-    <rect x="456" y="142" width="204" height="118" rx="20" fill="#0a3a26" fill-opacity=".8" stroke="#a7f3d0" stroke-width="5" stroke-dasharray="14 11"/>
-
-    <!-- dentro ogni cella un trattino lungo (hook) e uno corto
-         (body), identici ovunque: la differenza sta nel bordo,
-         non nel contenuto -->
-    <g fill="#ffffff" fill-opacity=".3">
-      <rect x="34"  y="46"  width="92" height="13" rx="6.5"/>
-      <rect x="34"  y="72"  width="56" height="13" rx="6.5"/>
-      <rect x="262" y="46"  width="92" height="13" rx="6.5"/>
-      <rect x="262" y="72"  width="56" height="13" rx="6.5"/>
-      <rect x="34"  y="188" width="92" height="13" rx="6.5"/>
-      <rect x="34"  y="214" width="56" height="13" rx="6.5"/>
-      <rect x="262" y="188" width="92" height="13" rx="6.5"/>
-      <rect x="262" y="214" width="56" height="13" rx="6.5"/>
-    </g>
-    <g fill="#04301f" fill-opacity=".6">
-      <rect x="490" y="46"  width="92" height="13" rx="6.5"/>
-      <rect x="490" y="72"  width="56" height="13" rx="6.5"/>
-      <rect x="490" y="188" width="92" height="13" rx="6.5"/>
-      <rect x="490" y="214" width="56" height="13" rx="6.5"/>
-    </g>
-
-    <path d="M600 44c40 0 56 14 74 34" fill="none" stroke="#ecfdf5" stroke-width="5" stroke-linecap="round"/>
-    <path d="M674 78l-4-26 25 6Z" fill="#ecfdf5"/>
+  <!-- la curva del CPL: parte alta e scende -->
+  <g opacity=".95">
+    <path d="M150 592 C 320 596, 470 610, 600 660 S 800 742, 900 770"
+          fill="none" stroke="#eafff9" stroke-width="6" stroke-linecap="round" opacity=".35"/>
+    <path d="M150 592 C 320 596, 470 610, 600 660 S 800 742, 900 770"
+          fill="none" stroke="#eafff9" stroke-width="9" stroke-linecap="round"/>
+    <path d="M150 592 C 320 596, 470 610, 600 660 S 800 742, 900 770 L 900 792 L 150 792 Z"
+          fill="#eafff9" opacity=".1"/>
+    <path d="M884 748 v46 h34" stroke="#eafff9" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 
-  <!-- ============================================================
-       IL RISULTATO — in basso: il costo per lead scende e si
-       appiattisce. Piccolo, perché il focus è il metodo; presente,
-       perché è la promessa del caso.
-       ============================================================ -->
-  <g transform="translate(0 566)">
-    <path d="M170 40C320 48 380 74 470 102C560 130 620 154 700 168C790 184 880 192 1030 194L1030 232L170 232Z"
-          fill="url(#fill)"/>
-    <g stroke="#a7f3d0" stroke-opacity=".26" stroke-width="2">
-      <path d="M170 232h860"/>
-    </g>
-    <path d="M170 40C320 48 380 74 470 102C560 130 620 154 700 168C790 184 880 192 1030 194"
-          fill="none" stroke="url(#line)" stroke-width="11" stroke-linecap="round"/>
-    <g stroke="#ecfdf5" stroke-width="9" stroke-linecap="round" fill="none" opacity=".9">
-      <path d="M986 132l-54 48M932 180v-48h48"/>
-    </g>
-  </g>
-
-  <!-- tacche: il tempo del test, non un asse con numeri -->
-  <g stroke="#ffffff" stroke-opacity=".3" stroke-width="3" stroke-linecap="round">
-    <path d="M170 760v24"/>
-    <path d="M600 760v24"/>
-    <path d="M1030 760v24"/>
+  <!-- il segnale di discesa, in alto a destra (tenuto dentro i bordi) -->
+  <g stroke="#eafff9" stroke-width="6" fill="none" stroke-linecap="round" opacity=".9">
+    <path d="M1104 140 l-32 38 h21 l-25 40"/>
   </g>
 </svg>

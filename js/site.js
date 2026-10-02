@@ -19,6 +19,14 @@ import { initDock } from "./dock.js";
 const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const hasGSAP = typeof window.gsap !== "undefined";
 
+/* ScrollTrigger va REGISTRATO: caricarlo dalla CDN non basta.
+   Senza questa riga l'opzione `scrollTrigger:` dentro gsap.from()
+   resta inerte, l'animazione non parte e l'elemento si ferma a
+   opacity 0: contenti che spariscono e non tornano più. */
+if (hasGSAP && window.ScrollTrigger) {
+  gsap.registerPlugin(ScrollTrigger);
+}
+
 export function boot({ page = "", dock = false } = {}) {
   /* ---------- sfondo carta + doodle ---------- */
 
