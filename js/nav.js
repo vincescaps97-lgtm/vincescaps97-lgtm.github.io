@@ -27,7 +27,7 @@ export const NAV = [
   },
   {
     id: "projects",
-    label: "Projects",
+    label: "Progetti",
     href: "/progetti/",
     icon: "/icons/projects.avif",
   },
@@ -91,11 +91,14 @@ export function mountMenu(currentId) {
             stroke-linecap="round" stroke-linejoin="round"/>
     </svg>`;
 
+  // Il bottone che chiude dice "CHIUDI" al posto di "MENU", come
+  // nel riferimento. Etichetta e testo in italiano: sono roba che
+  // legge chi usa la tastiera e chi usa lo screen reader.
   const closeBtn = document.createElement("button");
   closeBtn.className = "topbar__btn topbar__close";
   closeBtn.id = "menuClose";
-  closeBtn.setAttribute("aria-label", "Close menu");
-  closeBtn.textContent = "Close";
+  closeBtn.setAttribute("aria-label", "Chiudi il menu");
+  closeBtn.textContent = "Chiudi";
 
   const bar = document.createElement("div");
   bar.className = "topbar";
@@ -132,7 +135,7 @@ export function mountMenu(currentId) {
   menu.hidden = true;
   menu.setAttribute("role", "dialog");
   menu.setAttribute("aria-modal", "true");
-  menu.setAttribute("aria-label", "Site menu");
+  menu.setAttribute("aria-label", "Menu del sito");
   menu.innerHTML = `
     <div class="drawer__scrim"></div>
     <div class="drawer__panel">
@@ -164,7 +167,7 @@ export function mountDock(currentId) {
 
   host.className = "dock";
   host.setAttribute("role", "navigation");
-  host.setAttribute("aria-label", "Sections");
+  host.setAttribute("aria-label", "Sezioni");
 
   const items = VISIBLE.map((i) => `
     ${i.separator ? '<span class="dock__sep" role="separator"></span>' : ""}

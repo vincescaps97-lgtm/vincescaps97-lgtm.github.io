@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="Web &amp; Design: lo schema di una pagina dentro la finestra del browser">
+  <!--
+    CATEGORIA 4 — Web & Design
+
+    La finestra del browser con dentro lo schema della pagina: blocco
+    grande, due moduli a lato, tre righe sotto. Non un sito
+    finto — uno schema, perché qui si progetta.
+
+    Palette: nero, bianco e verde acqua. Questo file è fatto solo
+    di verde: dentro e fuori il verde non c'è nessun altro colore,
+    e così si vede sia sul tema scuro sia sulla card bianca.
+
+    I toni diversi dal verde pieno sono dello stesso verde, più
+    chiaro e più scuro: servono a distinguere i pezzi, non a
+    cambiare colore.
+
+    Stesso linguaggio degli altri tre: spessore 24, angoli tondi,
+    forme semplici. Nessun gradiente.
+  -->
+
+  <!-- la finestra -->
+  <rect x="230" y="250" width="740" height="440" rx="44" fill="none"
+        stroke="#3CCAB1" stroke-width="26"/>
+
+  <!-- la barra del titolo e i tre pallini: uno per tonalità, così
+       si vedono anche senza colori -->
+  <path d="M230 346h740" stroke="#3CCAB1" stroke-width="26" stroke-linecap="round"/>
+  <circle cx="302" cy="298" r="14" fill="#1C7A6D"/>
+  <circle cx="354" cy="298" r="14" fill="#3CCAB1"/>
+  <circle cx="406" cy="298" r="14" fill="#5FD8C4"/>
+
+  <!-- lo schema: il blocco grande pieno, i due moduli a lato
+       solo abbozzati -->
+  <rect x="290" y="396" width="300" height="130" rx="16" fill="#3CCAB1"/>
+  <rect x="620" y="396" width="290" height="58" rx="12" fill="none"
+        stroke="#1C7A6D" stroke-width="16"/>
+  <rect x="620" y="468" width="290" height="58" rx="12" fill="none"
+        stroke="#1C7A6D" stroke-width="16"/>
+
+  <!-- le tre righe sotto, in verde chiaro: le une il filo del testo -->
+  <g fill="#5FD8C4">
+    <rect x="290" y="556" width="200" height="22" rx="11"/>
+    <rect x="510" y="556" width="160" height="22" rx="11" fill="#A8E9DC"/>
+    <rect x="690" y="556" width="120" height="22" rx="11"/>
+  </g>
+
+  <!-- il filo che chiude lo schema -->
+  <path d="M290 624h620" stroke="#1C7A6D" stroke-width="16"
+        stroke-linecap="round" opacity=".8"/>
+</svg>

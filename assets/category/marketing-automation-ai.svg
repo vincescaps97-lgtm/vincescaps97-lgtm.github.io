@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="Marketing Automation &amp; AI: un chip collegato a quattro nodi">
+  <!--
+    CATEGORIA 2 — Marketing Automation & AI
+
+    Un chip al centro con quattro nodi collegati: l'automazione è
+    un flusso, e i collegamenti sono la parte che racconta il lavoro
+    (Zapier, Make, workflow). La stella dentro il chip è l'AI.
+
+    Palette: nero, bianco e verde acqua. Il nero è il foro del chip,
+    il bianco i dettagli dentro le masse verdi: fuori dal verde
+    il nero sparisce sul tema scuro e il bianco sulla card bianca.
+
+    Stesso linguaggio degli altri tre: spessore 24, angoli tondi,
+    forme semplici. Nessun gradiente.
+  -->
+
+  <!-- i collegamenti: prima le maglie, poi i nodi sopra, così le
+       linee restano sotto e non si vedono entrare nei cerchi -->
+  <g fill="none" stroke="#3CCAB1" stroke-width="24" stroke-linecap="round">
+    <path d="M600 232v98"/>
+    <path d="M600 570v98"/>
+    <path d="M272 450h198"/>
+    <path d="M730 450h198"/>
+  </g>
+
+  <!-- il chip -->
+  <rect x="470" y="330" width="260" height="240" rx="44" fill="#3CCAB1"/>
+  <rect x="540" y="400" width="120" height="100" rx="20" fill="#000000" opacity=".85"/>
+
+  <!-- la stella dentro il foro: bianco su nero, si vede sempre -->
+  <path d="M600 412c6 25 13 32 38 38-25 6-32 13-38 38-6-25-13-32-38-38 25-6 32-13 38-38z"
+        fill="#FFFFFF"/>
+
+  <!-- i quattro nodi: verde scuro con il punto bianco dentro -->
+  <g fill="#1C7A6D">
+    <circle cx="600" cy="180" r="52"/>
+    <circle cx="600" cy="720" r="52"/>
+    <circle cx="220" cy="450" r="52"/>
+    <circle cx="980" cy="450" r="52"/>
+  </g>
+  <g fill="#FFFFFF">
+    <circle cx="600" cy="180" r="18"/>
+    <circle cx="600" cy="720" r="18"/>
+    <circle cx="220" cy="450" r="18"/>
+    <circle cx="980" cy="450" r="18"/>
+  </g>
+</svg>

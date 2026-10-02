@@ -115,7 +115,7 @@ alla pagina compare "Leggi l'articolo originale su LinkedIn".
 
 | File | Sezione |
 |---|---|
-| `index.html` | Home — hero centrato con banda di selezione sul nome, dock, lavori selezionati, Servizi (vignetta ancorata a destra al passaggio del cursore), Blogs, CTA |
+| `index.html` | Home — hero centrato col titolo che si scrive da solo (nome → ruoli), dock, lavori selezionati, Servizi (vignetta ancorata a destra al passaggio del cursore), Blogs, CTA |
 | `projects.html?cat=...` | Projects pre-filtrata dai link Services |
 | `projects.html` | Projects — griglia con filtri per disciplina |
 | `project.html?slug=…` | Dettaglio progetto |
@@ -139,6 +139,7 @@ website/
 ├── icons/          icone SVG della dock
 ├── assets/doodle/  grid.svg + i sette doodle PNG dello sfondo
 ├── assets/project/ immagini di anteprima dei progetti
+├── assets/category/ un disegno per categoria, su sfondo trasparente
 ├── favicon.svg
 └── js/
     ├── data.js     ← TUTTO IL CONTENUTO
@@ -178,6 +179,39 @@ Passando il cursore su `MENU` (o col focus da tastiera) un ellisse
 scarabocchiato si disegna intorno alla scritta, come nel riferimento
 (tratto SVG con `stroke-dashoffset` animato, `currentColor` così funziona
 anche in dark mode).
+
+## Il titolo che si scrive da solo
+
+L'hero è l'unica cosa che cambia da sola, e cambia come una macchina
+da scrivere: le lettere entrano una alla volta e si cancellano con il
+tasto Canc. Il ciclo è in `index.html`, in cima allo script.
+
+```
+"Ciao 👋, io sono" → "Vincenzo"          3,5 secondi
+← cancella tutta la riga
+"Mi occupo di"    → "Advertising"         2 secondi
+                  → "Digital Strategy"    2 secondi
+                  → "Funnel"              2 secondi
+                  → "Automation & AI"     2 secondi
+← cancella anche "Mi occupo di" e si torna al saluto
+```
+
+Il dettaglio che regge tutto: dopo il primo ruolo si cancella **solo
+la parola**, il prefisso resta a schermo. `cancellaParola()` e
+`cancellaPrefisso()` sono due funzioni apposta, e il ciclo dice a
+ciascuna delle due quando chiamarle.
+
+Ruoli e tempi sono costanti in cima allo script: aggiungere una riga
+in `RUOLI` basta, il resto non si tocca. Il primo passo è scritto
+nell'HTML — deve esserlo, altrimenti il titolo parte vuoto e la frase
+non si legge senza JavaScript — quindi il ciclo comincia dal tempo di
+lettura e riparte davvero dal saluto dalla seconda volta.
+
+Il testo che si vede scriversi è una copia `aria-hidden`: la frase per
+screen reader sta in `.hero__sr`, fuori dal flusso, e non cambia mai.
+Con `prefers-reduced-motion` il ciclo non parte e la frase resta ferma.
+In una scheda in secondo piano il ciclo si ferma e riprende quando la
+scheda torna in primo piano.
 
 ## Dark mode
 

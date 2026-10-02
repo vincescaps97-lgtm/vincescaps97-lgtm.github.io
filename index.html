@@ -11,17 +11,40 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
 <script>(function(){try{var t=localStorage.getItem("theme");if(!t){t="dark";}document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme="dark";}})();</script>
-<link rel="stylesheet" href="/css/style.css?v=51">
-<link rel="stylesheet" href="/css/content.css?v=51">
+<link rel="stylesheet" href="/css/style.css?v=64">
+<link rel="stylesheet" href="/css/content.css?v=64">
 </head>
 <body>
 
 <header class="hero">
   <div class="hero__inner">
-    <!-- "Vincenzo" è nell'HTML, non solo scritto da JS: senza, il
-         titolo parte vuoto per un attimo prima che lo script lo
-         riempia. Poi lo script lo cancella e digita le parole. -->
-    <h1 class="hero__title" id="heroTitle">Vincenzo</h1>
+    <!-- Il primo passo del ciclo sta nell'HTML, non scritto da JS:
+         senza, il titolo parte vuoto per un attimo prima che lo
+         script lo riempia. Fin dal primo frame la frase è intera,
+         "Ciao 👋, io sono" sopra e "Vincenzo" sotto: lo script non
+         deve scriverla, deve solo cambiarla da lì.
+
+         Due righe di due TIPI diversi:
+         riga alta  il prefisso, "Ciao, io sono" o "Mi occupo di",
+                   in corpo minore
+         riga bassa UNA riga sola che ospita tutto il ciclo:
+                   il nome e i ruoli
+         Tenere il ciclo su una riga sola è il punto: se il nome
+         stesse su una riga e i ruoli su un'altra, ogni cambio
+         sposterebbe il testo e il titolo sballerebbe.
+
+         `hero__sr` è la frase intera per screen reader, fuori dal
+         flusso e invisibile: quello che si vede alternare è una
+         copia muta, altrimenti chi naviga da tastiera si sentirebbe
+         ogni cambio. -->
+    <h1 class="hero__title" id="heroTitle">
+      <span class="hero__prefix" id="heroPrefix">Ciao 👋, io sono</span>
+      <span class="hero__line">
+        <span class="hero__sr" id="heroWords"></span>
+        <span class="hero__main is-nome" id="heroMain" aria-hidden="true">Vincenzo</span>
+        <span class="hero__caret" aria-hidden="true"></span>
+      </span>
+    </h1>
     <p class="hero__role" id="heroRoleWrap">
       <span class="hero__role-text" id="heroRole"></span>
       <!-- Tratto a mano sotto il ruolo: stessa penna della freccia
@@ -86,8 +109,8 @@
   <!-- ---------- blog ---------- -->
   <section class="sec">
     <div class="sec__head">
-      <h2 class="sec__title">Blogs</h2>
-      <a class="sec__note backlink" href="/blog/" style="margin:0">See all</a>
+      <h2 class="sec__title">Blog</h2>
+      <a class="sec__note backlink" href="/blog/" style="margin:0">Vedi tutti</a>
     </div>
     <div class="btable" id="posts"></div>
   </section>
@@ -125,129 +148,172 @@
 
   document.getElementById("heroRole").textContent = PROFILE.role;
 
-  /* ---------- il nome che diventa parole-chiave ----------
+/* ---------- il titolo che si scrive da solo ----------
 
-     "Vincenzo" resta un secondo, poi viene cancellato un
-     carattere alla volta e al suo posto si digitano le parole
-     chiave, una dopo l'altra, a ciclo.
+     Un ciclo solo, per sempre, fatto di scrittura e cancellazione:
 
-     I tempi contano: se sono troppo veloci non si legge, se
-     sono troppo lenti l'attesa sembra un errore. Ogni parola
-     resta ferma un attimo prima di cancellarsi, così c'è il
-     tempo di leggerla.
+       "Ciao 👋, io sono" → "Vincenzo"                3,5 secondi
+       ← cancella tutta la riga
+       "Mi occupo di"    → "Advertising"               2 secondi
+       ← cancella SOLO la parola, "Mi occupo di" resta
+                          → "Digital Strategy"
+                          → "Funnel"
+                          → "Automation & AI"
+       ← cancella anche "Mi occupo di" e si torna al saluto
 
-     Il testo per gli screen reader metto tutte le parole in
-     fila: quello che si vede animarsi è una copia separata,
-     marcata aria-hidden, altrimenti chi usa la tastiera
-     sentirebbe ogni lettera. */
-  const KEYWORDS = [
+     Il dettaglio che fa la differenza è cosa si cancella: dopo il
+     primo ruolo il prefisso resta a schermo e si cancella solo la
+     parola. Se si cancellasse tutto, ogni ruolo ripeterebbe la
+     presentazione "Mi occupo di …" e il ciclo sembrerebbe più
+     lento di quanto non sia. */
+  const RUOLI = [
     "Advertising",
     "Digital Strategy",
     "Funnel",
     "Automation & AI",
   ];
 
-  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const titleEl = document.getElementById("heroTitle");
-  const nome = "Vincenzo";
+  const SALUTO = "Ciao 👋, io sono";
+  const INTRO = "Mi occupo di";
+  const NOME = "Vincenzo";
 
-  // Un solo ciclo per tutto: il nome è il primo pezzo, poi le
-  // parole chiave, e alla fine si torna al nome. Il nome si
-  // cancella come le altre, così non c'è un attimo in cui sparisce
-  // e basta.
-  const CICLO = [nome, ...KEYWORDS];
+  /* I tempi. Si scrive un po' più lento di quanto si cancella:
+     come al tastierino, la penna va con calma e il tasto Canc fa
+     presto. I tempi di lettura sono la parte che conta di più:
+     troppo veloci non si legge, troppo lenti l'attesa sembra un
+     errore. Aggiungere o togliere un ruolo è una riga in RUOLI. */
+  const DIGITA = 55;
+  const CANCELLA = 40;
+  const LEGGI_NOME = 3500;
+  const LEGGI_RUOLO = 2000;
+
+  const prefissoEl = document.getElementById("heroPrefix");
+  const parolaEl = document.getElementById("heroMain");
+
+  /* Screen reader: tutta la frase in una volta, non il pezzo che
+     capita a schermo in questo momento — altrimenti si sentirebbe
+     ogni singola lettera. Il prefisso si legge già dall'HTML
+     ("Ciao, io sono"), qui dentro c'è il resto del ciclo. */
+  document.getElementById("heroWords").textContent =
+    `${NOME}. ${INTRO} ${RUOLI.join(", ")}.`;
+
+  /* Il testo vive in due stringhe, non in una sola: il prefisso
+     sta a schermo mentre la parola cresce e si rimpicciolisce
+     sotto. Sono le due righe del titolo. */
+  let prefisso = SALUTO;
+  let parola = NOME;
+
+  /* Il colore segue la parola che sta scrivendo l'animazione, non
+     il pezzo di testo: mentre si scrive "Vincenzo" le lettere
+     già a schermo restano bianche anche se il confronto con la
+     parola intera non torna ancora. */
+  let scriveIlNome = true;
+
+  const disegna = () => {
+    prefissoEl.textContent = prefisso;
+    parolaEl.textContent = parola;
+    parolaEl.classList.toggle("is-nome", scriveIlNome);
+  };
 
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-  if (reduce) {
-    // senza animazione: tutto in fila, in ordine di ciclo
-    titleEl.innerHTML =
-      '<span class="hero__words-live">' +
-      CICLO.map(escHero).join(" · ") +
-      "</span>";
-  } else {
-    // La copia per screen reader sta FUORI dal flusso visivo con
-    // position:absolute: dentro il titolo, `display:inline` la
-    // faceva comparire insieme alle parole animate. Chi la legge
-    // con un lettore la sente comunque, ma non la vede.
-    titleEl.innerHTML =
-      '<span class="hero__sr" id="heroWords"></span>' +
-      '<span class="hero__words-live" id="heroLive" aria-hidden="true"></span>' +
-      '<span class="hero__caret" id="heroCaret" aria-hidden="true"></span>';
+  /* In una scheda in secondo piano i timer vengono sospesi e il
+     ciclo ripartirebbe a metà. Meglio fermarsi davvero e ripartire
+     quando la scheda torna in primo piano: si ritrova la frase a
+     metà, non una lettera a caso. */
+  const aspetta = (ms) => {
+    if (!document.hidden) return sleep(ms);
+    return new Promise((risolvi) =>
+      document.addEventListener("visibilitychange", function alRitorno() {
+        if (document.hidden) return;
+        document.removeEventListener("visibilitychange", alRitorno);
+        risolvi();
+      })
+    );
+  };
 
-    // testo per screen reader: l'intero ciclo in fila
-    document.getElementById("heroWords").textContent = CICLO.join(" · ");
+  /* I caratteri si contano per punto di codice, non per unità UTF-16:
+     l'ondina del saluto è un carattere solo ma due unità, e
+     dividendola a metà si vedrebbe metà faccia per qualche
+     millisecondo. */
+  const toChar = (s) => [...s];
+  const senzaUltimo = (s) => toChar(s).slice(0, -1).join("");
 
-    const live = document.getElementById("heroLive");
+  // Scrive il pezzo di prefisso che manca: dopo il primo ruolo il
+  // prefisso è già intero e quindi non scrive niente.
+  const scriviPrefisso = async (testo) => {
+    for (const ch of toChar(testo).slice(prefisso.length)) {
+      prefisso += ch;
+      disegna();
+      await aspetta(DIGITA);
+    }
+  };
 
-    // Il nome e le parole stanno in due span separati: il nome
-    // bianco e fermo in una riga sua, le parole verdi che si
-    // cancellano e si riscrivono. Stare nello stesso span
-    // significava colorare di verde anche "Vincenzo".
-    // Il NOME è già scritto, intero, nell'HTML: è la prima cosa che
-    // l'utente vede e deve arrivare subito, non digitata. Se
-    // l'utente atterra su "V… Vi… Vin…" per un paio di secondi non
-    // sa nemmeno chi sei, quindi l'animazione parte DOPO che il
-    // nome è stato letto: aspetta, poi lo cancella col cursore e
-    // da lì parte il ciclo.
-    const spanNome = document.createElement("span");
-    spanNome.className = "hero__nome is-first";
-    spanNome.textContent = nome;
-    const spanParola = document.createElement("span");
-    spanParola.className = "hero__parola";
-    live.replaceChildren(spanNome, spanParola);
+  const scriviParola = async (testo) => {
+    scriveIlNome = testo === NOME;
+    for (const ch of toChar(testo)) {
+      parola += ch;
+      disegna();
+      await aspetta(DIGITA);
+    }
+  };
 
-    // Il nome si ferma più a lungo delle parole: è la prima cosa
-    // che si legge e poi sparisce, quindi ha il peso maggiore.
-    const attesaNome = 2600;
-    const attesaParola = 1600;
-    const attesaLunga = (s) => (s === nome ? attesaNome : attesaParola);
+  const cancellaParola = async () => {
+    while (parola) {
+      parola = senzaUltimo(parola);
+      disegna();
+      await aspetta(CANCELLA);
+    }
+  };
 
+  const cancellaPrefisso = async () => {
+    while (prefisso) {
+      prefisso = senzaUltimo(prefisso);
+      disegna();
+      await aspetta(CANCELLA);
+    }
+  };
+
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* Con "riduci il movimento" il ciclo non parte: la frase resta
+     com'è, scritta nell'HTML, e i ruoli si leggono nella riga sotto,
+     quella del ruolo in verde. Meglio una riga ferma che una che si
+     scrive da sola sotto gli occhi di chi ha chiesto che non si
+     muova nulla. */
+  if (!reduce) {
     (async () => {
-      // Il nome è già a schermo, intero: è l'atterraggio. Gli do il
-      // tempo di essere letto, poi lo cancello col cursore e da lì
-      // parte il ciclo, che da questo momento è sempre lo stesso.
-      await sleep(attesaLunga(nome));
-      spanNome.classList.remove("is-first");
+      /* Il primo passo è già scritto nell'HTML — deve esserlo:
+         senza, il titolo parte vuoto e la frase non si legge senza
+         JavaScript. Quindi il ciclo comincia dal tempo di lettura e
+         riparte davvero dal saluto solo dalla seconda volta. */
+      await aspetta(LEGGI_NOME);
 
       for (;;) {
-        // Il NOME rientra nel ciclo, dopo l'ultima parola: senza,
-        // compariva una volta sola e poi spariva per sempre, e chi
-        // guarda la home non lo rivede più.
-        for (const parola of CICLO) {
-          const target = parola === nome ? spanNome : spanParola;
-          target.textContent = "";
-          await sleep(140); // pausa breve prima di iniziare a scrivere
+        // via tutto, prefisso compreso: il primo ruolo si presenta
+        await cancellaParola();
+        await cancellaPrefisso();
+        await scriviPrefisso(INTRO);
+        await scriviParola(RUOLI[0]);
+        await aspetta(LEGGI_RUOLO);
 
-          // scrive un carattere alla volta, col cursore
-          for (const ch of parola) {
-            target.textContent += ch;
-            await sleep(58);
-          }
-
-          // lascia il tempo di leggere
-          await sleep(attesaLunga(parola));
-
-          // cancella, come il tasto Canc
-          titleEl.classList.add("is-erasing");
-          for (let i = parola.length; i > 0; i--) {
-            target.textContent = parola.slice(0, i);
-            await sleep(40);
-          }
-          titleEl.classList.remove("is-erasing");
-          target.textContent = "";
-
-          // Niente pausa qui: il titolo resterebbe vuoto per qualche
-          // decimo di secondo a ogni cambio e sembrerebbe un buco.
-          // La pausa all'inizio del giro seguente fa lo stesso
-          // effetto senza staccare il testo da zero.
+        // i ruoli successivi: si cancella solo la parola
+        for (let i = 1; i < RUOLI.length; i++) {
+          await cancellaParola();
+          await scriviParola(RUOLI[i]);
+          await aspetta(LEGGI_RUOLO);
         }
+
+        /* reset: via tutta la riga. Prima l'ultima parola, poi il
+           prefisso — è l'ordine del tasto Canc, che mangia sempre
+           l'ultima lettera a destra. */
+        await cancellaParola();
+        await cancellaPrefisso();
+        await scriviPrefisso(SALUTO);
+        await scriviParola(NOME);
+        await aspetta(LEGGI_NOME);
       }
     })();
-  }
-
-  function escHero(s) {
-    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   }
 
   document.getElementById("work").innerHTML = PROJECTS.slice(0, 3).map(projectCard).join("");

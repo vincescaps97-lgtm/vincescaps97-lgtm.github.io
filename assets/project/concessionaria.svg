@@ -1,59 +1,68 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="Le ricerche di brand di una concessionaria crescono da 700 a 1600 al mese: curva in salita sopra un'auto">
   <!--
     COPERTINA 2 — performance branding, concessionaria locale
+
     Il progetto in un'immagine: la curva in salita (le ricerche di
     brand che crescono) sopra l'auto, con la lente di ricerca.
-    Forme semplici, due colori, niente testo. Palette: ciano.
-  -->
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0e7490"/>
-      <stop offset="1" stop-color="#67e8f9"/>
-    </linearGradient>
-  </defs>
 
-  <rect width="1200" height="900" fill="url(#bg)"/>
+    Palette: nero, bianco e verde acqua, con i verdi della famiglia
+    del verde pieno per i piani. Il fondo è nero puro: tiene dentro
+    la palette e dà il contrasto massimo al verde, che è il colore
+    del sito. Qui il verde pieno fa la massa dell'auto, il chiaro
+    i dettagli, il profondo le linee della griglia.
+
+    Il soggetto sta dentro x 120–1080 e y 130–770: è la parte che
+    resta anche quando la pagina di dettaglio ritaglia in 16:9. La
+    lente sta sopra la velatura che l'anno disegna a hover, quindi
+    non ci si sovrappone mai. Niente testo dentro.
+  -->
+  <rect width="1200" height="900" fill="#000000"/>
 
   <!-- linee di griglia, discrete: danno la sensazione di "dati" -->
-  <g stroke="#ffffff" stroke-opacity=".1" stroke-width="2" fill="none">
-    <path d="M150 258h900M150 350h900M150 442h900M150 534h900"/>
+  <g stroke="#1C7A6D" stroke-opacity=".35" stroke-width="3" fill="none">
+    <path d="M200 262h860M200 352h860M200 442h860M200 532h860"/>
   </g>
 
-  <!-- la curva in salita, con il punto finale aperto -->
-  <path d="M150 542 C 320 534, 430 500, 540 440 S 760 320, 900 226 L 900 300 L 150 566 Z"
-        fill="#eafdff" opacity=".12"/>
-  <path d="M150 542 C 320 534, 430 500, 540 440 S 760 320, 900 226"
-        fill="none" stroke="#eafdff" stroke-width="9" stroke-linecap="round"/>
-  <circle cx="900" cy="226" r="19" fill="#0e7490" stroke="#eafdff" stroke-width="9"/>
-
-  <!-- la lente di ricerca, in basso a sinistra -->
-  <g stroke="#eafdff" stroke-width="9" fill="none" opacity=".9">
-    <circle cx="216" cy="706" r="56"/>
-    <path d="M256 746 l62 62" stroke-linecap="round"/>
+  <!-- il segnale di crescita, in alto a sinistra: una freccia in su
+       disegnata orizzontale e ruotata, così la punta resta
+       dritta invece di diventare un lampo -->
+  <g stroke="#3CCAB1" stroke-width="9" fill="none" stroke-linecap="round"
+     stroke-linejoin="round">
+    <path d="M244 330h56M282 316l18 14-18 14" transform="rotate(-42 272 330)"/>
   </g>
+
+  <!-- la lente di ricerca, a sinistra -->
+  <g stroke="#FFFFFF" stroke-width="9" fill="none" stroke-linecap="round" opacity=".9">
+    <circle cx="250" cy="470" r="52"/>
+    <path d="M286 506l60 60"/>
+  </g>
+
+  <!-- la curva in salita, con il punto di arrivo aperto -->
+  <path d="M200 620C360 612 460 576 560 512S780 372 1020 236L1020 660H200Z"
+        fill="#3CCAB1" opacity=".12"/>
+  <path d="M200 620C360 612 460 576 560 512S780 372 1020 236"
+        fill="none" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round"/>
+  <!-- il punto di partenza, vuoto: da 700 ricerche -->
+  <circle cx="200" cy="620" r="13" fill="#000000" stroke="#FFFFFF" stroke-width="7"/>
+  <!-- il punto di arrivo, con l'anello in verde chiaro -->
+  <circle cx="1020" cy="236" r="19" fill="#000000" stroke="#5FD8C4" stroke-width="9"/>
 
   <!-- l'auto, in basso al centro -->
-  <g opacity=".95">
+  <g>
     <!-- corpo -->
-    <path d="M396 762 L418 668 Q426 636 462 628 L556 602 Q584 596 604 618 L664 664 L730 686 Q754 696 758 726 L758 762 Z"
-          fill="#eafdff"/>
-    <!-- finestre, in tinte diverse per non appesantire -->
-    <path d="M452 660 L540 634 Q556 630 570 644 L598 672 L452 672 Z" fill="#0e7490" opacity=".55"/>
-    <path d="M612 660 L660 686 L604 686 L592 660 Z" fill="#0e7490" opacity=".4"/>
+    <path d="M470 700 L486 636 Q492 610 524 604 L610 584 Q634 580 650 598
+             L706 638 L764 656 Q784 664 786 690 L786 700 Z"
+          fill="#3CCAB1"/>
+    <!-- finestre: fori scuri nel verde, non finestre vere -->
+    <path d="M528 646 L602 626 Q616 622 628 634 L650 656 L528 656 Z"
+          fill="#000000" opacity=".55"/>
+    <path d="M662 638 L700 658 L652 658 L642 638 Z" fill="#000000" opacity=".4"/>
     <!-- ruote -->
-    <circle cx="490" cy="764" r="46" fill="#0b3d47"/>
-    <circle cx="490" cy="764" r="19" fill="#a5f3fc"/>
-    <circle cx="672" cy="764" r="46" fill="#0b3d47"/>
-    <circle cx="672" cy="764" r="19" fill="#a5f3fc"/>
+    <circle cx="560" cy="700" r="44" fill="#1C7A6D"/>
+    <circle cx="560" cy="700" r="18" fill="#000000"/>
+    <circle cx="712" cy="700" r="44" fill="#1C7A6D"/>
+    <circle cx="712" cy="700" r="18" fill="#000000"/>
     <!-- luce -->
-    <circle cx="746" cy="712" r="12" fill="#0b3d47" opacity=".5"/>
+    <circle cx="770" cy="682" r="12" fill="#A8E9DC"/>
   </g>
-
-  <!-- il segnale di crescita, in alto a sinistra -->
-  <g stroke="#eafdff" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".9">
-    <path d="M188 214 l34 -40 l-22 -1 l28 -40"/>
-  </g>
-
-  <!-- il punto di partenza, aperto: da 700 ricerche -->
-  <circle cx="150" cy="542" r="13" fill="#0e7490" stroke="#eafdff" stroke-width="7"/>
 </svg>

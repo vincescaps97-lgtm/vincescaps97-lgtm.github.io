@@ -37,6 +37,7 @@ require "json"
 require "fileutils"
 require "tmpdir"
 require "time"
+require "erb"
 
 ROOT = File.expand_path("..", __dir__)
 SITE = "https://vincenzocapasso.com"
@@ -134,6 +135,16 @@ def project_bg(p)
   p["img"] ? "url('#{esc(p['img'])}'),#{grad}" : grad
 end
 
+# I tag delle categorie, cliccabili: portano all'elenco progetti
+# già filtrato su quella disciplina. Erano <span> inerti, quindi
+# sembravano etichette ma non facevano niente.
+def cats_links_html(p)
+  Array(p["cats"]).map do |c|
+    href = "/progetti/?cat=#{ERB::Util.url_encode(c)}"
+    %(<a class="tag" href="#{esc(href)}">#{esc(c)}</a>)
+  end.join(" ")
+end
+
 # Stesso blocco di apertura di tutte le pagine: temi, font,
 # fogli di stile. I percorsi sono ASSOLUTI (/css/...) perché
 # questa pagina potrebbe stare in /blog/<slug>/.
@@ -174,6 +185,12 @@ end
 #   Delega tutto a boot() come fanno le altre pagine: sfondo,
 #   menu, dock, animazioni. Il testo della pagina è già
 #   nell'HTML, qui non c'è niente da costruire.
+#
+#   `page` è l'id della sezione, e serve a una cosa sola: accendere
+#   la voce giusta nel menu e nella dock. Deve essere l'id DI QUESTA
+#   pagina, non quello della vicina — è l'errore che faceva
+#   accendere "Progetti" sulla pagina Chi Sono.
+#   Valori in uso: home · about · projects · journal · contact.
 def shell_scripts(page)
   <<~HTML
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -426,7 +443,7 @@ def about_page(data)
     </main>
 
     #{footer}
-    #{shell_scripts("projects")}
+    #{shell_scripts("about")}
     </body>
     </html>
   HTML
@@ -494,7 +511,7 @@ def contact_page(data)
     </section>
 
     #{footer}
-    #{shell_scripts("journal")}
+    #{shell_scripts("contact")}
     </body>
     </html>
   HTML
@@ -508,7 +525,7 @@ def project_page(p, cats)
   url = "#{SITE}/progetti/#{p['slug']}/"
   d = read_date("#{p['year']}-01-01")
   desc = summary(p["excerpt"])
-  cats_html = Array(p["cats"]).map { |c| %(<span class="tag">#{esc(c)}</span>) }.join(" ")
+  cats_html = cats_links_html(p)
 
   jsonld = {
     "@context" => "https://schema.org",
@@ -544,7 +561,7 @@ def project_page(p, cats)
             <span><b>Anno</b> #{esc(p['year'])}</span>
             <span><b>Ruolo</b> #{esc(p['role'])}</span>
           </div>
-          <div class="pcard__cats" style="margin:1.25rem 0">#{cats_html}</div>
+          <div class="pcard__cats" style="margin:1.25rem 0">#{cats_links_html(p)}</div>
           <p class="lede">#{esc(p['excerpt'])}</p>
           #{render_blocks(p['body'])}
         </div>
@@ -561,7 +578,7 @@ def project_page(p, cats)
       </section>
     </main>
     #{footer}
-    #{shell_scripts("about")}
+    #{shell_scripts("projects")}
     </body>
     </html>
   HTML
@@ -629,7 +646,7 @@ def post_page(p, next_post)
       #{next_card}
     </main>
     #{footer}
-    #{shell_scripts("contact")}
+    #{shell_scripts("journal")}
     </body>
     </html>
   HTML
@@ -660,11 +677,11 @@ def post_index(posts, cats)
   end.join("\n")
 
   <<~HTML
-    #{head(title: "Blog — Vincenzo Capasso", desc: "Articoli su advertising, tracking, strategia e creatività: #{posts.length} pezzi scritti da Vincenzo Capasso.", canonical: "#{SITE}/blog/")}
+    #{head(title: "Blog — Vincenzo Capasso", desc: "Articoli su advertising, tracking, strategia e creatività, scritti da Vincenzo Capasso.", canonical: "#{SITE}/blog/")}
     <main class="page" id="app">
       <header class="pagehead">
         <h1 class="pagehead__title" data-len="1">Blog</h1>
-        <p class="pagehead__lede">#{posts.length} articoli su advertising, strategia e creatività.</p>
+        <p class="pagehead__lede">Articoli e approfondimenti su advertising, strategia e creatività.</p>
       </header>
       <section class="sec sec--tight">
         <ul class="posts">#{rows}</ul>
@@ -678,23 +695,36 @@ def post_index(posts, cats)
 end
 
 def project_index(projects, categories)
+  # La card NON è un <a>: dentro ci stanno i tag delle categorie,
+  # che sono link veri, e un <a> dentro un <a> fa spezzare la card
+  # al parser (ne escono tre pezzi, il conteggio salta e la griglia
+  # si disordina). Il link sta sul titolo e copre la card con un
+  # ::after: si clicca come prima, i tag restano cliccabili perché
+  # stanno sopra la copertura.
   cards = projects.map do |p|
-    tags = Array(p["cats"]).map { |c| %(<span class="tag">#{esc(c)}</span>) }.join
+    tags = cats_links_html(p)
     <<~HTML
-      <a class="pcard reveal" href="/progetti/#{p['slug']}/" data-cats="#{esc(Array(p['cats']).join('|'))}">
-        <div class="pcard__media" data-year="#{esc(p['year'])}" style="background-image:#{project_bg(p)}"></div>
+      <div class="pcard reveal" data-cats="#{esc(Array(p['cats']).join('|'))}">
+        <div class="pcard__media" data-badge="#{esc(p['year'])}" style="background-image:#{project_bg(p)}"></div>
         <div class="pcard__body">
-          <h3 class="pcard__title" data-len="#{title_len(p['title'])}">#{esc(p['title'])}</h3>
+          <h3 class="pcard__title" data-len="#{title_len(p['title'])}"><a href="/progetti/#{p['slug']}/">#{esc(p['title'])}</a></h3>
           <p class="pcard__excerpt">#{esc(p['excerpt'])}</p>
           <div class="pcard__cats">#{tags}</div>
           <span class="pcard__cta">Apri progetto</span>
         </div>
-      </a>
+      </div>
     HTML
   end.join("\n")
 
+  # Il chip "di tutto" ha due facce: il valore macchina "All", quello
+  # che confronta lo script e finisce nell'URL dei link condivisibili,
+  # e l'etichetta che l'utente legge. Cambiare il valore romperebbe il
+  # filtro: per questo il dizionario qui sotto e non una sostituzione.
+  etichette_chip = { "All" => "Tutte" }
+
   chips = (["All"] + categories).map do |c|
-    %(<button class="chip" data-cat="#{esc(c)}" aria-pressed="#{c == 'All'}">#{esc(c)}</button>)
+    testo = etichette_chip.fetch(c, c)
+    %(<button class="chip" data-cat="#{esc(c)}" aria-pressed="#{c == 'All'}">#{esc(testo)}</button>)
   end.join("\n    ")
 
   # Il filtro è in JavaScript, ma le card sono tutte nell'HTML: anche
@@ -706,11 +736,25 @@ def project_index(projects, categories)
       var chips = document.getElementById("chips");
       var count = document.getElementById("count");
       var cards = Array.prototype.slice.call(grid.querySelectorAll(".pcard"));
-      var fromUrl = new URLSearchParams(location.search).get("cat");
-      if (!fromUrl) fromUrl = history.replaceState && location.hash.replace(/^#/, "");
-      var attivo = fromUrl || "All";
+      var attivo = new URLSearchParams(location.search).get("cat")
+                || location.hash.replace(/^#/, "")
+                || "All";
+
+      // I tag dentro le card si accendono quando sono la disciplina
+      // filtrata: così la selezione si vede anche guardando le card
+      // e non solo i chip in alto.
+      function segnalaTag() {
+        grid.querySelectorAll(".tag").forEach(function (t) {
+          var nome = (t.textContent || "").trim();
+          t.classList.toggle("is-on", attivo !== "All" && nome === attivo);
+        });
+      }
 
       function filtra(cat) {
+        // L'attivo va AGGIORNATO qui: restando fermo al valore
+        // iniziale, segnalaTag() rileggeva sempre quello e i tag
+        // non si accendevano mai cambiando filtro.
+        attivo = cat;
         var n = 0;
         cards.forEach(function (c) {
           var cats = (c.getAttribute("data-cats") || "").split("|");
@@ -721,16 +765,41 @@ def project_index(projects, categories)
         chips.querySelectorAll(".chip").forEach(function (b) {
           b.setAttribute("aria-pressed", String(b.dataset.cat === cat));
         });
-        count.textContent = n === cards.length
-          ? cards.length + " progetti"
-          : n + " progetti in " + cat;
+        // Senza filtro il contatore NON porta numeri: "3 progetti"
+        // diventa falso al primo progetto nuovo, e la riga sta per
+        // fare da titolo della griglia, non da dato. Con un filtro
+        // attivo invece il numero serve, perché dice quanti ne
+        // restano fuori dalla selezione.
+        count.textContent = cat === "All"
+          ? "Tutti i progetti"
+          : n + (n === 1 ? " progetto in " : " progetti in ") + cat;
+        segnalaTag();
+      }
+
+      // Filtra e aggiorna l'URL: il link resta condivisibile e il
+      // tasto indietro torna al filtro precedente.
+      function vai(cat) {
+        filtra(cat);
+        history.replaceState(null, "", cat === "All"
+          ? "/progetti/"
+          : "/progetti/?cat=" + encodeURIComponent(cat));
       }
 
       chips.addEventListener("click", function (e) {
         var b = e.target.closest(".chip");
         if (!b) return;
-        filtra(b.dataset.cat);
-        history.replaceState(null, "", b.dataset.cat === "All" ? "/progetti/" : "/progetti/?cat=" + encodeURIComponent(b.dataset.cat));
+        vai(b.dataset.cat);
+      });
+
+      // I tag sono link veri: senza script portano a
+      // /progetti/?cat=… e la pagina filtrata si apre lo stesso.
+      // Con lo script li intercettiamo per filtrare sul posto,
+      // senza ricaricare.
+      grid.addEventListener("click", function (e) {
+        var t = e.target.closest(".tag");
+        if (!t || !t.href) return;
+        e.preventDefault();
+        vai(new URL(t.href).searchParams.get("cat") || "All");
       });
 
       filtra(attivo);
@@ -739,17 +808,17 @@ def project_index(projects, categories)
   JS
 
   <<~HTML
-    #{head(title: "Progetti — Vincenzo Capasso", desc: "Casi di studio su paid media, tracking e marketing automation: #{projects.length} progetti con numeri e metodo.", canonical: "#{SITE}/progetti/")}
+    #{head(title: "Progetti — Vincenzo Capasso", desc: "Casi di studio su paid media, tracking e marketing automation, con numeri e metodo.", canonical: "#{SITE}/progetti/")}
     <main class="page" id="app">
       <header class="pagehead">
         <h1 class="pagehead__title" data-len="1">Progetti</h1>
-        <p class="pagehead__lede">#{projects.length} casi di studio, con il metodo e i numeri.</p>
+        <p class="pagehead__lede">Tutti i progetti, con il metodo e i numeri.</p>
       </header>
       <section class="sec sec--tight">
         <div class="chips" id="chips" role="group" aria-label="Filtra i progetti per disciplina">
           #{chips}
         </div>
-        <p class="sec__note" id="count" style="margin-bottom:1.5rem">#{projects.length} progetti</p>
+        <p class="sec__note" id="count" style="margin-bottom:1.5rem">Tutti i progetti</p>
         <div class="pgrid" id="grid">#{cards}</div>
       </section>
     </main>

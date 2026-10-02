@@ -41,3 +41,31 @@ grande in cima alla pagina di dettaglio.
   vengono caricate tutte insieme in home.
 - Niente testo dentro l'immagine: l'anno è già sovrapposto dalla
   card, e sopra ci passa una velatura scura.
+
+## Palette
+
+Le tre copertine sono disegnate con tre colori e nient'altro: nero
+puro `#000000`, il verde acqua del sito `#3CCAB1` e bianco `#FFFFFF`.
+Il verde si può schiarire e scurire restando nella sua famiglia
+(stessa tinta, diversa luminosità): `#2AA18F`, `#1C7A6D`, `#5FD8C4`,
+`#A8E9DC`.
+
+**Niente gradienti.** Le tre versioni precedenti avevano un fondo in
+gradiente e una sfumatura propria per disciplina; ora il fondo è
+nero puro in tutte e tre e la differenza la fa il disegno, non la
+tinta. Il vantaggio è che i tre colori sono davvero tre: le card non
+possono più stonare con il resto della pagina.
+
+Il nero e il bianco compaiono **sempre dentro una massa verde**, non
+come trattiisolati: fuori dal verde il nero sparisce sul tema scuro e
+il bianco sulla card bianca.
+
+Il soggetto sta dentro `x 120–1080`, `y 130–770`: è la parte che
+resta anche quando la pagina di dettaglio ritaglia in 16:9. La lente
+di `concessionaria.svg` sta per questo sopra la velatura che l'anno
+disegna a hover, e le ruote dell'auto non arrivano in fondo.
+
+I `PALETTE` in `js/data.js` restano: ora copre la macchia, cioè il
+caso in cui il file non c'è. Se in futuro un progetto ha una
+copertina trasparente, il gradiente sotto torna visibile — e in quel
+caso il verde del disegno va scelto scuro.

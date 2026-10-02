@@ -55,18 +55,27 @@ export function projectBg(p) {
   return p.img ? `url('${esc(p.img)}'),${grad}` : grad;
 }
 
+/* La card NON è un <a>: dentro ci vivono i tag delle categorie,
+   che sono link veri, e un <a> dentro un <a> fa spezzare la card
+   al parser — ne escono tre pezzi e la griglia salta. Il link sta
+   sul titolo e copre tutta la card con un ::after, quindi si
+   clicca la card come prima (e il click sui tag, che stanno sopra
+   la copertura, resta loro). */
 export function projectCard(p) {
+  const cats = p.cats
+    .map((c) => `<a class="tag" href="/progetti/?cat=${encodeURIComponent(c)}">${esc(c)}</a>`)
+    .join(" ");
   return `
-    <a class="pcard reveal" href="/progetti/${p.slug}/">
-      <div class="pcard__media" data-year="${esc(p.year)}"
+    <div class="pcard reveal">
+      <div class="pcard__media" data-badge="${esc(p.year)}"
            style="background-image:${projectBg(p)}"></div>
       <div class="pcard__body">
-        <h3 class="pcard__title" data-len="${titleLen(p.title)}">${esc(p.title)}</h3>
+        <h3 class="pcard__title" data-len="${titleLen(p.title)}"><a href="/progetti/${p.slug}/">${esc(p.title)}</a></h3>
         <p class="pcard__excerpt">${esc(p.excerpt)}</p>
-        <div class="pcard__cats">${p.cats.map((c) => `<span class="tag">${esc(c)}</span>`).join("")}</div>
+        <div class="pcard__cats">${cats}</div>
         <span class="pcard__cta">Apri progetto</span>
       </div>
-    </a>`;
+    </div>`;
 }
 
 /* ---------- JOURNAL ---------- */

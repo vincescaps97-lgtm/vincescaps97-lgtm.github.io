@@ -1,0 +1,18 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body{margin:0;background:#111;color:#9f9;font:12px monospace;padding:12px}
+#o{white-space:pre}
+</style></head><body><div id="o">…</div>
+<script>
+const f = new FontFace('DarkerGrotesque-Black','url(/fonts/DarkerGrotesque-Black.ttf)');
+f.load().then(()=>{ document.fonts.add(f);
+  const c=document.createElement('canvas').getContext('2d');
+  c.font='100px DarkerGrotesque-Black';
+  const adv=s=>+(c.measureText(s).width/100).toFixed(3);
+  const voci=['Ciao 👋, io sono','Mi occupo di','Vincenzo','Advertising','Digital Strategy','Funnel','Automation & AI'];
+  const righe=voci.map(v=>({v,a:adv(v)}));
+  const max=righe.reduce((a,b)=>b.a>a.a?b:a);
+  document.getElementById('o').textContent=righe.map(r=>`${r.v.padEnd(24)} ${r.a} em`).join('\n')+
+    `\n\nla piu larga: "${max.v}" ${max.a} em  (criterio attuale: Automation & AI 6.661)`+
+    `\ncorpo max con 4% margine: ${(0.96*96/100*0.96/Math.max(max.a,6.661)*100).toFixed(1)}vw`;
+});
+</script></body></html>

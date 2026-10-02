@@ -415,35 +415,61 @@ body.menu-open{ overflow:hidden }
    in `.hero__role-underline`. Le regole resterebbero come spazzatura
    e i due trattamenti sullo stesso elemento si rimescolerebbero. */
 
-/* ---------- ROTAZIONE DELLE PAROLE-CHIAVE ----------
+/* ---------- IL TITOLO CHE SI SCRIVE ----------
 
-   Dopo che il nome è stato letto, viene "cancellato" un
-   carattere alla volta e al suo posto si digitano le parole
-   chiave, una dopo l'altra, a ciclo.
+   Dopo il nome, al suo posto si scrivono i ruoli, uno alla volta, a
+   ciclo, come a macchina da scrivere: il testo cresce carattere per
+   carattere e si cancella con il tasto Canc. Qui nessuna
+   transizione — una dissolvenza mentre le lettere entrano una alla
+   volta si leggerebbe come un difetto, non come un effetto. L'unica
+   animazione è il cursore che lampeggia.
 
-   Il testo reale vive in <span class="hero__words"> e viene
-   letto dagli screen reader: quello che si vede animarsi è
-   solo la copia dentro <span aria-hidden="true">. */
-.hero__title{ /* il titolo ospita anche le parole, stessa riga */
+   Il testo vero vive in `.hero__sr` e viene letto dai screen
+   reader: quello che si vede scriversi è la copia aria-hidden
+   dentro `.hero__main`. */
+
+.hero__title{ /* il titolo ospita anche i ruoli, stessa riga */
   min-height:1em;
 }
-.hero__title.is-erasing .caret{ opacity:0 }
 
-/* Il NOME resta nel colore del titolo (bianco), le parole vanno
-   verdi. Stanno in due span separati per poterli colorare
-   diversamente mentre si cancellano e si riscrivono.
+/* Il SALUTO resta nel colore del titolo (bianco), i ruoli vanno
+   verdi. Stanno in due span separati per poter essere colorati
+   diversemente a ogni passo del ciclo. */
 
-   `display:contents` su quello che è vuoto: uno span vuoto con
-   padding occuperebbe spazio e il titolo saltellerebbe a ogni
-   cambio di parola. Così lo span sparisce dal flusso e resta
-   solo il testo. */
-.hero__nome:empty,
-.hero__parola:empty{ display:contents }
-/* Durante la prima pausa il nome è già scritto e deve restare
-   visibile: `is-first` annulla il `display:contents`, altrimenti
-   sparirebbe per un attimo prima che il ciclo lo riscriva. */
-.hero__nome.is-first{ display:inline }
-.hero__title .hero__nome{ color:var(--ink) }
+/* Prefisso e ciclo su due righe, ma di due TIPI diversi:
+
+   riga alta: il prefisso, "Ciao, io sono" o "Mi occupo di",
+              in corpo minore
+   riga bassa: nome e ruoli, uno alla volta, a corpo pieno
+
+   La riga bassa è `nowrap` e non cambia mai altezza, quindi il
+   titolo non sballa quando il contenuto passa da "Vincenzo" a
+   "Automation & AI" né mentre le lettere crescono e si cancellano.
+
+   `min-height` sulla riga alta: senza, nel mezzo del ciclo — quando
+   il prefisso è stato cancellato del tutto e non è ancora stato
+   riscritto — la riga collassa e tutto l'hero salta in su di qualche
+   pixel. Meglio una riga vuota che si vede che è in attesa. */
+.hero__prefix{
+  display:block;
+  font-size:.38em;
+  line-height:1.15;
+  min-height:1.15em;
+  color:var(--ink);
+  /* l'emoji resta a colori: senza, su alcuni sistemi la faccia
+     viene resa in monocromo e sembra una macchia */
+  font-variant-emoji:emoji;
+  white-space:nowrap;
+}
+
+/* La riga che ospita il ciclo. `nowrap` è la garanzia che nessuna
+   parola vada a capo: il corpo è tarato perché la più lunga
+   ("Automation & AI", 6,66 corpi) entri in 96vw. */
+.hero__line{
+  display:block;
+  line-height:.95;
+  white-space:nowrap;
+}
 
 /* Copia per screen reader: fuori dal flusso, quindi invisibile.
    `.hero__sr` è l'unica cosa che un lettore di schermo sente
@@ -457,33 +483,39 @@ body.menu-open{ overflow:hidden }
   white-space:nowrap;
   border:0;
 }
-/* Le parole del ciclo sono in verde acqua, il nome resta bianco:
+/* I ruoli del ciclo sono in verde acqua, il nome resta bianco:
    così si distingue a colpo d'occhio che "Vincenzo" è la persona e
-   le altre sono le cose che fa. Il colore è lo stesso della dock
+   gli altri sono le cose che fa. Il colore è lo stesso della dock
    e dell'evidenziatore, quindi non è un colore nuovo.
 
    In tema chiaro il verde acceso sparirebbe su fondo bianco, per
    questo la variante scura sotto. */
-.hero__words-live{
+.hero__main{
   display:inline;
-  /* verde acqua sulle parole del ciclo: distingue "Vincenzo"
-     (il colore del titolo) dalle cose che fa.
+  /* verde acqua sui ruoli del ciclo: distingue il nome, che
+     resta bianco, dalle cose che fa.
 
      `--hero-word` perché il verde acceso che si vede bene su
      fondo scuro sparisce su fondo bianco: in tema chiaro la
      variante è un verde più scuro, la stessa tinta ma leggibile. */
   color:var(--hero-word, #0f9b86);
-  /* lo spazio per il cursore: senza, il testo saltellerebbe
-     a ogni lettera aggiunta */
-  padding-right:.08em;
-  /* Il titolo non deve MAI andare a capo. Le parole del ciclo
-     sono separate da spazi, quindi il browser le tratterebbe
-     come testo normale e su schermi larghi "Automation & AI"
-     andava su due righe, allungando l'hero a ogni lettera.
-     nowrap lo impedisce a prescindere dai calcoli; i corpi
-     sono già tarati perché il testo entri nella colonna. */
+  /* Il titolo non deve MAI andare a capo: i ruoli sono separati
+     da parole intere, quindi il browser li tratterebbe come testo
+     normale e su schermi larghi "Automation & AI" andava su due
+     righe, allungando l'hero a ogni cambio. nowrap lo impedisce a
+     prescindere dai calcoli; i corpi sono già tarati perché il
+     testo entri nella colonna. */
   white-space:nowrap;
 }
+/* Il nome, sulla stessa riga dei ruoli ma nel colore del titolo:
+   è la persona, non una delle sue competenze. */
+.hero__main.is-nome{
+  color:var(--ink);
+}
+/* Il cursore della macchina da scrivere: sta sempre in fondo alla
+   riga grande, accanto all'ultima lettera. `steps(1,end)` lo fa
+   accendere e spegnere di colpo, come un terminale — con un fade
+   sembrerebbe una lampadina, non un cursore. */
 .hero__caret{
   display:inline-block;
   width:.075em;
@@ -497,8 +529,9 @@ body.menu-open{ overflow:hidden }
 }
 @keyframes caret{ 0%,50%{ opacity:1 } 51%,100%{ opacity:0 } }
 
-/* preferenza: niente animazioni, le parole restano tutte visibili
-   in fila e senza cursore */
+/* preferenza: niente animazioni. La scrittura del titolo la ferma
+   lo script (vedi `index.html`), qui basta togliere il cursore e il
+   tratto sotto il ruolo resta già disegnato */
 @media (prefers-reduced-motion:reduce){
   .hero__caret{ display:none }
   /* il tratto sotto il ruolo resta, ma già disegnato: senza
@@ -644,7 +677,9 @@ body.menu-open{ overflow:hidden }
   transition:background .2s ease, color .2s ease, border-color .2s ease;
 }
 .chip:hover{ border-color:var(--ink) }
-.chip[aria-pressed="true"]{ background:var(--blue); border-color:var(--blue); color:#fff }
+/* Lo stato selezionato dei chip è in fondo al file, insieme a
+   quello dei tag: il blocco dark riscrive il background dei chip,
+   quindi la regola deve venire DOPO. */
 
 /* ============================================================
    PROJECT GRID
@@ -708,6 +743,7 @@ body.menu-open{ overflow:hidden }
 }
 
 .pcard{
+  position:relative;
   display:flex;
   flex-direction:column;
   background:#fff;
@@ -717,6 +753,19 @@ body.menu-open{ overflow:hidden }
   transition:transform .35s cubic-bezier(.34,1.56,.64,1), box-shadow .35s ease;
 }
 .pcard:hover{ transform:translateY(-6px); box-shadow:var(--shadow) }
+
+/* Il link della card sta sul TITOLO e la copre intera con un
+   ::after: si clicca la card come quando era un <a> tutto intero,
+   ma i tag delle categorie restano link veri dentro (un <a> dentro
+   un <a> fa spezzare la card al parser). Il focus visibile va sul
+   titolo, non su tutta la card: l'outline esce dal bordo altrimenti. */
+.pcard__title a::after{ content:""; position:absolute; inset:0; z-index:0 }
+.pcard__title a:focus-visible{ outline:2px solid var(--blue); outline-offset:3px }
+
+/* `hidden` da solo non basta: `.pcard` ha `display:flex`, che è
+   una regola autore e vince sul `display:none` della UA stylesheet
+   — le card restavano lì anche filtrate, cambiava solo il conto. */
+.pcard[hidden]{ display:none }
 
 /* Media 4/3. Se il progetto ha un'immagine, va in `cover` e con
    un leggero zoom allo hover; il gradiente di `art` resta sotto e
@@ -728,8 +777,13 @@ body.menu-open{ overflow:hidden }
   background-position:center;
   background-color:var(--line);
 }
+/* L'anno sul media è un badge disegnato dal CSS (`::after`), non
+   testo dentro il div: `js/site.js` riempie i `[data-year]` del
+   footer con l'anno corrente, e usare lo stesso attributo qui
+   scriveva il 2026 due volte sulla card, una in alto a sinistra e
+   una in fondo con la velatura. */
 .pcard__media::after{
-  content:attr(data-year);
+  content:attr(data-badge);
   position:absolute;
   left:1rem; bottom:.85rem;
   font-family:var(--display);
@@ -768,8 +822,11 @@ body.menu-open{ overflow:hidden }
 .pcard__title[data-len="3"]{ font-size:1.22rem }
 
 .pcard__excerpt{ color:var(--muted); font-size:1.12rem; flex:1 }
-.pcard__cats{ display:flex; flex-wrap:wrap; gap:.35rem; margin-top:.35rem }
+/* z-index sopra la copertura del link (`::after` sul titolo):
+   senza, il link di tutta la card intercetta anche i click sui tag. */
+.pcard__cats{ display:flex; flex-wrap:wrap; gap:.35rem; margin-top:.35rem; position:relative; z-index:1 }
 .tag{
+  display:inline-block;
   font-size:.88rem;
   letter-spacing:.03em;
   text-transform:none;
@@ -777,7 +834,20 @@ body.menu-open{ overflow:hidden }
   border-radius:99px;
   padding:.15rem .55rem;
   color:var(--muted);
+  text-decoration:none;
+  transition:background .18s ease, color .18s ease, border-color .18s ease;
 }
+/* I tag cliccabili (categorie di un progetto) rispondono al
+   passaggio e si accendono. Da inerti a interattivi è un salto
+   che si deve sentire, altrimenti sembrano ancora etichette. */
+a.tag:hover{
+  background:rgba(61,202,177,.14);
+  border-color:var(--blue);
+  color:var(--ink);
+}
+
+/* Stato selezionato dei tag: regola in fondo al file, insieme a
+   quella dei chip, perché qui dentro vinceva il tema. */
 
 .pcard__cta{
   align-self:flex-start;
@@ -960,7 +1030,7 @@ body.menu-open{ overflow:hidden }
    caratteri, non a centrare. */
 .article{ max-width:52rem; margin-inline:0 }
 .article > * + *{ margin-top:1.25rem }
-.article p{ color:#2b2f36 }
+.article p{ color:var(--muted) }
 
 /* Sottotitolo dell'articolo: display font, come i titoli di sezione
    ma più piccolo, con un filetto sopra per staccare il blocco. */
@@ -980,7 +1050,7 @@ body.menu-open{ overflow:hidden }
 .article__list{
   list-style:disc;
   padding-left:1.35rem;
-  color:#2b2f36;
+  color:var(--muted);
 }
 .article__list li + li{ margin-top:.6rem }
 .article__list li::marker{ color:var(--blue) }
@@ -1055,7 +1125,7 @@ ol.article__list{ list-style:decimal }
   border-bottom-width:2px;
   white-space:nowrap;
 }
-.article__table td{ color:#2b2f36 }
+.article__table td{ color:var(--muted) }
 /* l'ultima colonna è quella da mettere in evidenza */
 .article__table td:last-child{
   font-family:var(--display);
@@ -1348,3 +1418,25 @@ ol.article__list{ list-style:decimal }
    restano quelle del riferimento. */
 [data-theme="dark"] .bg__grid,
 [data-theme="dark"] .bg__doodles{ filter:invert(1) }
+
+/* ============================================================
+   STATO SELEZIONATO — chip dei filtri e tag delle categorie
+
+   Fondo scuro e testo chiaro in tema chiaro, l'inverso in tema
+   scuro: `var(--ink)` e `var(--paper)` si scambiano i ruoli fra i
+   due temi, quindi basta una regola sola.
+
+   Sta DOPO il blocco dark: `[data-theme="dark"] .chip` ha la
+   stessa specificità di `.chip[aria-pressed="true"]` e, venendo
+   prima, lasciava ai chip il fondo scuro invece di quello
+   selezionato.
+   ============================================================ */
+.chip[aria-pressed="true"],
+.chip[aria-pressed="true"]:hover,
+[aria-pressed="true"].tag,
+.tag.is-on,
+a.tag.is-on:hover{
+  background:var(--ink);
+  border-color:var(--ink);
+  color:var(--paper);
+}
