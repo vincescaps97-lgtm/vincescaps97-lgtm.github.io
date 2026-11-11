@@ -12,7 +12,7 @@ export const PROFILE = {
   name: "Vincenzo Capasso",
   initials: "VC",
   photo: "/assets/vincenzo.jpg",
-  email: "vincenzo.capasso1297@gmail.com",
+  email: "hello@vincenzocapasso.com",
   role: "Performance & Marketing automation",
   roleLine: "Performance & Marketing automation | Paid Media, Tracking & AI",
   tagline: "👋 Ciao, sono Vincenzo.",
