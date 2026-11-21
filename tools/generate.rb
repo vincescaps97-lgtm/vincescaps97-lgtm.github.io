@@ -386,8 +386,12 @@ def about_page(data)
   # attributo height vince su quello, stirando la foto in un
   # rettangolo alto. Il riquadro di riserva con le iniziali resta
   # il fallback se il file non c'e'.
+  # Niente width/height sull'<img>: `.portrait` ha `width:100%` e
+  # `aspect-ratio:1`, e gli attributi HTML (presentational hints)
+  # fisserebbero l'altezza a 640px, allungando il riquadro. Lo
+  # spazio è già riservato dal CSS, quindi il CLS resta a posto.
   portrait = if prof["photo"]
-               %(<img class="portrait" src="#{esc(prof['photo'])}" alt="Vincenzo Capasso" width="640" height="640" decoding="async" fetchpriority="high">)
+               %(<img class="portrait" src="#{esc(prof['photo'])}" alt="Vincenzo Capasso" decoding="async" fetchpriority="high">)
              else
                %(<img class="portrait" alt="Vincenzo Capasso" decoding="async" fetchpriority="high">)
              end
