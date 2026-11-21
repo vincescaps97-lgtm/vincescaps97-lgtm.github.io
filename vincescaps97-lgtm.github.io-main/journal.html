@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="it">
+<head>
+<!-- Google Tag Manager -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MS4XZXCT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog | Vincenzo Capasso</title>
+<meta name="description" content="Articoli su advertising, creatività, tracking e strategia di vendita.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://vincenzocapasso.com/blog/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+<script>(function(){try{var t=localStorage.getItem("theme");if(!t){t="dark";}document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme="dark";}})();</script>
+<link rel="stylesheet" href="css/style.css?v=66">
+<link rel="stylesheet" href="css/content.css?v=66">
+</head>
+<body>
+
+<header class="pagehead">
+  <h1 class="pagehead__title">Blog</h1>
+  <p class="pagehead__lede">Articoli su advertising, creatività, tracking e strategia di vendita.</p>
+</header>
+
+<main class="page">
+  <section class="sec sec--tight">
+    <ul class="posts" id="list"></ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>&copy; <span data-year></span> Vincenzo Capasso. Tutti i diritti riservati.</p>
+  <p id="footlinks"></p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script type="module">
+  import { boot } from "./js/site.js";
+  import { POSTS, SOCIALS } from "./js/data.js";
+  import { postRow, socialLinks } from "./js/render.js";
+
+  boot({ page: "journal" });
+
+  document.getElementById("list").innerHTML = POSTS.map(postRow).join("");
+  document.getElementById("footlinks").innerHTML = socialLinks(SOCIALS);
+</script>
+</body>
+</html>

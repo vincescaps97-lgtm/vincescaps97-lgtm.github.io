@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="MockAds: la stessa creatività mostrata nei formati storia, post e portrait">
+  <!--
+    COPERTINA 3 — MockAds, il tool per fare i mockup
+
+    L'idea del progetto in un'immagine: una sola creatività che
+    diventa tre formati diversi, con le frecce che escono dal
+    centro verso i due formati laterali.
+
+    Palette: nero, bianco e verde acqua, con i verdi della famiglia
+    del verde pieno per i piani. Il fondo è nero puro: tiene dentro
+    la palette e dà il contrasto massimo al verde, che è il colore
+    del sito.
+
+    Qui la creatività centrale è bianca — è la fonte, l'unica cosa
+    vera — e i formati laterali sono verdi: le versioni che si
+    ottengono da lei. È l'unico dei tre progetti dove il bianco è
+    la massa principale.
+
+    Il soggetto sta dentro x 120–1080 e y 130–770: è la parte che
+    resta anche quando la pagina di dettaglio ritaglia in 16:9.
+    Niente testo dentro.
+  -->
+  <rect width="1200" height="900" fill="#000000"/>
+
+  <!-- la creatività, una sola: il quadrato bianco al centro -->
+  <g>
+    <rect x="472" y="300" width="256" height="256" rx="24" fill="#FFFFFF"/>
+    <circle cx="528" cy="362" r="28" fill="#A8E9DC"/>
+    <rect x="572" y="342" width="112" height="14" rx="7" fill="#000000" opacity=".75"/>
+    <rect x="572" y="368" width="78" height="14" rx="7" fill="#000000" opacity=".45"/>
+    <rect x="504" y="442" width="128" height="14" rx="7" fill="#000000" opacity=".55"/>
+    <rect x="504" y="468" width="96" height="14" rx="7" fill="#000000" opacity=".3"/>
+    <rect x="504" y="500" width="104" height="30" rx="15" fill="#1C7A6D"/>
+  </g>
+
+  <!-- formato storia, a sinistra: cornice verde, contenuto in chiaro -->
+  <g>
+    <rect x="150" y="252" width="152" height="272" rx="20" fill="#1C7A6D" opacity=".5"
+          stroke="#3CCAB1" stroke-width="6"/>
+    <circle cx="192" cy="306" r="20" fill="#5FD8C4"/>
+    <rect x="222" y="296" width="60" height="10" rx="5" fill="#FFFFFF" opacity=".85"/>
+    <rect x="222" y="314" width="40" height="10" rx="5" fill="#FFFFFF" opacity=".45"/>
+    <rect x="176" y="428" width="100" height="12" rx="6" fill="#FFFFFF" opacity=".8"/>
+    <rect x="176" y="450" width="72" height="12" rx="6" fill="#FFFFFF" opacity=".45"/>
+    <rect x="176" y="480" width="80" height="24" rx="12" fill="#A8E9DC"/>
+  </g>
+
+  <!-- formato portrait, a destra: stessa grammatica -->
+  <g>
+    <rect x="898" y="286" width="164" height="204" rx="20" fill="#1C7A6D" opacity=".5"
+          stroke="#3CCAB1" stroke-width="6"/>
+    <circle cx="940" cy="332" r="21" fill="#5FD8C4"/>
+    <rect x="972" y="322" width="66" height="10" rx="5" fill="#FFFFFF" opacity=".85"/>
+    <rect x="972" y="340" width="44" height="10" rx="5" fill="#FFFFFF" opacity=".45"/>
+    <rect x="926" y="424" width="108" height="12" rx="6" fill="#FFFFFF" opacity=".8"/>
+    <rect x="926" y="446" width="76" height="12" rx="6" fill="#FFFFFF" opacity=".45"/>
+    <rect x="926" y="474" width="86" height="24" rx="12" fill="#A8E9DC"/>
+  </g>
+
+  <!-- le frecce: escono dal centro e arrivano ai due formati -->
+  <g stroke="#3CCAB1" stroke-width="8" fill="none" stroke-linecap="round">
+    <path d="M452 400H332"/>
+    <path d="M748 400h130"/>
+  </g>
+  <g fill="#3CCAB1">
+    <path d="M322 400l22-13v26z"/>
+    <path d="M888 400l-22-13v26z"/>
+  </g>
+</svg>

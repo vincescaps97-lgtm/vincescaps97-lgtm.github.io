@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="Analytics &amp; Tracking: un quadrante con l&#039;ago">
+  <!--
+    CATEGORIA 3 — Analytics & Tracking
+
+    Un quadrante: la misura. L'anello chiaro è il giro completo,
+    il verde sopra è quello effettivamente coperto, l'ago dice dove
+    siamo. È tracking e non "un grafico": il quadrante è l'unico
+    disegno che dice "quanto" senza doverci mettere un numero.
+
+    Palette: nero, bianco e verde acqua. Il nero è il disco dentro
+    l'anello e il bianco l'ago: due colori che stanno sempre
+    l'uno sull'altro, quindi si vedono su qualunque fondo.
+
+    Il tratto verde non è un gradiente ma un'anello spezzato
+    (stroke-dasharray): stesso colore, stessa tinta, cambia solo
+    quanto è coperto.
+
+    Stesso linguaggio degli altri tre: spessore 24, angoli tondi,
+    forme semplici. Nessun gradiente.
+  -->
+
+  <!-- il giro di fondo, in verde chiaro: la scala -->
+  <circle cx="600" cy="450" r="210" fill="none"
+          stroke="#A8E9DC" stroke-width="56"/>
+
+  <!-- il giro coperto, in verde scuro: parte da mezzanotte e gira
+       per tre quarti. Ruotato di -90 perché lo zero in SVG è a
+       destra, non in alto. Scuro e non pieno perché sull'anello il
+       contrasto fra "coperto" e "non coperto" è tutta la lettura -->
+  <circle cx="600" cy="450" r="210" fill="none"
+          stroke="#1C7A6D" stroke-width="56" stroke-linecap="round"
+          stroke-dasharray="924 396" transform="rotate(-90 600 450)"/>
+
+  <!-- il disco interno è nero: fuori dal verde il nero non
+       esiste, quindi qui funziona da fondo per l'ago -->
+  <circle cx="600" cy="450" r="132" fill="#000000" opacity=".9"/>
+
+  <!-- l'ago e il mozzo, bianchi sul nero -->
+  <g transform="rotate(-45 600 450)">
+    <rect x="586" y="286" width="28" height="176" rx="14" fill="#FFFFFF"/>
+    <circle cx="600" cy="450" r="22" fill="#FFFFFF"/>
+  </g>
+</svg>

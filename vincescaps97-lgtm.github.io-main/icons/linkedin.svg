@@ -1,0 +1,13 @@
+<!-- Canvas con lo stesso margine delle altre icone: il disegno
+       occupa l'81,1% del riquadro, come il bordo solido dei PNG/AVIF. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-11.7 -11.7 123.4 123.4" width="512" height="512" role="img" aria-label="LinkedIn">
+  <!-- Logo ufficiale: quadrato arrotondato blu, glifo bianco piatto.
+       Geometria ricavata dal logo allegato (1024×1024): punto tondo,
+       aste dritte, arco largo con buco centrale. -->
+  <rect width="100" height="100" rx="17" fill="#0A66C2"/>
+  <g fill="#ffffff">
+    <circle cx="22.2" cy="22.6" r="8.4"/>
+    <rect x="15.1" y="37.1" width="14.7" height="47.9"/>
+    <path d="M39.1 85V37.1h14.1v4.1c2.6-3 7.4-5.2 13.3-5.2 11.7 0 18.5 6.6 18.5 18.6V85H70.8V56.8c0-5.8-2.9-8.5-7.4-8.5-5.4 0-10.2 3.5-10.2 10.3V85Z"/>
+  </g>
+</svg>

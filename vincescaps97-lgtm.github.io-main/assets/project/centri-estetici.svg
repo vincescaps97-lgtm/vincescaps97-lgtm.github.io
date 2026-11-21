@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="Il metodo di test modulare: la griglia di sei varianti con una cella cambiata, il macchinario del centro estetico e la curva del costo per lead in discesa">
+  <!--
+    COPERTINA 1 — caso studio centri estetici
+
+    Il metodo del progetto in un'immagine: la matrice 3×2 delle
+    varianti con una sola cella cambiata (cambiare solo ciò che non
+    funziona), il macchinario, e la curva del CPL che scende.
+
+    Palette: nero, bianco e verde acqua, con i verdi della famiglia
+    del verde pieno per i piani. Il fondo è nero puro: tiene dentro
+    la palette e dà il contrasto massimo al verde, che è il colore
+    del sito. Il verde scuro porta la matrice, il verde pieno la
+    cella vincente, il verde chiaro quella da cambiare.
+
+    Il soggetto sta dentro x 120–1080 e y 130–770: è la parte che
+    resta anche quando la pagina di dettaglio ritaglia in 16:9.
+    Niente testo dentro: l'anno è un badge del CSS.
+  -->
+  <rect width="1200" height="900" fill="#000000"/>
+
+  <!-- il macchinario, a sinistra: il palo, la base e il braccio -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M170 560h120" stroke="#1C7A6D" stroke-width="26"/>
+    <path d="M230 556V320" stroke="#3CCAB1" stroke-width="24"/>
+    <path d="M230 320 L298 258" stroke="#3CCAB1" stroke-width="24"/>
+  </g>
+  <rect x="278" y="212" width="104" height="50" rx="25" fill="#5FD8C4"
+        transform="rotate(-26 330 237)"/>
+  <circle cx="230" cy="440" r="18" fill="#A8E9DC"/>
+
+  <!-- i due angoli della matrice, per chiudere il riferimento -->
+  <g stroke="#2AA18F" stroke-width="5" fill="none" stroke-linecap="round" opacity=".8">
+    <path d="M356 160h-24M356 160v-24"/>
+    <path d="M1068 476h24M1068 476v24"/>
+  </g>
+
+  <!-- la matrice 3×2. Quattro celle uguali, una vincente, una da
+       cambiare: è il metodo in una figura -->
+  <g>
+    <!-- le quattro celle di partenza -->
+    <g fill="#1C7A6D">
+      <rect x="380" y="160" width="200" height="132" rx="16"/>
+      <rect x="612" y="160" width="200" height="132" rx="16"/>
+      <rect x="380" y="320" width="200" height="132" rx="16"/>
+      <rect x="612" y="320" width="200" height="132" rx="16"/>
+    </g>
+    <g fill="#FFFFFF">
+      <rect x="408" y="196" width="96" height="12" rx="6" opacity=".85"/>
+      <rect x="408" y="220" width="140" height="10" rx="5" opacity=".35"/>
+      <rect x="640" y="196" width="96" height="12" rx="6" opacity=".85"/>
+      <rect x="640" y="220" width="140" height="10" rx="5" opacity=".35"/>
+      <rect x="408" y="356" width="96" height="12" rx="6" opacity=".85"/>
+      <rect x="408" y="380" width="140" height="10" rx="5" opacity=".35"/>
+      <rect x="640" y="356" width="96" height="12" rx="6" opacity=".85"/>
+      <rect x="640" y="380" width="140" height="10" rx="5" opacity=".35"/>
+    </g>
+
+    <!-- la cella vincente: verde pieno, e la freccia che la sceglie -->
+    <rect x="844" y="160" width="200" height="132" rx="16" fill="#3CCAB1"/>
+    <rect x="872" y="196" width="96" height="12" rx="6" fill="#000000" opacity=".8"/>
+    <rect x="872" y="220" width="140" height="10" rx="5" fill="#000000" opacity=".4"/>
+    <path d="M996 188h28a10 10 0 0 1 10 10v26a10 10 0 0 1-10 10h-28z"
+          fill="#000000" opacity=".16"/>
+    <path d="M1000 220l16-15v10h14l-16 15v-10z" fill="#000000"/>
+
+    <!-- la cella da cambiare: ancora scura, bordo tratteggiato.
+         Il tratteggio è l'unico posto del file dove il bordo si
+         disegna a trattini: dice "questa qui la tocchiamo" -->
+    <rect x="844" y="320" width="200" height="132" rx="16" fill="#1C7A6D" opacity=".35"
+          stroke="#5FD8C4" stroke-width="5" stroke-dasharray="15 11"/>
+    <rect x="872" y="356" width="96" height="12" rx="6" fill="#5FD8C4" opacity=".6"/>
+    <rect x="872" y="380" width="140" height="10" rx="5" fill="#5FD8C4" opacity=".3"/>
+  </g>
+
+  <!-- il livello di partenza del CPL: tratteggiato, è il "prima" -->
+  <path d="M230 604h800" fill="none" stroke="#2AA18F" stroke-width="5"
+        stroke-dasharray="18 14" opacity=".8"/>
+
+  <!-- la curva del costo per lead: parte dal livello e scende -->
+  <path d="M230 604C400 612 520 640 640 676S860 736 1030 748"
+        fill="none" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round"/>
+  <path d="M230 604C400 612 520 640 640 676S860 736 1030 748L1030 772H230Z"
+        fill="#FFFFFF" opacity=".07"/>
+
+  <!-- la discesa, in basso a destra -->
+  <g stroke="#FFFFFF" stroke-width="9" fill="none" stroke-linecap="round"
+     stroke-linejoin="round">
+    <path d="M1010 726l20 22 20-22"/>
+  </g>
+</svg>
