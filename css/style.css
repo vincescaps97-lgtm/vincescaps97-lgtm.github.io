@@ -352,6 +352,9 @@ body.menu-open{ overflow:hidden }
 
 .hero{
   position:relative;
+  /* Sopra il layer della luce (z-index:1), sotto la dock e la topbar:
+     senza, il testo statico dell'hero finirebbe sotto la sfumatura. */
+  z-index:2;
   min-height:100svh;
   display:flex;
   flex-direction:column;
@@ -1316,8 +1319,21 @@ ol.article__list{ list-style:decimal }
    A 360px il limite è 13,8vw, ma il gutter e il cursore mangiano
    spazio, quindi scendo a 12,2vw con margine. */
 @media (max-width:400px){
-  .hero__title{ font-size:clamp(1.5rem,12.2vw,2.2rem) }
+  /* Il tetto era 2.2rem (35px): sul telefono il nome e i ruoli
+     restavano piccoli. 2.75rem (44px) è il massimo misurato che
+     tiene "Automation & AI" su una riga a 360px con ~40px di
+     margine; a 320px il termine 12.2vw scende da solo a 39px. */
+  .hero__title{ font-size:clamp(1.5rem,12.2vw,2.75rem) }
   .hero__caret{ height:.6em; width:.055em }
+
+  /* Saluto e "Mi occupo di" erano troppo piccoli sul telefono:
+     qui crescono da soli, restando su UNA riga (`nowrap`) e senza
+     toccare il titolo grande né il ciclo dei ruoli. Il limite in
+     vw serve a non sforare il gutter sui telefoni più stretti. */
+  .hero__prefix{
+    font-size:clamp(1.05rem,5.6vw,1.35rem);
+    white-space:nowrap;
+  }
 }
 
 @media (prefers-reduced-motion:reduce){
@@ -1366,7 +1382,10 @@ ol.article__list{ list-style:decimal }
 [data-theme="dark"] .build,
 [data-theme="dark"] .about__side,
 [data-theme="dark"] .btn-touch{
-  background:#15171c;
+  /* `background-color`, non `background`: la card dei progetti usa
+     `background-image` per la luce che segue il cursore (vedi in
+     fondo al file) e lo shorthand la cancellerebbe. */
+  background-color:#15171c;
 }
 [data-theme="dark"] .window__bar{ background:#101216; }
 [data-theme="dark"] .window__url{ background:#15171c; }
@@ -1439,4 +1458,159 @@ a.tag.is-on:hover{
   background:var(--ink);
   border-color:var(--ink);
   color:var(--paper);
+}
+
+/* ============================================================
+   SFUMATURA — l'alone che segue il cursore
+
+   La sfumatura verde acqua delle slide, portata sul sito. Il layer
+   è `fixed` e sta a z-index 1: sopra la carta a quadretti (z 0) e
+   sotto ogni contenuto (z 2), quindi attraversa la pagina senza
+   mai passare davanti a un testo.
+
+   Tre livelli, di cui uno solo si muove:
+   - `::before`  alone d'ambiente in alto a destra, fermo: è la
+                 macchia che nelle slide esce dal bordo. Dà il tono
+                 della pagina prima che il cursore si muova;
+   - `--wide`    alone grande che insegue lento (profondità);
+   - `--core`    alone stretto che arriva prima (il fuoco).
+
+   In tema chiaro le opacità sono basse: su carta bianca un alone
+   verde acceso diventa una macchia. In tema scuro si accende e usa
+   `mix-blend-mode:screen`, che è esattamente il modo in cui la luce
+   si somma su un fondo nero — su bianco lo `screen` sparirebbe,
+   per questo vale solo per il tema scuro.
+
+   Sparisce in stampa e non esiste con `prefers-reduced-motion`:
+   in quel caso `mountGlow()` non monta nemmeno il layer.
+   ============================================================ */
+
+.glow{
+  position:fixed;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  overflow:hidden;
+}
+
+/* Solo gli aloni che seguono il cursore si accendono al primo
+   movimento: l'alone d'ambiente è già acceso, altrimenti su touch
+   non si vedrebbe mai. */
+.glow__orb{
+  position:absolute;
+  left:0; top:0;
+  aspect-ratio:1;
+  border-radius:50%;
+  will-change:transform;
+  opacity:0;
+  /* Un blur leggero serve a togliere il bordo percepibile: un
+     gradiente, per quanto morbido, su un fondo piatto lascia
+     leggere il cerchio. Con il blur l'alone è una foschia, non un
+     disco. */
+  filter:blur(26px);
+  /* l'accensione è lenta, lo spegnimento pure: comparire di colpo
+     al primo movimento del mouse sembrerebbe un lampeggio */
+  transition:opacity .8s ease;
+}
+
+.glow.is-live .glow__orb{ opacity:1 }
+
+/* L'alone d'ambiente: stesso taglio delle slide, un cerchio che
+   esce dal bordo destro in alto. `filter:blur` qui è concesso —
+   è fermo, si rasterizza una volta. */
+.glow::before{
+  content:"";
+  position:absolute;
+  top:-20vw;
+  right:-14vw;
+  width:min(78vw,1000px);
+  aspect-ratio:1;
+  border-radius:50%;
+  background:radial-gradient(circle at 42% 42%,
+    rgba(61,202,177,.22) 0%,
+    rgba(45,178,158,.10) 34%,
+    rgba(45,178,158,0) 66%);
+  filter:blur(50px);
+  opacity:.75;
+}
+
+/* Gli aloni che si muovono. Il blur è volutamente contenuto (26px):
+   serve a togliere il bordo che fa leggere il cerchio, non a
+   spalmare l'alone su mezzo schermo. Più grande è il raggio, più
+   cara è la composizione a ogni frame. */
+.glow__orb--wide{
+  width:clamp(200px,22vw,300px);
+  /* due macchie sovrapposte invece di un cerchio solo: la forma
+     che ne esce è irregolare, e un'irregolarità si legge come luce
+     diffusa, non come un disco che segue il mouse */
+  background:
+    radial-gradient(closest-side at 42% 38%,
+      rgba(61,202,177,.055),
+      rgba(61,202,177,0) 100%),
+    radial-gradient(closest-side at 60% 64%,
+      rgba(61,202,177,.038),
+      rgba(61,202,177,0) 100%);
+}
+
+.glow__orb--core{
+  width:clamp(70px,8vw,100px);
+  background:radial-gradient(closest-side,
+    rgba(130,246,226,.075) 0%,
+    rgba(61,202,177,.04) 45%,
+    rgba(61,202,177,0) 100%);
+}
+
+[data-theme="dark"] .glow{ mix-blend-mode:screen }
+
+[data-theme="dark"] .glow::before{
+  background:radial-gradient(circle at 42% 42%,
+    rgba(61,202,177,.42) 0%,
+    rgba(38,150,136,.16) 34%,
+    rgba(38,150,136,0) 66%);
+  opacity:1;
+}
+
+[data-theme="dark"] .glow__orb--wide{
+  background:
+    radial-gradient(closest-side at 42% 38%,
+      rgba(61,202,177,.08),
+      rgba(61,202,177,0) 100%),
+    radial-gradient(closest-side at 60% 64%,
+      rgba(43,160,144,.055),
+      rgba(43,160,144,0) 100%);
+}
+
+[data-theme="dark"] .glow__orb--core{
+  background:radial-gradient(closest-side,
+    rgba(150,255,238,.09) 0%,
+    rgba(61,202,177,.05) 45%,
+    rgba(61,202,177,0) 100%);
+}
+
+/* ---------- la stessa luce, dentro le card ----------
+
+   Il centro del gradiente sta fuori schermo di default: la luce
+   esiste solo mentre il cursore è sulla card, e `js/glow.js` scrive
+   `--mx`/`--my` in pixel relativi alla card. È il fondo della card,
+   non un elemento sopra: il testo resta sopra la luce e la card
+   continua a essere cliccabile per intero. */
+.pcard{
+  background-image:radial-gradient(
+    380px circle at var(--mx,-9999px) var(--my,-9999px),
+    var(--spot, rgba(61,202,177,.10)),
+    transparent 62%);
+}
+
+[data-theme="dark"] .pcard{ --spot:rgba(61,202,177,.14) }
+
+/* Con "riduci il movimento" resta solo l'alone fermo: gli orb che
+   inseguono il cursore non si vedono e `js/glow.js` non li monta
+   nemmeno. */
+@media (prefers-reduced-motion:reduce){
+  .glow__orb{ display:none }
+}
+
+@media print{
+  .glow{ display:none }
+  .pcard{ background-image:none }
 }

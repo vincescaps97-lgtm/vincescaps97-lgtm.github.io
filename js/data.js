@@ -70,6 +70,8 @@ export const PROJECTS = [
   {
     slug: "caso-studio-meta-ads-centri-estetici",
     title: "Meta Ads per centri estetici: caso studio, CPL -57%",
+    seoTitle: "Meta Ads per centri estetici: CPL -57% | Vincenzo Capasso",
+    seoDesc: "Caso studio: un'azienda beauty ha ridotto il CPL del 57% in meno di 30 giorni su Meta Ads, con un metodo di test modulare e meno creatività.",
     year: "2026",
     client: "Azienda beauty (cliente anonimo)",
     role: "Paid media, framework creativo, lead generation",
@@ -110,6 +112,8 @@ export const PROJECTS = [
   {
     slug: "concessionaria-performance-branding",
     title: "Performance branding per una concessionaria locale",
+    seoTitle: "Performance branding locale: +69% | Vincenzo Capasso",
+    seoDesc: "Le ricerche di brand passano da 700 a 1.600 al mese in tre anni. A budget invariato: +69% di impression e +145% di click sulle query di brand.",
     year: "2026",
     client: "Concessionaria locale (cliente anonimo)",
     role: "Performance branding, analytics, campagne multi-funnel",
@@ -170,6 +174,8 @@ export const PROJECTS = [
   {
     slug: "mockup-ads-mockads",
     title: "Mockup ads: perché ho costruito un tool per farli",
+    seoTitle: "Mockup ads: perché ho creato MockAds | Vincenzo Capasso",
+    seoDesc: "Come ho ridotto il tempo dei mockup ads nelle proposte ai clienti: perché ho costruito MockAds, dove lo uso e cosa non risolve, con esempi concreti.",
     year: "2025",
     client: "Progetto personale",
     role: "Prodotto, design, sviluppo",
@@ -227,6 +233,8 @@ export const POSTS = [
     url: "https://www.linkedin.com/posts/v-capasso_adfatigue-advertising-performance-ugcPost-7395480426414243841-3VfF",
     slug: "ad-fatigue",
     title: "Ad fatigue: il killer silenzioso delle tue campagne",
+    seoTitle: "Ad fatigue: salvare le campagne | Vincenzo Capasso",
+    seoDesc: "Cos'è l'ad fatigue, come riconoscerla dai numeri e quali leve usare per fermarla prima che eroda CTR, budget e risultati delle campagne advertising.",
     date: "2026-04-28",
     topic: "Advertising",
     art: ["#047857", "#6ee7b7"],
@@ -283,6 +291,8 @@ export const POSTS = [
     url: "https://www.linkedin.com/pulse/come-smontare-la-narrazione-dominante-per-vendere-meglio-capasso-rhthf/",
     slug: "contro-narrazione",
     title: "Smontare la narrazione dominante per vendere",
+    seoTitle: "Smontare la narrazione dominante | Vincenzo Capasso",
+    seoDesc: "Perché smontare la narrazione dominante del tuo settore vende più che raccontarsi: convinzioni, contro-narrazione e il caso Basecamp in pratica.",
     date: "2026-04-20",
     topic: "Strategia",
     art: ["#155e75", "#a5f3fc"],
@@ -386,6 +396,8 @@ export const POSTS = [
   {
     slug: "framework-creativita",
     title: "Non ti servono più Ads, ti serve un framework",
+    seoTitle: "Ads: un framework per la creatività | Vincenzo Capasso",
+    seoDesc: "CPL ridotti del 57% in 30 giorni senza più creatività: pre-analisi, modularità e un framework per decidere cosa testare, quando e perché davvero.",
     date: "2025-09-01",
     topic: "Creatività",
     art: ["#0e7490", "#67e8f9"],

@@ -41,6 +41,8 @@ require "erb"
 
 ROOT = File.expand_path("..", __dir__)
 SITE = "https://vincenzocapasso.com"
+OG_IMAGE = "#{SITE}/assets/og/og-default.jpg"
+OG_IMAGE_ALT = "Vincenzo Capasso | Performance & Marketing automation"
 CACHE_BUST = File.read(File.join(ROOT, "index.html"))[/style\.css\?v=(\d+)/, 1] || "1"
 
 # ------------------------------------------------------------
@@ -67,12 +69,14 @@ def read_data
     JSON.stringify({
       posts: POSTS.map(p => ({
         slug: p.slug, title: p.title, date: p.date, topic: p.topic,
-        excerpt: p.excerpt, url: p.url || null, art: p.art, body: p.body
+        excerpt: p.excerpt, url: p.url || null, art: p.art, body: p.body,
+        seoTitle: p.seoTitle || null, seoDesc: p.seoDesc || null
       })),
       projects: PROJECTS.map(p => ({
         slug: p.slug, title: p.title, year: p.year, client: p.client,
         role: p.role, cats: p.cats, art: p.art, img: p.img,
-        excerpt: p.excerpt, body: p.body
+        excerpt: p.excerpt, body: p.body,
+        seoTitle: p.seoTitle || null, seoDesc: p.seoDesc || null
       })),
       categories: CATEGORIES, profile: PROFILE, socials: SOCIALS,
       skills: SKILLS, tools: TOOLS, jobs: JOBS,
@@ -153,8 +157,17 @@ def head(title:, desc:, canonical:, type: "website", extra: "")
     <!doctype html>
     <html lang="it">
     <head>
+    <!-- Google Tag Manager -->
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MS4XZXCT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0d0e11" media="(prefers-color-scheme: dark)">
     <title>#{esc(title)}</title>
     <meta name="description" content="#{esc(desc)}">
     <link rel="canonical" href="#{esc(canonical)}">
@@ -164,12 +177,19 @@ def head(title:, desc:, canonical:, type: "website", extra: "")
     <meta property="og:url" content="#{esc(canonical)}">
     <meta property="og:site_name" content="Vincenzo Capasso">
     <meta property="og:locale" content="it_IT">
+    <meta property="og:image" content="#{OG_IMAGE}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="#{esc(OG_IMAGE_ALT)}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="#{esc(title)}">
     <meta name="twitter:description" content="#{esc(desc)}">
-    #{extra}<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="icon" href="/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
-    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+    <meta name="twitter:image" content="#{OG_IMAGE}">
+    <meta name="twitter:image:alt" content="#{esc(OG_IMAGE_ALT)}">
+    #{extra}<link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
@@ -257,6 +277,34 @@ def summary(text, n = 155)
   "#{s[0, n - 1].rstrip}…"
 end
 
+# Entità condivise dai JSON-LD. Lo stesso @id su ogni pagina: i
+# motori le uniscono invece di leggerle come persone diverse.
+def person_node(data)
+  prof = data["profile"]
+  {
+    "@type" => "Person",
+    "@id" => "#{SITE}/#person",
+    "name" => prof["name"],
+    "url" => "#{SITE}/",
+    "image" => "#{SITE}#{prof['photo']}",
+    "jobTitle" => prof["roleLine"],
+    "email" => prof["email"],
+    "sameAs" => Array(data["socials"]).map { |s| s["href"] },
+    "knowsAbout" => ["Advertising", "Paid media", "Tracking", "Marketing automation"]
+  }
+end
+
+def website_node
+  {
+    "@type" => "WebSite",
+    "@id" => "#{SITE}/#website",
+    "url" => "#{SITE}/",
+    "name" => "Vincenzo Capasso",
+    "inLanguage" => "it",
+    "publisher" => { "@id" => "#{SITE}/#person" }
+  }
+end
+
 # ------------------------------------------------------------
 # 3b. Componenti di "Chi Sono"
 #     Le stesse strutture di js/render.js, in HTML definitivo.
@@ -339,15 +387,15 @@ def about_page(data)
   # rettangolo alto. Il riquadro di riserva con le iniziali resta
   # il fallback se il file non c'e'.
   portrait = if prof["photo"]
-               %(<img class="portrait" src="#{esc(prof['photo'])}" alt="Vincenzo Capasso" decoding="async" fetchpriority="high">)
+               %(<img class="portrait" src="#{esc(prof['photo'])}" alt="Vincenzo Capasso" width="640" height="640" decoding="async" fetchpriority="high">)
              else
                %(<img class="portrait" alt="Vincenzo Capasso" decoding="async" fetchpriority="high">)
              end
 
-  desc = "Performance &amp; Marketing automation: paid media, tracking e automazione applicata al marketing. Eserienza, competenze e strumenti."
+  desc = "Performance marketing e automazione: paid media, tracking e AI applicata al marketing. Esperienza, competenze e strumenti che uso ogni giorno."
 
   <<~HTML
-    #{head(title: "Chi Sono — Vincenzo Capasso", desc: desc, canonical: "#{SITE}/chi-sono/")}
+    #{head(title: "Chi sono | Vincenzo Capasso, performance marketing", desc: desc, canonical: "#{SITE}/chi-sono/")}
     <header class="pagehead">
       <h1 class="pagehead__title">Chi Sono</h1>
     </header>
@@ -451,7 +499,7 @@ end
 
 def contact_page(data)
   prof = data["profile"]
-  desc = "Contatti diretti: scrivimi per paid media, tracking e marketing automation. Risposta personale, senza form."
+  desc = "Contatti diretti: scrivimi per paid media, tracking e marketing automation. Risposta personale, senza form e senza passaggi intermedi: raccontami il progetto."
 
   # L'indirizzo non compare come testo da nessuna parte: esiste solo
   # dentro l'href del bottone, quindi non è leggibile con un copia e
@@ -460,12 +508,7 @@ def contact_page(data)
 
   jsonld = {
     "@context" => "https://schema.org",
-    "@type" => "Person",
-    "name" => prof["name"],
-    "jobTitle" => prof["roleLine"],
-    "url" => SITE,
-    "email" => prof["email"],
-    "knowsAbout" => "Advertising, tracking, marketing automation"
+    "@graph" => [person_node(data), website_node]
   }.to_json
   ld = %(<script type="application/ld+json">#{esc(jsonld)}</script>\n)
 
@@ -489,7 +532,7 @@ def contact_page(data)
   end.join("\n")
 
   <<~HTML
-    #{head(title: "Contatti — Vincenzo Capasso", desc: desc, canonical: "#{SITE}/contatti/", extra: ld)}
+    #{head(title: "Contatti | Scrivimi per paid media e automazione su misura", desc: desc, canonical: "#{SITE}/contatti/", extra: ld)}
     <main class="contact">
       <p class="scribble scribble--l">Connettiamoci</p>
       <p class="scribble scribble--r">Disponibile per nuove collaborazioni</p>
@@ -521,7 +564,7 @@ end
 # 4. Pagine dei progetti
 # ------------------------------------------------------------
 
-def project_page(p, cats)
+def project_page(p, cats, data)
   url = "#{SITE}/progetti/#{p['slug']}/"
   d = read_date("#{p['year']}-01-01")
   desc = summary(p["excerpt"])
@@ -529,20 +572,28 @@ def project_page(p, cats)
 
   jsonld = {
     "@context" => "https://schema.org",
-    "@type" => "CreativeWork",
-    "name" => p["title"],
-    "headline" => p["title"],
-    "description" => p["excerpt"],
-    "inLanguage" => "it",
-    "url" => url,
-    "datePublished" => "#{p['year']}-01-01",
-    "author" => { "@type" => "Person", "name" => "Vincenzo Capasso" },
-    "keywords" => Array(p["cats"]).join(", ")
+    "@graph" => [
+      person_node(data),
+      {
+        "@type" => "CreativeWork",
+        "@id" => "#{url}#work",
+        "name" => p["title"],
+        "headline" => p["title"],
+        "description" => p["seoDesc"] || p["excerpt"],
+        "image" => OG_IMAGE,
+        "inLanguage" => "it",
+        "url" => url,
+        "datePublished" => "#{p['year']}-01-01",
+        "author" => { "@id" => "#{SITE}/#person" },
+        "creator" => { "@id" => "#{SITE}/#person" },
+        "keywords" => Array(p["cats"]).join(", ")
+      }
+    ]
   }.to_json
   ld = %(<script type="application/ld+json">#{esc(jsonld)}</script>\n)
 
   <<~HTML
-    #{head(title: "#{p['title']} — Vincenzo Capasso", desc: desc, canonical: url, extra: ld)}
+    #{head(title: p["seoTitle"] || "#{p['title']} | Vincenzo Capasso", desc: p["seoDesc"] || desc, canonical: url, type: "article", extra: ld)}
     <main class="page" id="app">
       <header class="pagehead">
         <a class="backlink" href="/progetti/">&larr; Tutti i progetti</a>
@@ -588,21 +639,31 @@ end
 # 5. Pagina di un articolo
 # ------------------------------------------------------------
 
-def post_page(p, next_post)
+def post_page(p, next_post, data)
   url = "#{SITE}/blog/#{p['slug']}/"
   desc = summary(p["excerpt"])
   art = Array(p["art"])
 
   jsonld = {
     "@context" => "https://schema.org",
-    "@type" => "BlogPosting",
-    "headline" => p["title"],
-    "description" => p["excerpt"],
-    "inLanguage" => "it",
-    "url" => url,
-    "datePublished" => read_date_iso(p["date"]),
-    "author" => { "@type" => "Person", "name" => "Vincenzo Capasso" },
-    "articleSection" => p["topic"]
+    "@graph" => [
+      person_node(data),
+      {
+        "@type" => "BlogPosting",
+        "@id" => "#{url}#article",
+        "headline" => p["title"],
+        "description" => p["seoDesc"] || p["excerpt"],
+        "image" => OG_IMAGE,
+        "inLanguage" => "it",
+        "url" => url,
+        "mainEntityOfPage" => url,
+        "datePublished" => read_date_iso(p["date"]),
+        "dateModified" => read_date_iso(p["date"]),
+        "author" => { "@id" => "#{SITE}/#person" },
+        "publisher" => { "@id" => "#{SITE}/#person" },
+        "articleSection" => p["topic"]
+      }
+    ]
   }.to_json
   ld = %(<script type="application/ld+json">#{esc(jsonld)}</script>\n)
 
@@ -628,7 +689,7 @@ def post_page(p, next_post)
               end
 
   <<~HTML
-    #{head(title: "#{p['title']} — Vincenzo Capasso", desc: desc, canonical: url, type: "article", extra: ld)}
+    #{head(title: p["seoTitle"] || "#{p['title']} | Vincenzo Capasso", desc: p["seoDesc"] || desc, canonical: url, type: "article", extra: ld)}
     <main class="page" id="app">
       <header class="pagehead">
         <a class="backlink" href="/blog/">&larr; Tutti gli articoli</a>
@@ -666,7 +727,7 @@ def post_index(posts, cats)
       <li class="post reveal">
         <div>
           <time datetime="#{esc(p['date'])}">#{read_date(p['date'])}</time>
-          <h3 data-len="#{title_len(p['title'])}"><a href="/blog/#{p['slug']}/">#{esc(p['title'])}</a></h3>
+          <h2 data-len="#{title_len(p['title'])}"><a href="/blog/#{p['slug']}/">#{esc(p['title'])}</a></h2>
           <p>#{esc(p['excerpt'])}</p>
         </div>
         <a class="post__thumb" href="/blog/#{p['slug']}/"
@@ -677,7 +738,7 @@ def post_index(posts, cats)
   end.join("\n")
 
   <<~HTML
-    #{head(title: "Blog — Vincenzo Capasso", desc: "Articoli su advertising, tracking, strategia e creatività, scritti da Vincenzo Capasso.", canonical: "#{SITE}/blog/")}
+    #{head(title: "Blog | Idee e metodi su ads, tracking e strategia digitale", desc: "Articoli su advertising, tracking, strategia e creatività: metodi, numeri e lezioni imparate sul campo, raccontati senza gergo da Vincenzo Capasso.", canonical: "#{SITE}/blog/")}
     <main class="page" id="app">
       <header class="pagehead">
         <h1 class="pagehead__title" data-len="1">Blog</h1>
@@ -707,7 +768,7 @@ def project_index(projects, categories)
       <div class="pcard reveal" data-cats="#{esc(Array(p['cats']).join('|'))}">
         <div class="pcard__media" data-badge="#{esc(p['year'])}" style="background-image:#{project_bg(p)}"></div>
         <div class="pcard__body">
-          <h3 class="pcard__title" data-len="#{title_len(p['title'])}"><a href="/progetti/#{p['slug']}/">#{esc(p['title'])}</a></h3>
+          <h2 class="pcard__title" data-len="#{title_len(p['title'])}"><a href="/progetti/#{p['slug']}/">#{esc(p['title'])}</a></h2>
           <p class="pcard__excerpt">#{esc(p['excerpt'])}</p>
           <div class="pcard__cats">#{tags}</div>
           <span class="pcard__cta">Apri progetto</span>
@@ -808,7 +869,7 @@ def project_index(projects, categories)
   JS
 
   <<~HTML
-    #{head(title: "Progetti — Vincenzo Capasso", desc: "Casi di studio su paid media, tracking e marketing automation, con numeri e metodo.", canonical: "#{SITE}/progetti/")}
+    #{head(title: "Progetti | Casi studio di paid media e automazione", desc: "Casi studio su paid media, tracking e marketing automation: numeri reali, metodo di lavoro e cosa ha funzionato davvero, raccontati senza fuffa.", canonical: "#{SITE}/progetti/")}
     <main class="page" id="app">
       <header class="pagehead">
         <h1 class="pagehead__title" data-len="1">Progetti</h1>
@@ -884,12 +945,12 @@ end
 
 posts.each_with_index do |p, i|
   nxt = posts[(i + 1) % posts.length]
-  write.call("blog/#{p['slug']}/index.html", post_page(p, nxt))
+  write.call("blog/#{p['slug']}/index.html", post_page(p, nxt, data))
 end
 write.call("blog/index.html", post_index(posts, data["categories"]))
 
 projects.each do |p|
-  write.call("progetti/#{p['slug']}/index.html", project_page(p, data["categories"]))
+  write.call("progetti/#{p['slug']}/index.html", project_page(p, data["categories"], data))
 end
 write.call("progetti/index.html", project_index(projects, data["categories"]))
 

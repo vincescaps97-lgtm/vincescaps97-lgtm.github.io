@@ -140,7 +140,8 @@ website/
 ├── assets/doodle/  grid.svg + i sette doodle PNG dello sfondo
 ├── assets/project/ immagini di anteprima dei progetti
 ├── assets/category/ un disegno per categoria, su sfondo trasparente
-├── favicon.svg
+├── favicon.ico / favicon.svg / favicon-192.png
+├── apple-touch-icon.png
 └── js/
     ├── data.js     ← TUTTO IL CONTENUTO
     ├── render.js   helper di markup condivisi

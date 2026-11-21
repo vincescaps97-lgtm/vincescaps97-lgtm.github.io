@@ -65,6 +65,18 @@ const HOME_ITEM = { id: "home", label: "Home", href: "/" };
     pannello né nella dock, ma la pagina continua a esistere. */
 const VISIBLE = NAV.filter((i) => !i.hidden);
 
+/** Voci che stanno solo nella dock: link esterni, non sezioni.
+    LinkedIn è già nei social del pannello, quindi non entra in
+    NAV (che alimenta anche il menu) ma solo qui. L'URL viene da
+    SOCIALS: un posto solo dove cambiarlo. */
+const DOCK_EXTRAS = SOCIALS.filter((s) => /^linkedin$/i.test(s.label)).map((s) => ({
+  id: "linkedin",
+  label: s.label,
+  href: s.href,
+  icon: "/icons/linkedin.svg",
+  external: true,
+}));
+
 const iconMarkup = (i) =>
   i.fallback
     ? `<img src="${i.icon}" data-fallback="${i.fallback}" alt="" loading="lazy">`
@@ -169,10 +181,11 @@ export function mountDock(currentId) {
   host.setAttribute("role", "navigation");
   host.setAttribute("aria-label", "Sezioni");
 
-  const items = VISIBLE.map((i) => `
+  const items = [...VISIBLE, ...DOCK_EXTRAS].map((i) => `
     ${i.separator ? '<span class="dock__sep" role="separator"></span>' : ""}
     <a class="dock__item${i.id === currentId ? " is-current" : ""}"
-       href="${i.href}" data-id="${i.id}" data-label="${i.label}">
+       href="${i.href}" data-id="${i.id}" data-label="${i.label}"
+       aria-label="${i.label}"${i.external ? ' target="_blank" rel="noopener"' : ""}>
       <span class="dock__icon">${iconMarkup(i)}</span>
       <span class="dock__tip" aria-hidden="true">${i.label}</span>
     </a>`).join("");

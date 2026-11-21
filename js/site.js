@@ -14,7 +14,9 @@
 
 import { mountMenu, mountDock } from "./nav.js";
 import { mountBackground } from "./background.js";
+import { mountGlow } from "./glow.js";
 import { initDock } from "./dock.js";
+import { mountGreeting } from "./greeting.js";
 
 const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const hasGSAP = typeof window.gsap !== "undefined";
@@ -31,6 +33,11 @@ export function boot({ page = "", dock = false } = {}) {
   /* ---------- sfondo carta + doodle ---------- */
 
   mountBackground();
+
+  /* ---------- alone che segue il cursore ----------
+     Montato DOPO lo sfondo: il layer deve stare sopra la griglia
+     e i doodle, altrimenti la luce non li attraversa. */
+  mountGlow();
 
   /* ---------- drawer ---------- */
 
@@ -135,6 +142,10 @@ export function boot({ page = "", dock = false } = {}) {
       );
     });
   }
+
+  /* ---------- messaggino di benvenuto ---------- */
+
+  mountGreeting({ page });
 
   /* ---------- footer year ---------- */
 
